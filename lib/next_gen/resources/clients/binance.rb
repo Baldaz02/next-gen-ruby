@@ -34,7 +34,7 @@ module NextGen
       def candlestick_response(response)
         data = JSON.parse(response.body)
 
-        data.map { |candle| { open_time: candle[0], price: candle[1].to_f } }
+        data.map { |candle| { time: candle[0], price: candle[1].to_f } }
       end
     end
   end
