@@ -22,6 +22,11 @@ Gem::Specification.new do |specification|
   specification.executables = specification.files.grep(%r{^bin/}) { |file| File.basename(file) }
   specification.require_paths = %w[lib]
 
+  specification.add_dependency('json')
+  specification.add_dependency('ostruct', '~> 0.6')
+  specification.add_dependency('rest-client')
+  specification.add_dependency('vcr')
   specification.add_dependency('zeitwerk', '~> 2.4')
+
   specification.metadata['rubygems_mfa_required'] = 'true'
 end
