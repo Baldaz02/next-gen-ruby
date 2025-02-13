@@ -23,13 +23,5 @@ Gem::Specification.new do |specification|
   specification.require_paths = %w[lib]
 
   specification.add_dependency('zeitwerk', '~> 2.4')
-
-  specification.add_development_dependency('bump', '~> 0.8')
-  specification.add_development_dependency('digest', '~> 3.1.0')
-  specification.add_development_dependency('pry', '~> 0.14')
-  specification.add_development_dependency('rake', '~> 13.0')
-  specification.add_development_dependency('rspec', '~> 3.8')
-  specification.add_development_dependency('rubocop', '~> 0.0')
-  specification.add_development_dependency('simplecov', '~> 0.16')
   specification.metadata['rubygems_mfa_required'] = 'true'
 end
