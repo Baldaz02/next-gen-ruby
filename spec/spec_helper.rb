@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-require('pry')
+require('byebug')
 require('simplecov')
+require('ostruct')
 
 SimpleCov.start do
   minimum_coverage(100)
