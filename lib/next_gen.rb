@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative './next_gen/autoloader'
+require_relative 'next_gen/autoloader'
 
 module NextGen
   NAME = 'NextGen Ruby'
@@ -22,4 +22,4 @@ module NextGen
   end
 end
 
-::NextGen::Autoloader.setup!
+NextGen::Autoloader.setup!
