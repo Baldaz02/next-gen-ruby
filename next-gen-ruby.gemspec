@@ -22,9 +22,11 @@ Gem::Specification.new do |specification|
   specification.executables = specification.files.grep(%r{^bin/}) { |file| File.basename(file) }
   specification.require_paths = %w[lib]
 
+  specification.add_dependency('csv', '~> 3.3.2')
   specification.add_dependency('json')
   specification.add_dependency('ostruct', '~> 0.6')
   specification.add_dependency('rest-client')
+  specification.add_dependency('tzinfo', '~> 2.0.6')
   specification.add_dependency('vcr')
   specification.add_dependency('zeitwerk', '~> 2.4')
 
