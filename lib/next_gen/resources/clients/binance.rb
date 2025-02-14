@@ -25,8 +25,8 @@ module NextGen
         {
           symbol: @params.symbol,
           interval: @params.interval,
-          startTime: @params.timestamps[:start],
-          endTime: @params.timestamps[:end],
+          startTime: @params.timestamps&.dig(:start),
+          endTime: @params.timestamps&.dig(:end),
           limit: @params.limit
         }.compact
       end
@@ -34,7 +34,12 @@ module NextGen
       def candlestick_response(response)
         data = JSON.parse(response.body)
 
-        data.map { |candle| { time: candle[0], price: candle[1].to_f } }
+        data.map do |candle| 
+          timestamp = candle[0]
+          ticker_date = NextGen::Config::Application.timestamp_to_date(timestamp / 1000)
+
+          { unix_timestamp: timestamp, price: candle[1].to_f, date: ticker_date }
+        end
       end
     end
   end
