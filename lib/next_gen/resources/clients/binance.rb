@@ -33,20 +33,16 @@ module NextGen
 
       def candlestick_response(response)
         data = JSON.parse(response.body)
+        map_candle = { unix_timestamp: 0, open_price: 1, high_price: 2, low_price: 3, close_price: 4, volume: 5 }
 
         data.map do |candle|
-          timestamp = candle[0]
-          NextGen::Config::Application.timestamp_to_date(timestamp / 1000)
+          candle_data = map_candle.transform_values do |index|
+            candle[index].to_f
+          end
 
-          {
-            unix_timestamp: timestamp,
-            date: NextGen::Config::Application.timestamp_to_date(timestamp / 1000),
-            open_price: candle[1].to_f,
-            high_price: candle[2].to_f,
-            low_price: candle[3].to_f,
-            close_price: candle[4].to_f,
-            volume: candle[5].to_f
-          }.freeze
+          candle_data[:date] = NextGen::Config::Application.timestamp_to_date(candle[0] / 1000)
+
+          candle_data.freeze
         end
       end
     end
