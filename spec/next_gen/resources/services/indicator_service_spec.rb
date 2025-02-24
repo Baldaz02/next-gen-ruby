@@ -21,61 +21,46 @@ RSpec.describe NextGen::Services::IndicatorService do
 
   let(:expected_timestamp) { Time.at(1_740_384_000) }
 
-  context 'Simple Moving Averages (SMA)' do
+  context 'Trend Following (SMA, EMA, RSI, MACD)' do
     it do
-      sma_data = described_class.new(tickers).simple_moving_averages
-      expect(sma_data.count).to eq 2
+      data = described_class.new(tickers).trend_following
 
-      sma_10_result = sma_data['sma10']
-      expect(sma_10_result.count).to eq 6
-      expect(Time.parse(sma_10_result.first.date_time)).to eq expected_timestamp
-      expect(sma_10_result.first.sma).to eq 95_800.08700000001
+      # SMA
+      expect(data.sma_values.sma10.count).to eq 6
+      sma_10_result = data.sma_values.sma10.first
+      expect(Time.parse(sma_10_result.date_time)).to eq expected_timestamp
+      expect(sma_10_result.sma).to eq 95_800.08700000001
 
-      sma_20_result = sma_data['sma20']
-      expect(sma_20_result.count).to eq 6
-      expect(Time.parse(sma_20_result.first.date_time)).to eq expected_timestamp
-      expect(sma_20_result.first.sma).to eq 95_745.1125
-    end
-  end
+      expect(data.sma_values.sma20.count).to eq 6
+      sma_20_result = data.sma_values.sma20.first
+      expect(Time.parse(sma_20_result.date_time)).to eq expected_timestamp
+      expect(sma_20_result.sma).to eq 95_745.1125
 
-  context 'Exponential Moving Averages (EMA)' do
-    it do
-      ema_data = described_class.new(tickers).exponential_moving_averages
-      expect(ema_data.count).to eq 2
+      # EMA
+      expect(data.ema_values.ema10.count).to eq 6
+      ema_10_result = data.ema_values.ema10.first
+      expect(Time.parse(ema_10_result.date_time)).to eq expected_timestamp
+      expect(ema_10_result.ema).to eq 95_736.22029778144
 
-      ema_10_result = ema_data['ema10']
-      expect(ema_10_result.count).to eq 6
-      expect(Time.parse(ema_10_result.first.date_time)).to eq expected_timestamp
-      expect(ema_10_result.first.ema).to eq 95_736.22029778144
+      expect(data.ema_values.ema20.count).to eq 6
+      ema_20_result = data.ema_values.ema20.first
+      expect(Time.parse(ema_20_result.date_time)).to eq expected_timestamp
+      expect(ema_20_result.ema).to eq 95_785.91814626193
 
-      ema_20_result = ema_data['ema20']
-      expect(ema_20_result.count).to eq 6
-      expect(Time.parse(ema_20_result.first.date_time)).to eq expected_timestamp
-      expect(ema_20_result.first.ema).to eq 95_785.91814626193
-    end
-  end
-
-  context 'Relative Strength Index (RSI)' do
-    it do
-      rsi_data = described_class.new(tickers).relative_strength_index
-      expect(rsi_data.count).to eq 5
-
-      first_rsi = rsi_data.first
+      # RSI
+      expect(data.rsi_values.count).to eq 5
+      first_rsi = data.rsi_values.first
       expect(Time.parse(first_rsi.date_time)).to eq expected_timestamp
       expect(first_rsi.rsi).to eq 47.37161756129789
-    end
-  end
 
-  context 'Moving Average Convergence Divergence (MACD)' do
-    it do
-      macd_data = described_class.new(tickers).moving_average_convergence_divergence
-      expect(macd_data.count).to eq 6
+      # MACD
 
-      first_macd = macd_data.first
+      expect(data.macd_values.count).to eq 6
+      first_macd = data.macd_values.first
       expect(Time.parse(first_macd.date_time)).to eq expected_timestamp
-      expect(first_macd.macd_line).to eq -178.1478434993478
+      expect(first_macd.macd_line).to eq(-178.1478434993478)
       expect(first_macd.macd_histogram).to eq 31.282820089225936
-      expect(first_macd.signal_line).to eq -209.43066358857374
+      expect(first_macd.signal_line).to eq(-209.43066358857374)
     end
   end
 end
