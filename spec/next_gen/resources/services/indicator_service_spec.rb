@@ -22,15 +22,15 @@ RSpec.describe NextGen::Services::IndicatorService do
   context 'sma' do
     it do
       sma = described_class.new(tickers).simple_moving_averages
-      date_time = Time.at(1740384000)
+      date_time = Time.at(1_740_384_000)
 
       first_sma = sma['sma10']
       expect(Time.parse(first_sma.date_time)).to eq date_time
-      expect(first_sma.sma).to eq 95800.08700000001
+      expect(first_sma.sma).to eq 95_800.08700000001
 
       second_sma = sma['sma20']
       expect(Time.parse(second_sma.date_time)).to eq date_time
-      expect(second_sma.sma).to eq 95745.1125
+      expect(second_sma.sma).to eq 95_745.1125
     end
   end
 end
