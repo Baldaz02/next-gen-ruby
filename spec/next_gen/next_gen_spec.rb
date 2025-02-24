@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe(NextGen) do # rubocop: disable Metrics/BlockLength
+RSpec.describe(NextGen) do
   before do
     allow(ENV).to receive(:[]).with('APP_INFO').and_return('telegram')
   end
