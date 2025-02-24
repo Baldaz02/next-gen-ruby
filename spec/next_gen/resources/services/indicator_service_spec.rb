@@ -19,11 +19,11 @@ RSpec.describe NextGen::Services::IndicatorService do
     end
   end
 
+  let(:expected_timestamp) { Time.at(1_740_384_000) }
+
   context 'Simple Moving Averages (SMA)' do
     it do
       sma_data = described_class.new(tickers).simple_moving_averages
-      expected_timestamp = Time.at(1_740_384_000)
-
       expect(sma_data.count).to eq 2
 
       sma_10_result = sma_data['sma10']
@@ -41,8 +41,6 @@ RSpec.describe NextGen::Services::IndicatorService do
   context 'Exponential Moving Averages (EMA)' do
     it do
       ema_data = described_class.new(tickers).exponential_moving_averages
-      expected_timestamp = Time.at(1_740_384_000)
-
       expect(ema_data.count).to eq 2
 
       ema_10_result = ema_data['ema10']
@@ -54,6 +52,17 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(ema_20_result.count).to eq 6
       expect(Time.parse(ema_20_result.first.date_time)).to eq expected_timestamp
       expect(ema_20_result.first.ema).to eq 95_785.91814626193
+    end
+  end
+
+  context 'Relative Strength Index (RSI)' do
+    it do
+      rsi_data = described_class.new(tickers).relative_strength_index
+      expect(rsi_data.count).to eq 5
+
+      first_rsi = rsi_data.first
+      expect(Time.parse(first_rsi.date_time)).to eq expected_timestamp
+      expect(first_rsi.rsi).to eq 47.37161756129789
     end
   end
 end
