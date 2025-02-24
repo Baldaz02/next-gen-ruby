@@ -9,28 +9,24 @@ module NextGen
 
       attr_reader :price_data
 
-      def initialize(tickers)
+      def initialize(tickers, buffer_size = 5)
         @price_data = load_data(tickers).freeze
+
+        @cache_data = {}
+        cache_data_by_periods([10, 20], buffer_size)
       end
-
-      # def calculate_indicator(type, period, price_key = :close)
-      #   return nil if price_data.size < period
-
-      #   indicator_class = Object.const_get("TechnicalAnalysis::#{type.capitalize}")
-      #   indicator_class.calculate(price_data.map(&:to_h), period: period, price_key: price_key)
-      # end
 
       def simple_moving_averages
         {
-          'sma10' => TechnicalAnalysis::Sma.calculate(price_data.last(15).map(&:to_h), period: 10, price_key: :close),
-          'sma20' => TechnicalAnalysis::Sma.calculate(price_data.last(25).map(&:to_h), period: 20, price_key: :close)
+          'sma10' => calculate_indicator(:Sma, 10),
+          'sma20' => calculate_indicator(:Sma, 20),
         }.freeze
       end
 
       def exponential_moving_averages
         {
-          'ema10' => TechnicalAnalysis::Ema.calculate(price_data.last(15).map(&:to_h), period: 10, price_key: :close),
-          'ema20' => TechnicalAnalysis::Ema.calculate(price_data.last(25).map(&:to_h), period: 20, price_key: :close)
+          'ema10' => calculate_indicator(:Ema, 10),
+          'ema20' => calculate_indicator(:Ema, 20),
         }
       end
 
@@ -41,6 +37,17 @@ module NextGen
           CandleData.new(date_time: t.date, open: t.open_price, high: t.high_price,
                          low: t.low_price, close: t.close_price, volume: t.volume)
         end
+      end
+
+      def cache_data_by_periods(periods, buffer_size)
+        periods.each do |period|
+          @cache_data[period] ||= price_data.last(period + buffer_size).map(&:to_h)
+        end
+      end
+
+      def calculate_indicator(indicator_type, period)
+        indicator_class = Object.const_get("TechnicalAnalysis::#{indicator_type}")
+        indicator_class.calculate(@cache_data[period], period: period, price_key: :close)
       end
     end
   end
