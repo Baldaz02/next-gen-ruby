@@ -65,4 +65,17 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(first_rsi.rsi).to eq 47.37161756129789
     end
   end
+
+  context 'Moving Average Convergence Divergence (MACD)' do
+    it do
+      macd_data = described_class.new(tickers).moving_average_convergence_divergence
+      expect(macd_data.count).to eq 6
+
+      first_macd = macd_data.first
+      expect(Time.parse(first_macd.date_time)).to eq expected_timestamp
+      expect(first_macd.macd_line).to eq -178.1478434993478
+      expect(first_macd.macd_histogram).to eq 31.282820089225936
+      expect(first_macd.signal_line).to eq -209.43066358857374
+    end
+  end
 end
