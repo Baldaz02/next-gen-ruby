@@ -7,15 +7,16 @@ RSpec.describe NextGen::Services::IndicatorService do
 
   let(:tickers) do
     CSV.read(csv_file, headers: true).map do |entry|
-      NextGen::Models::Ticker.new(
-        entry['Date'],
-        entry['Open Price'].to_f,
-        entry['Close Price'].to_f,
-        entry['High Price'].to_f,
-        entry['Low Price'].to_f,
-        entry['Volume'].to_f,
-        entry['Crypto Name']
-      )
+      candle_params = {
+        date: entry['Date'],
+        open_price: entry['Open Price'].to_f,
+        close_price: entry['Close Price'].to_f,
+        high_price: entry['High Price'].to_f,
+        low_price: entry['Low Price'].to_f,
+        volume: entry['Volume'].to_f
+      }
+
+      NextGen::Models::Ticker.new(candle_params, entry['Crypto Name'])
     end
   end
 
