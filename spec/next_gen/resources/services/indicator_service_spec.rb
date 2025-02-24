@@ -19,18 +19,41 @@ RSpec.describe NextGen::Services::IndicatorService do
     end
   end
 
-  context 'sma' do
+  context 'Simple Moving Averages (SMA)' do
     it do
-      sma = described_class.new(tickers).simple_moving_averages
-      date_time = Time.at(1_740_384_000)
+      sma_data = described_class.new(tickers).simple_moving_averages
+      expected_timestamp = Time.at(1_740_384_000)
 
-      first_sma = sma['sma10']
-      expect(Time.parse(first_sma.date_time)).to eq date_time
-      expect(first_sma.sma).to eq 95_800.08700000001
+      expect(sma_data.count).to eq 2
 
-      second_sma = sma['sma20']
-      expect(Time.parse(second_sma.date_time)).to eq date_time
-      expect(second_sma.sma).to eq 95_745.1125
+      sma_10_result = sma_data['sma10']
+      expect(sma_10_result.count).to eq 6
+      expect(Time.parse(sma_10_result.first.date_time)).to eq expected_timestamp
+      expect(sma_10_result.first.sma).to eq 95_800.08700000001
+
+      sma_20_result = sma_data['sma20']
+      expect(sma_20_result.count).to eq 6
+      expect(Time.parse(sma_20_result.first.date_time)).to eq expected_timestamp
+      expect(sma_20_result.first.sma).to eq 95_745.1125
+    end
+  end
+
+  context 'Exponential Moving Averages (EMA)' do
+    it do
+      ema_data = described_class.new(tickers).exponential_moving_averages
+      expected_timestamp = Time.at(1_740_384_000)
+
+      expect(ema_data.count).to eq 2
+
+      ema_10_result = ema_data['ema10']
+      expect(ema_10_result.count).to eq 6
+      expect(Time.parse(ema_10_result.first.date_time)).to eq expected_timestamp
+      expect(ema_10_result.first.ema).to eq 95_736.22029778144
+
+      ema_20_result = ema_data['ema20']
+      expect(ema_20_result.count).to eq 6
+      expect(Time.parse(ema_20_result.first.date_time)).to eq expected_timestamp
+      expect(ema_20_result.first.ema).to eq 95_785.91814626193
     end
   end
 end
