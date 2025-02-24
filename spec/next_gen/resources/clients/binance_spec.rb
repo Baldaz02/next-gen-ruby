@@ -7,6 +7,15 @@ RSpec.describe NextGen::Clients::Binance do
 
   let(:client) { described_class.new(OpenStruct.new(params)) }
 
+  let(:expected_date) { Time.at(1_699_102_800_000 / 1000) }
+
+  let(:candle) do
+    {
+      unix_timestamp: 1_699_102_800_000, date: expected_date, close_price: 34_756.01,
+      high_price: 34_758.78, low_price: 34_756.0, open_price: 34_758.78, volume: 7.53895
+    }
+  end
+
   context '#candlestick', vcr: true do
     context 'params not all present' do
       it do
@@ -15,8 +24,7 @@ RSpec.describe NextGen::Clients::Binance do
         expect(response).not_to be_empty
 
         first_candle = response.first
-        expected_date = Time.at(1_699_102_800_000 / 1000)
-        expect(first_candle).to eq({ unix_timestamp: 1_699_102_800_000, price: 34_758.78000000, date: expected_date })
+        expect(first_candle).to eq candle
       end
     end
 
@@ -29,8 +37,7 @@ RSpec.describe NextGen::Clients::Binance do
         expect(response).not_to be_empty
 
         first_candle = response.first
-        expected_date = Time.at(1_699_102_800_000 / 1000)
-        expect(first_candle).to eq({ unix_timestamp: 1_699_102_800_000, price: 34_758.78000000, date: expected_date })
+        expect(first_candle).to eq candle
       end
     end
   end
