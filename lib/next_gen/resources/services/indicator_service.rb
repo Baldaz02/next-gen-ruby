@@ -31,8 +31,8 @@ module NextGen
 
       def load_data(tickers)
         tickers.map do |t|
-          CandleData.new( date_time: t.date, open: t.open_price, high: t.high_price, 
-                         low: t.low_price, close: t.close_price, volume: t.volume )
+          CandleData.new(date_time: t.date, open: t.open_price, high: t.high_price,
+                         low: t.low_price, close: t.close_price, volume: t.volume)
         end
       end
     end
