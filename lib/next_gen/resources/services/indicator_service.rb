@@ -10,20 +10,27 @@ module NextGen
       attr_reader :price_data
 
       def initialize(tickers)
-        @price_data = load_data(tickers)
+        @price_data = load_data(tickers).freeze
       end
 
-      def calculate_indicator(type, period, price_key = :close)
-        return nil if price_data.size < period
+      # def calculate_indicator(type, period, price_key = :close)
+      #   return nil if price_data.size < period
 
-        indicator_class = Object.const_get("TechnicalAnalysis::#{type.capitalize}")
-        indicator_class.calculate(price_data.map(&:to_h), period: period, price_key: price_key)
-      end
+      #   indicator_class = Object.const_get("TechnicalAnalysis::#{type.capitalize}")
+      #   indicator_class.calculate(price_data.map(&:to_h), period: period, price_key: price_key)
+      # end
 
       def simple_moving_averages
         {
-          'sma10' => calculate_indicator('sma', 10)&.first,
-          'sma20' => calculate_indicator('sma', 20)&.first
+          'sma10' => TechnicalAnalysis::Sma.calculate(price_data.last(15).map(&:to_h), period: 10, price_key: :close),
+          'sma20' => TechnicalAnalysis::Sma.calculate(price_data.last(25).map(&:to_h), period: 20, price_key: :close)
+        }.freeze
+      end
+
+      def exponential_moving_averages
+        {
+          'ema10' => TechnicalAnalysis::Ema.calculate(price_data.last(15).map(&:to_h), period: 10, price_key: :close),
+          'ema20' => TechnicalAnalysis::Ema.calculate(price_data.last(25).map(&:to_h), period: 20, price_key: :close)
         }
       end
 
