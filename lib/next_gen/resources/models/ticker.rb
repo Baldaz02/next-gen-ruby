@@ -5,13 +5,10 @@ module NextGen
     class Ticker
       attr_reader :date, :open_price, :close_price, :high_price, :low_price, :volume, :crypto_name
 
-      def initialize(date, open_price, close_price, high_price, low_price, volume, crypto_name)
-        @date = date
-        @open_price = open_price
-        @close_price = close_price
-        @high_price = high_price
-        @low_price = low_price
-        @volume = volume
+      def initialize(candle_params, crypto_name)
+        @date, @open_price, @close_price, @high_price, @low_price, @volume =
+          candle_params.values_at(:date, :open_price, :close_price, :high_price, :low_price, :volume)
+
         @crypto_name = crypto_name
       end
     end
