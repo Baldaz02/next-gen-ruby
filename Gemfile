@@ -6,6 +6,7 @@ source('https://rubygems.org')
 gemspec
 
 group :development, :test do
+  gem 'benchmark'
   gem 'bump', '~> 0.8'
   gem 'byebug', '~> 11.1'
   gem 'digest', '~> 3.1.0'
