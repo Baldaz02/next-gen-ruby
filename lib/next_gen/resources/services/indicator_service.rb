@@ -14,7 +14,7 @@ module NextGen
         @price_data = load_data(tickers).freeze
 
         @cache_data = {}
-        cache_data_by_periods([10, 14, 20], buffer_size)
+        cache_data_by_periods([10, 14, 20, 34], buffer_size)
       end
 
       def simple_moving_averages
@@ -35,6 +35,11 @@ module NextGen
         calculate_indicator(:Rsi, period)
       end
 
+      def moving_average_convergence_divergence(fast_period = 12, slow_period = 26, signal_period = 9)
+        options = { fast_period: fast_period, slow_period: slow_period, signal_period: signal_period , price_key: :close }
+        calculate_indicator(:Macd, 34, options: options)
+      end
+
       private
 
       def load_data(tickers)
@@ -50,9 +55,14 @@ module NextGen
         end
       end
 
-      def calculate_indicator(indicator_type, period)
+      def calculate_indicator(indicator_type, period, options: nil)
         indicator_class = Object.const_get("TechnicalAnalysis::#{indicator_type}")
-        indicator_class.calculate(@cache_data[period], period: period, price_key: :close)
+
+        if options
+          indicator_class.calculate(@cache_data[period], options)
+        else
+          indicator_class.calculate(@cache_data[period], period: period, price_key: :close)
+        end
       end
     end
   end
