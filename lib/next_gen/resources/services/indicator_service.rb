@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'technical-analysis'
+require 'byebug'
 
 module NextGen
   module Services
@@ -13,21 +14,25 @@ module NextGen
         @price_data = load_data(tickers).freeze
 
         @cache_data = {}
-        cache_data_by_periods([10, 20], buffer_size)
+        cache_data_by_periods([10, 14, 20], buffer_size)
       end
 
       def simple_moving_averages
         {
           'sma10' => calculate_indicator(:Sma, 10),
-          'sma20' => calculate_indicator(:Sma, 20),
+          'sma20' => calculate_indicator(:Sma, 20)
         }.freeze
       end
 
       def exponential_moving_averages
         {
           'ema10' => calculate_indicator(:Ema, 10),
-          'ema20' => calculate_indicator(:Ema, 20),
+          'ema20' => calculate_indicator(:Ema, 20)
         }
+      end
+
+      def relative_strength_index(period = 14)
+        calculate_indicator(:Rsi, period)
       end
 
       private
