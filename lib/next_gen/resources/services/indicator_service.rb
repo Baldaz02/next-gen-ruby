@@ -10,7 +10,7 @@ module NextGen
         @cache_data = {}
         cache_data_by_periods([10, 14, 20, 34], buffer_size)
 
-        @trend_following = NextGen::Services::Indicators::TrendFollowing.new(@cache_data)
+        @trend_following = Indicators::TrendFollowing.new(@cache_data)
       end
 
       def trend_following

@@ -40,7 +40,7 @@ module NextGen
             candle[index].to_f
           end
 
-          candle_data[:date] = NextGen::Config::Application.timestamp_to_date(candle[0] / 1000)
+          candle_data[:date] = Config::Application.timestamp_to_date(candle[0] / 1000)
 
           candle_data.freeze
         end
