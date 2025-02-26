@@ -25,7 +25,7 @@ module NextGen
         def on_balance_volume(period = 20)
           Models::Indicator.calculate(:Obv, period, cache_data)
         end
-        
+
         def volume_weighted_average_price(period = 20)
           Models::Indicator.calculate(:Vwap, period, cache_data)
         end
