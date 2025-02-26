@@ -63,13 +63,13 @@ RSpec.describe NextGen::Services::IndicatorService do
       data = described_class.new(tickers).momentum
 
       # RSI
-      expect(data.rsi_values.count).to eq 5
+      expect(data.rsi_values.count).to eq 6
       first_rsi = data.rsi_values.first
       expect(Time.parse(first_rsi.date_time)).to eq expected_timestamp
-      expect(first_rsi.rsi).to eq 47.37161756129789
+      expect(first_rsi.rsi).to eq 42.422962260091424
 
       # SR
-      expect(data.sr_values.count).to eq 4
+      expect(data.sr_values.count).to eq 6
       first_sr = data.sr_values.first
       expect(Time.parse(first_sr.date_time)).to eq expected_timestamp
       expect(first_sr.sr).to eq 29.676017412218346

@@ -10,7 +10,10 @@ module NextGen
         sma20: 25,
         ema10: 15,
         ema20: 25,
-        macd: 39
+        macd: 39,
+        rsi: 20,
+        sr: 21,
+        tsi: 43
       }.freeze
 
       attr_reader :cache_data, :tickers

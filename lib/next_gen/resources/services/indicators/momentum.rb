@@ -4,10 +4,16 @@ module NextGen
   module Services
     module Indicators
       class Momentum
-        attr_reader :cache_data
+        attr_reader :indicator_obj
 
-        def initialize(cache_data)
-          @cache_data = cache_data
+        OPTIONS = {
+          rsi: { period: 14, price_key: :close},
+          sr: {},
+          tsi: { low_period: 13, high_period: 25, price_key: :close }
+        }.freeze
+
+        def initialize(indicator_obj)
+          @indicator_obj = indicator_obj
         end
 
         def calculate_all
@@ -18,17 +24,22 @@ module NextGen
                          })
         end
 
-        def stochastic_oscillator(period = 14)
-          Models::Indicator.calculate(:Sr, period, cache_data, options: {})
+        def relative_strength_index
+          calculate_indicator(:rsi)
         end
 
-        def true_strength_index(short_period = 13, long_period = 25)
-          options = { low_period: short_period, high_period: long_period, price_key: :close }
-          Models::Indicator.calculate(:Tsi, 38, cache_data, options: options)
+        def stochastic_oscillator
+          calculate_indicator(:sr)
         end
 
-        def relative_strength_index(period = 14)
-          Models::Indicator.calculate(:Rsi, period, cache_data)
+        def true_strength_index
+          calculate_indicator(:tsi)
+        end
+
+        private
+
+        def calculate_indicator(type, opts = nil)
+          indicator_obj.calculate(type.to_s, opts || OPTIONS[type])
         end
       end
     end
