@@ -21,7 +21,7 @@ module NextGen
         initialize_indicators
       end
 
-      INDICATOR_CLASSES.keys.each do |indicator|
+      INDICATOR_CLASSES.each_key do |indicator|
         define_method(indicator) do
           instance_variable_get("@#{indicator}").calculate_all
         end
