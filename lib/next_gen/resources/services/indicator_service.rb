@@ -8,13 +8,18 @@ module NextGen
       def initialize(tickers, buffer_size = 5)
         @price_data = load_data(tickers).freeze
         @cache_data = {}
-        cache_data_by_periods([10, 14, 20, 34], buffer_size)
+        cache_data_by_periods([10, 14, 20, 34, 38], buffer_size)
 
         @trend_following = Indicators::TrendFollowing.new(@cache_data)
+        @momentum = Indicators::Momentum.new(@cache_data)
       end
 
       def trend_following
         @trend_following.calculate_all
+      end
+
+      def momentum
+        @momentum.calculate_all
       end
 
       private
