@@ -5,16 +5,35 @@ require 'technical-analysis'
 module NextGen
   module Models
     class Indicator
-      def self.calculate(type, period, cache_data, options: nil)
-        indicator_class = Object.const_get("TechnicalAnalysis::#{type}")
+      TYPE_PERIOD = {
+        sma10: 15,
+        sma20: 25,
+        ema10: 15,
+        ema20: 25,
+        macd: 39
+      }.freeze
 
-        if %i[Obv Vwap Adi].include?(type)
-          indicator_class.calculate(cache_data[period])
-        elsif options
-          indicator_class.calculate(cache_data[period], options)
-        else
-          indicator_class.calculate(cache_data[period], period: period, price_key: :close)
-        end
+      attr_reader :cache_data, :tickers
+
+      def initialize(tickers)
+        @cache_data = {}
+        @tickers = tickers
+
+        cache_data_by_periods(TYPE_PERIOD.values.uniq)
+      end
+
+      def calculate(type, options = {})
+        indicator_class = Object.const_get("TechnicalAnalysis::#{type.capitalize}")
+        key = :"#{type}#{options[:period]}"
+        period = TYPE_PERIOD[key] || TYPE_PERIOD[type.to_sym]
+
+        indicator_class.calculate(cache_data[period], options)
+      end
+
+      private
+
+      def cache_data_by_periods(periods)
+        periods.each { |period| cache_data[period] ||= tickers.last(period) }
       end
     end
   end
