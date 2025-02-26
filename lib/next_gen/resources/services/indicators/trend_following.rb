@@ -14,8 +14,7 @@ module NextGen
           OpenStruct.new({
                            sma_values: simple_moving_averages,
                            ema_values: exponential_moving_averages,
-                           macd_values: moving_average_convergence_divergence,
-                           rsi_values: relative_strength_index
+                           macd_values: moving_average_convergence_divergence
                          })
         end
 
@@ -31,10 +30,6 @@ module NextGen
                            ema10: Models::Indicator.calculate(:Ema, 10, cache_data),
                            ema20: Models::Indicator.calculate(:Ema, 20, cache_data)
                          })
-        end
-
-        def relative_strength_index(period = 14)
-          Models::Indicator.calculate(:Rsi, period, cache_data)
         end
 
         def moving_average_convergence_divergence(fast_period = 12, slow_period = 26, signal_period = 9)
