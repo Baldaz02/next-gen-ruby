@@ -82,4 +82,32 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(first_tsi.tsi).to eq -8.000203271189148
     end
   end
+
+  context 'Volatility (BB, ATR, KC)' do
+    it do
+      data = described_class.new(tickers).volatility
+
+      # BB
+      expect(data.bb_values.count).to eq 6
+      first_bollinger = data.bb_values.first
+      expect(Time.parse(first_bollinger.date_time)).to eq expected_timestamp
+      expect(first_bollinger.lower_band).to eq 95232.0818194411
+      expect(first_bollinger.middle_band).to eq 95745.1125
+      expect(first_bollinger.upper_band).to eq 96258.14318055891
+
+      # ATR
+      expect(data.atr_values.count).to eq 5
+      first_atr = data.atr_values.first
+      expect(Time.parse(first_atr.date_time)).to eq expected_timestamp
+      expect(first_atr.atr).to eq 375.3754512256822
+
+      # KC
+      expect(data.kc_values.count).to eq 16
+      first_kc = data.kc_values.first
+      expect(Time.parse(first_kc.date_time)).to eq expected_timestamp
+      expect(first_kc.lower_band).to eq 95344.57566666667
+      expect(first_kc.middle_band).to eq 95803.63766666668
+      expect(first_kc.upper_band).to eq 96262.69966666668
+    end
+  end
 end
