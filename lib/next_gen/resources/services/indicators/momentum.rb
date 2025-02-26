@@ -7,7 +7,7 @@ module NextGen
         attr_reader :indicator_obj
 
         OPTIONS = {
-          rsi: { period: 14, price_key: :close},
+          rsi: { period: 14, price_key: :close },
           sr: {},
           tsi: { low_period: 13, high_period: 25, price_key: :close }
         }.freeze
