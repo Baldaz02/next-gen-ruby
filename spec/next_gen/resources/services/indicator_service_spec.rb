@@ -22,7 +22,7 @@ RSpec.describe NextGen::Services::IndicatorService do
 
   let(:expected_timestamp) { Time.at(1_740_384_000) }
 
-  context 'Trend Following (SMA, EMA, RSI, MACD)' do
+  context 'Trend Following (SMA, EMA, MACD)' do
     it do
       data = described_class.new(tickers).trend_following
 
@@ -48,20 +48,38 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(Time.parse(ema_20_result.date_time)).to eq expected_timestamp
       expect(ema_20_result.ema).to eq 95_785.91814626193
 
-      # RSI
-      expect(data.rsi_values.count).to eq 5
-      first_rsi = data.rsi_values.first
-      expect(Time.parse(first_rsi.date_time)).to eq expected_timestamp
-      expect(first_rsi.rsi).to eq 47.37161756129789
-
       # MACD
-
       expect(data.macd_values.count).to eq 6
       first_macd = data.macd_values.first
       expect(Time.parse(first_macd.date_time)).to eq expected_timestamp
       expect(first_macd.macd_line).to eq(-178.1478434993478)
       expect(first_macd.macd_histogram).to eq 31.282820089225936
       expect(first_macd.signal_line).to eq(-209.43066358857374)
+    end
+  end
+
+  context 'Momentum (RSI, SR, TSI)' do
+    it do
+      data = described_class.new(tickers).momentum
+
+      # RSI
+      expect(data.rsi_values.count).to eq 5
+      first_rsi = data.rsi_values.first
+      expect(Time.parse(first_rsi.date_time)).to eq expected_timestamp
+      expect(first_rsi.rsi).to eq 47.37161756129789
+
+      # SR
+      expect(data.sr_values.count).to eq 4
+      first_sr = data.sr_values.first
+      expect(Time.parse(first_sr.date_time)).to eq expected_timestamp
+      expect(first_sr.sr).to eq 29.676017412218346
+      expect(first_sr.sr_signal).to eq 46.93657011183882
+
+      # TSI
+      expect(data.tsi_values.count).to eq 6
+      first_tsi = data.tsi_values.first
+      expect(Time.parse(first_tsi.date_time)).to eq expected_timestamp
+      expect(first_tsi.tsi).to eq -8.000203271189148
     end
   end
 end
