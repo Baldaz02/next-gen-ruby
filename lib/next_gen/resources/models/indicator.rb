@@ -8,7 +8,7 @@ module NextGen
       def self.calculate(type, period, cache_data, options: nil)
         indicator_class = Object.const_get("TechnicalAnalysis::#{type}")
 
-        if type == :Obv || type == :Vwap
+        if type == :Obv || type == :Vwap || type == :Adi
           indicator_class.calculate(cache_data[period])
         else
           if options
