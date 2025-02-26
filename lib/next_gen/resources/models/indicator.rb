@@ -5,7 +5,7 @@ require 'technical-analysis'
 module NextGen
   module Models
     class Indicator
-      TYPE_PERIOD = {
+      DATA_PERIOD = {
         sma10: 15,
         sma20: 25,
         ema10: 15,
@@ -22,13 +22,13 @@ module NextGen
         @cache_data = {}
         @tickers = tickers
 
-        cache_data_by_periods(TYPE_PERIOD.values.uniq)
+        cache_data_by_periods(DATA_PERIOD.values.uniq)
       end
 
       def calculate(type, options = {})
         indicator_class = Object.const_get("TechnicalAnalysis::#{type.capitalize}")
         key = :"#{type}#{options[:period]}"
-        period = TYPE_PERIOD[key] || TYPE_PERIOD[type.to_sym]
+        period = DATA_PERIOD[key] || DATA_PERIOD[type.to_sym]
 
         indicator_class.calculate(cache_data[period], options)
       end
