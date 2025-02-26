@@ -110,4 +110,28 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(first_kc.upper_band).to eq 96262.69966666668
     end
   end
+
+  context 'Volume Based (OBV, CMF, VWAP)' do
+    it do
+      data = described_class.new(tickers).volume_based
+      
+      # OBV
+      expect(data.obv_values.count).to eq 25
+      first_obv = data.obv_values.first
+      expect(Time.parse(first_obv.date_time)).to eq expected_timestamp
+      expect(first_obv.obv).to eq -2775.5002999999992
+
+      # CMF
+      expect(data.cmf_values.count).to eq 6
+      first_cmf = data.cmf_values.first
+      expect(Time.parse(first_cmf.date_time)).to eq expected_timestamp
+      expect(first_cmf.cmf).to eq -0.03214215314867067
+
+      # VWAP
+      expect(data.vwap_values.count).to eq 25
+      first_vwap = data.vwap_values.first
+      expect(Time.parse(first_vwap.date_time)).to eq expected_timestamp
+      expect(first_vwap.vwap).to eq 95771.99741613115
+    end
+  end
 end
