@@ -8,10 +8,14 @@ module NextGen
       def self.calculate(type, period, cache_data, options: nil)
         indicator_class = Object.const_get("TechnicalAnalysis::#{type}")
 
-        if options
-          indicator_class.calculate(cache_data[period], options)
+        if type == :Obv || type == :Vwap
+          indicator_class.calculate(cache_data[period])
         else
-          indicator_class.calculate(cache_data[period], period: period, price_key: :close)
+          if options
+            indicator_class.calculate(cache_data[period], options)
+          else
+            indicator_class.calculate(cache_data[period], period: period, price_key: :close)
+          end
         end
       end
     end
