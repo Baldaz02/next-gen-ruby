@@ -14,6 +14,7 @@ module NextGen
         @momentum = Indicators::Momentum.new(@cache_data)
         @volatility = Indicators::Volatility.new(@cache_data)
         @volume_based = Indicators::VolumeBased.new(@cache_data)
+        @sentiment = Indicators::Sentiment.new(@cache_data)
       end
 
       def trend_following
@@ -30,6 +31,10 @@ module NextGen
 
       def volume_based
         @volume_based.calculate_all
+      end
+
+      def sentiment
+        @sentiment.calculate_all
       end
 
       private

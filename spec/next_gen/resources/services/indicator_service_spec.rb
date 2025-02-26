@@ -134,4 +134,25 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(first_vwap.vwap).to eq 95771.99741613115
     end
   end
+
+  context 'Sentiment (FGI, ADI, MFI)' do
+    it do
+      data = described_class.new(tickers).sentiment
+
+      # FGI
+      expect(data.fgi_values.count).to eq 0
+
+      # ADI
+      expect(data.adi_values.count).to eq 19
+      first_adi = data.adi_values.first
+      expect(Time.parse(first_adi.date_time)).to eq expected_timestamp
+      expect(first_adi.adi).to eq -1033.7879626264803
+
+      # MFI
+      expect(data.mfi_values.count).to eq 5
+      first_mfi = data.mfi_values.first
+      expect(Time.parse(first_mfi.date_time)).to eq expected_timestamp
+      expect(first_mfi.mfi).to eq 49.90181972128826
+    end
+  end
 end
