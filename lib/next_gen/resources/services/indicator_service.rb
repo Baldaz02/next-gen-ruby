@@ -5,39 +5,35 @@ module NextGen
     class IndicatorService
       attr_reader :price_data, :cache_data
 
+      INDICATOR_CLASSES = {
+        trend_following: Indicators::TrendFollowing,
+        momentum: Indicators::Momentum,
+        volatility: Indicators::Volatility,
+        volume_based: Indicators::VolumeBased,
+        sentiment: Indicators::Sentiment
+      }.freeze
+
       def initialize(tickers, buffer_size = 5)
         @price_data = load_data(tickers).freeze
         @cache_data = {}
         cache_data_by_periods([10, 14, 20, 34, 38], buffer_size)
 
-        @trend_following = Indicators::TrendFollowing.new(@cache_data)
-        @momentum = Indicators::Momentum.new(@cache_data)
-        @volatility = Indicators::Volatility.new(@cache_data)
-        @volume_based = Indicators::VolumeBased.new(@cache_data)
-        @sentiment = Indicators::Sentiment.new(@cache_data)
+        initialize_indicators
       end
 
-      def trend_following
-        @trend_following.calculate_all
-      end
-
-      def momentum
-        @momentum.calculate_all
-      end
-
-      def volatility
-        @volatility.calculate_all
-      end
-
-      def volume_based
-        @volume_based.calculate_all
-      end
-
-      def sentiment
-        @sentiment.calculate_all
+      INDICATOR_CLASSES.keys.each do |indicator|
+        define_method(indicator) do
+          instance_variable_get("@#{indicator}").calculate_all
+        end
       end
 
       private
+
+      def initialize_indicators
+        INDICATOR_CLASSES.each do |indicator, klass|
+          instance_variable_set("@#{indicator}", klass.new(@cache_data))
+        end
+      end
 
       def load_data(tickers)
         tickers.map do |t|
