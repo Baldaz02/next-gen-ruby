@@ -96,13 +96,13 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(first_bollinger.upper_band).to eq 96_258.14318055891
 
       # ATR
-      expect(data.atr_values.count).to eq 5
+      expect(data.atr_values.count).to eq 6
       first_atr = data.atr_values.first
       expect(Time.parse(first_atr.date_time)).to eq expected_timestamp
-      expect(first_atr.atr).to eq 375.3754512256822
+      expect(first_atr.atr).to eq 382.9426101754502
 
       # KC
-      expect(data.kc_values.count).to eq 16
+      expect(data.kc_values.count).to eq 6
       first_kc = data.kc_values.first
       expect(Time.parse(first_kc.date_time)).to eq expected_timestamp
       expect(first_kc.lower_band).to eq 95_344.57566666667

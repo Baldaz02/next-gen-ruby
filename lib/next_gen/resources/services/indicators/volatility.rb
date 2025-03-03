@@ -4,30 +4,26 @@ module NextGen
   module Services
     module Indicators
       class Volatility
-        attr_reader :cache_data
+        attr_reader :indicator_obj
 
-        def initialize(cache_data)
-          @cache_data = cache_data
+        OPTIONS = {
+          bb: { period: 20, price_key: :close },
+          atr: {},
+          kc: {}
+        }.freeze
+
+        def initialize(indicator_obj)
+          @indicator_obj = indicator_obj
         end
 
         def calculate_all
-          OpenStruct.new({
-                           bb_values: bollinger_bands,
-                           atr_values: average_true_range,
-                           kc_values: keltner_channel
-                         })
+          OpenStruct.new(OPTIONS.to_h { |type, opts| [:"#{type}_values", calculate_indicator(type, opts)] })
         end
 
-        def average_true_range(period = 14)
-          Models::Indicator.calculate(:Atr, period, cache_data, options: {})
-        end
+        private
 
-        def bollinger_bands(period = 20)
-          Models::Indicator.calculate(:Bb, period, cache_data)
-        end
-
-        def keltner_channel(period = 20)
-          Models::Indicator.calculate(:Kc, period, cache_data, options: {})
+        def calculate_indicator(type, opts)
+          indicator_obj.calculate(type.to_s, opts)
         end
       end
     end
