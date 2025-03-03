@@ -19,7 +19,9 @@ module NextGen
         kc: 15,
         obv: 20,
         cmf: 25,
-        vwap: 25
+        vwap: 25,
+        adi: 20,
+        mfi: 20
       }.freeze
 
       attr_reader :cache_data, :tickers
