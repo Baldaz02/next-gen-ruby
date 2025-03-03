@@ -13,7 +13,10 @@ module NextGen
         macd: 39,
         rsi: 20,
         sr: 21,
-        tsi: 43
+        tsi: 43,
+        bb: 25,
+        atr: 20,
+        kc: 15
       }.freeze
 
       attr_reader :cache_data, :tickers
