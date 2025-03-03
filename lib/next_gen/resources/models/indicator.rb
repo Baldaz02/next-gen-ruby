@@ -16,7 +16,10 @@ module NextGen
         tsi: 43,
         bb: 25,
         atr: 20,
-        kc: 15
+        kc: 15,
+        obv: 20,
+        cmf: 25,
+        vwap: 25
       }.freeze
 
       attr_reader :cache_data, :tickers
@@ -33,7 +36,11 @@ module NextGen
         key = :"#{type}#{options[:period]}"
         period = DATA_PERIOD[key] || DATA_PERIOD[type.to_sym]
 
-        indicator_class.calculate(cache_data[period], options)
+        if %i[obv vwap adi].map(&:to_s).include?(type)
+          indicator_class.calculate(cache_data[period])
+        else
+          indicator_class.calculate(cache_data[period], options)
+        end
       end
 
       private
