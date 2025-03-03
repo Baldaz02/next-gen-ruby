@@ -20,7 +20,7 @@ module NextGen
 
         def calculate_all
           OpenStruct.new(INDICATORS.each_with_object({}) do |indicator, result|
-            result["#{indicator}_values".to_sym] = calculate_indicator(indicator)
+            result[:"#{indicator}_values"] = calculate_indicator(indicator)
           end)
         end
 
