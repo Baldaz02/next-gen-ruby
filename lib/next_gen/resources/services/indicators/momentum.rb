@@ -17,29 +17,15 @@ module NextGen
         end
 
         def calculate_all
-          OpenStruct.new({
-                           rsi_values: relative_strength_index,
-                           sr_values: stochastic_oscillator,
-                           tsi_values: true_strength_index
-                         })
-        end
-
-        def relative_strength_index
-          calculate_indicator(:rsi)
-        end
-
-        def stochastic_oscillator
-          calculate_indicator(:sr)
-        end
-
-        def true_strength_index
-          calculate_indicator(:tsi)
+          OpenStruct.new(OPTIONS.transform_keys { |type| :"#{type}_values" }
+                               .transform_values { |opts| calculate_indicator(opts) })
         end
 
         private
 
-        def calculate_indicator(type, opts = nil)
-          indicator_obj.calculate(type.to_s, opts || OPTIONS[type])
+        def calculate_indicator(opts)
+          type = opts.empty? ? :sr : OPTIONS.key(opts)
+          indicator_obj.calculate(type.to_s, opts)
         end
       end
     end
