@@ -4,38 +4,34 @@ module NextGen
   module Services
     module Indicators
       class TrendFollowing
-        attr_reader :cache_data
+        attr_reader :indicator_obj
 
-        def initialize(cache_data)
-          @cache_data = cache_data
+        OPTIONS = {
+          sma: { 'sma10' => { period: 10, price_key: :close }, 'sma20' => { period: 20, price_key: :close } },
+          ema: { 'ema10' => { period: 10, price_key: :close }, 'ema20' => { period: 20, price_key: :close } },
+          macd: { fast_period: 12, slow_period: 26, signal_period: 9, price_key: :close }
+        }.freeze
+
+        def initialize(indicator_obj)
+          @indicator_obj = indicator_obj
         end
 
         def calculate_all
-          OpenStruct.new({
-                           sma_values: simple_moving_averages,
-                           ema_values: exponential_moving_averages,
-                           macd_values: moving_average_convergence_divergence
-                         })
+          OpenStruct.new(
+            sma_values: moving_average(:sma),
+            ema_values: moving_average(:ema),
+            macd_values: calculate_indicator(:macd)
+          )
         end
 
-        def simple_moving_averages
-          OpenStruct.new({
-                           sma10: Models::Indicator.calculate(:Sma, 10, cache_data),
-                           sma20: Models::Indicator.calculate(:Sma, 20, cache_data)
-                         })
+        private
+
+        def moving_average(type)
+          OpenStruct.new(OPTIONS[type].transform_values { |opts| calculate_indicator(type, opts) })
         end
 
-        def exponential_moving_averages
-          OpenStruct.new({
-                           ema10: Models::Indicator.calculate(:Ema, 10, cache_data),
-                           ema20: Models::Indicator.calculate(:Ema, 20, cache_data)
-                         })
-        end
-
-        def moving_average_convergence_divergence(fast_period = 12, slow_period = 26, signal_period = 9)
-          options = { fast_period: fast_period, slow_period: slow_period, signal_period: signal_period,
-                      price_key: :close }
-          Models::Indicator.calculate(:Macd, 34, cache_data, options: options)
+        def calculate_indicator(type, opts = nil)
+          indicator_obj.calculate(type.to_s, opts || OPTIONS[type])
         end
       end
     end
