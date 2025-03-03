@@ -4,30 +4,30 @@ module NextGen
   module Services
     module Indicators
       class VolumeBased
-        attr_reader :cache_data
+        attr_reader :indicator_obj
 
-        def initialize(cache_data)
-          @cache_data = cache_data
+        OPTIONS = {
+          obv: { period: 20, price_key: :close },
+          cmf: { period: 20 },
+          vwap: {}
+        }.freeze
+
+        INDICATORS = %i[obv cmf vwap].freeze
+
+        def initialize(indicator_obj)
+          @indicator_obj = indicator_obj
         end
 
         def calculate_all
-          OpenStruct.new({
-                           obv_values: on_balance_volume,
-                           cmf_values: chaikin_money_flow,
-                           vwap_values: volume_weighted_average_price
-                         })
+          OpenStruct.new(INDICATORS.each_with_object({}) do |indicator, result|
+            result["#{indicator}_values".to_sym] = calculate_indicator(indicator)
+          end)
         end
 
-        def chaikin_money_flow(period = 20)
-          Models::Indicator.calculate(:Cmf, period, cache_data, options: {})
-        end
+        private
 
-        def on_balance_volume(period = 20)
-          Models::Indicator.calculate(:Obv, period, cache_data)
-        end
-
-        def volume_weighted_average_price(period = 20)
-          Models::Indicator.calculate(:Vwap, period, cache_data)
+        def calculate_indicator(type)
+          indicator_obj.calculate(type.to_s, OPTIONS.fetch(type, {}))
         end
       end
     end
