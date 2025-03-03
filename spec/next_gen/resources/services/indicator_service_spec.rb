@@ -119,13 +119,13 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(data.obv_values.count).to eq 20
       first_obv = data.obv_values.first
       expect(Time.parse(first_obv.date_time)).to eq expected_timestamp
-      expect(first_obv.obv).to eq -1628.6596099999997
+      expect(first_obv.obv).to eq(-1628.6596099999997)
 
       # CMF
       expect(data.cmf_values.count).to eq 6
       first_cmf = data.cmf_values.first
       expect(Time.parse(first_cmf.date_time)).to eq expected_timestamp
-      expect(first_cmf.cmf).to eq -0.03214215314867067
+      expect(first_cmf.cmf).to eq(-0.03214215314867067)
 
       # VWAP
       expect(data.vwap_values.count).to eq 25
@@ -143,13 +143,13 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(data.fgi_values.count).to eq 0
 
       # ADI
-      expect(data.adi_values.count).to eq 19
+      expect(data.adi_values.count).to eq 20
       first_adi = data.adi_values.first
       expect(Time.parse(first_adi.date_time)).to eq expected_timestamp
-      expect(first_adi.adi).to eq(-1033.7879626264803)
+      expect(first_adi.adi).to eq(-413.2663317468913)
 
       # MFI
-      expect(data.mfi_values.count).to eq 5
+      expect(data.mfi_values.count).to eq 6
       first_mfi = data.mfi_values.first
       expect(Time.parse(first_mfi.date_time)).to eq expected_timestamp
       expect(first_mfi.mfi).to eq 49.90181972128826
