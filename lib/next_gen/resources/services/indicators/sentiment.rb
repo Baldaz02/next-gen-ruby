@@ -4,10 +4,15 @@ module NextGen
   module Services
     module Indicators
       class Sentiment
-        attr_reader :cache_data
+        attr_reader :indicator_obj
 
-        def initialize(cache_data)
-          @cache_data = cache_data
+        OPTIONS = {
+          adi: { period: 14, price_key: :close },
+          mfi: {}
+        }.freeze
+
+        def initialize(indicator_obj)
+          @indicator_obj = indicator_obj
         end
 
         def calculate_all
@@ -18,16 +23,22 @@ module NextGen
                          })
         end
 
-        def accumulation_distribution_index(period = 14)
-          Models::Indicator.calculate(:Adi, period, cache_data)
+        def accumulation_distribution_index
+          calculate_indicator(:adi)
         end
 
         def fear_greed_index
           []
         end
 
-        def money_flow_index(period = 14)
-          Models::Indicator.calculate(:Mfi, period, cache_data, options: {})
+        def money_flow_index
+          calculate_indicator(:mfi)
+        end
+
+        private
+
+        def calculate_indicator(type, opts = nil)
+          indicator_obj.calculate(type.to_s, opts || OPTIONS[type])
         end
       end
     end
