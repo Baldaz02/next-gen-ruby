@@ -36,7 +36,7 @@ module NextGen
       def calculate(type, options = {})
         indicator_class = Object.const_get("TechnicalAnalysis::#{type.capitalize}")
         key = :"#{type}#{options[:period]}"
-        period = DATA_PERIOD[key] || DATA_PERIOD[type.to_sym]
+        period = DATA_PERIOD[type.to_sym] || DATA_PERIOD[key]
 
         if %i[obv vwap adi].map(&:to_s).include?(type)
           indicator_class.calculate(cache_data[period])
