@@ -3,6 +3,7 @@ PATH
   specs:
     next_gen (0.0.0)
       csv
+      file_utils
       json
       ostruct (~> 0.6)
       rest-client
@@ -29,6 +30,7 @@ GEM
     docile (1.4.1)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    file_utils (1.1.2)
     hashdiff (1.0.1)
     http-accept (1.7.0)
     http-cookie (1.0.5)
@@ -86,6 +88,7 @@ GEM
     simplecov-html (0.13.1)
     simplecov_json_formatter (0.1.4)
     technical-analysis (0.2.4)
+    timecop (0.9.5)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -112,6 +115,7 @@ DEPENDENCIES
   rspec (~> 3.8)
   rubocop (~> 0.0)
   simplecov (~> 0.16)
+  timecop
   webmock (~> 3.0)
 
 BUNDLED WITH
