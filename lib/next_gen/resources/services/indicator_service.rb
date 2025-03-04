@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'concurrent'
+
 module NextGen
   module Services
     class IndicatorService
@@ -22,7 +24,9 @@ module NextGen
 
       INDICATOR_CLASSES.each_key do |indicator|
         define_method(indicator) do
-          instance_variable_get("@#{indicator}").calculate_all
+          Concurrent::Future.execute do
+            instance_variable_get("@#{indicator}").calculate_all
+          end.value
         end
       end
 
