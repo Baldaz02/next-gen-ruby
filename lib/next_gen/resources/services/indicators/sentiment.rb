@@ -3,37 +3,23 @@
 module NextGen
   module Services
     module Indicators
-      class Sentiment
-        attr_reader :indicator_obj
-
+      class Sentiment < BaseIndicatorService
         OPTIONS = {
           adi: { period: 14, price_key: :close },
           mfi: {}
         }.freeze
 
-        def initialize(indicator_obj)
-          @indicator_obj = indicator_obj
-        end
-
         def calculate_all
           OpenStruct.new({
                            fgi_values: fear_greed_index,
-                           adi_values: accumulation_distribution_index,
-                           mfi_values: money_flow_index
+                           adi_values: calculate_indicator(:adi),
+                           mfi_values: calculate_indicator(:mfi)
                          })
-        end
-
-        def accumulation_distribution_index
-          calculate_indicator(:adi)
         end
 
         def fear_greed_index(limit = 6)
           params = OpenStruct.new({ limit: limit })
           deep_struct(Clients::Fgi.new(params).values)
-        end
-
-        def money_flow_index
-          calculate_indicator(:mfi)
         end
 
         private
@@ -47,10 +33,6 @@ module NextGen
           else
             obj
           end
-        end
-
-        def calculate_indicator(type, opts = nil)
-          indicator_obj.calculate(type.to_s, opts || OPTIONS[type])
         end
       end
     end
