@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     next_gen (0.0.0)
+      concurrent-ruby (~> 1.3.5)
       csv
       file_utils
       json

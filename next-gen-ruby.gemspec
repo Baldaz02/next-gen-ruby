@@ -22,6 +22,7 @@ Gem::Specification.new do |specification|
   specification.executables = specification.files.grep(%r{^bin/}) { |file| File.basename(file) }
   specification.require_paths = %w[lib]
 
+  specification.add_dependency('concurrent-ruby', '~> 1.3.5')
   specification.add_dependency('csv')
   specification.add_dependency('file_utils')
   specification.add_dependency('json')
