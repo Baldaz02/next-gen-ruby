@@ -33,10 +33,8 @@ module NextGen
       def data_file_path
         base_path = File.join(Dir.pwd, 'data', Time.now.strftime('%Y-%m-%d'))
         file_path = File.join(base_path, 'fgi.json')
-        
-        if defined?(RSpec)
-          file_path.sub!('data', 'spec/data')
-        end
+
+        file_path.sub!('data', 'spec/data') if defined?(RSpec)
 
         FileUtils.mkdir_p(File.dirname(file_path))
 
