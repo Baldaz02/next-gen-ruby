@@ -24,6 +24,7 @@ Gem::Specification.new do |specification|
 
   specification.add_dependency('csv')
   specification.add_dependency('json')
+  specification.add_dependency('file_utils')
   specification.add_dependency('ostruct', '~> 0.6')
   specification.add_dependency('rest-client')
   specification.add_dependency('technical-analysis')
