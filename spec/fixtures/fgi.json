@@ -31,26 +31,6 @@
       "value": "10",
       "value_classification": "Extreme Fear",
       "timestamp": "1740614400"
-    },
-    {
-      "value": "21",
-      "value_classification": "Extreme Fear",
-      "timestamp": "1740528000"
-    },
-    {
-      "value": "25",
-      "value_classification": "Extreme Fear",
-      "timestamp": "1740441600"
-    },
-    {
-      "value": "49",
-      "value_classification": "Neutral",
-      "timestamp": "1740355200"
-    },
-    {
-      "value": "50",
-      "value_classification": "Neutral",
-      "timestamp": "1740268800"
     }
   ],
   "metadata": {
