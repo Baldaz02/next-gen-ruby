@@ -6,22 +6,10 @@ module NextGen
   module Models
     class Indicator
       DATA_PERIOD = {
-        sma10: 15,
-        sma20: 25,
-        ema10: 15,
-        ema20: 25,
-        macd: 39,
-        rsi: 20,
-        sr: 21,
-        tsi: 43,
-        bb: 25,
-        atr: 20,
-        kc: 15,
-        obv: 20,
-        cmf: 25,
-        vwap: 25,
-        adi: 20,
-        mfi: 20
+        adi: 20, atr: 20, bb: 25, cmf: 25,
+        ema10: 15, ema20: 25, kc: 15, macd: 39,
+        mfi: 20, obv: 20, rsi: 20, sma10: 15,
+        sma20: 25, sr: 21, tsi: 43, vwap: 25
       }.freeze
 
       attr_reader :cache_data, :tickers
@@ -38,7 +26,7 @@ module NextGen
         key = :"#{type}#{options[:period]}"
         period = DATA_PERIOD[type.to_sym] || DATA_PERIOD[key]
 
-        if %i[obv vwap adi].map(&:to_s).include?(type)
+        if %i[adi obv vwap].map(&:to_s).include?(type)
           indicator_class.calculate(cache_data[period])
         else
           indicator_class.calculate(cache_data[period], options)
