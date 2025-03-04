@@ -27,8 +27,9 @@ module NextGen
           calculate_indicator(:adi)
         end
 
-        def fear_greed_index
-          []
+        def fear_greed_index(limit = 6)
+          params = OpenStruct.new({ limit: limit })
+          deep_struct(Clients::Fgi.new(params).values)
         end
 
         def money_flow_index
@@ -36,6 +37,17 @@ module NextGen
         end
 
         private
+
+        def deep_struct(obj)
+          case obj
+          when Hash
+            OpenStruct.new(obj.transform_values { |v| deep_struct(v) })
+          when Array
+            obj.map { |v| deep_struct(v) }
+          else
+            obj
+          end
+        end
 
         def calculate_indicator(type, opts = nil)
           indicator_obj.calculate(type.to_s, opts || OPTIONS[type])
