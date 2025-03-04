@@ -24,10 +24,22 @@ module NextGen
 
       INDICATOR_CLASSES.each_key do |indicator|
         define_method(indicator) do
+          instance_variable_get("@#{indicator}").calculate_all
+        end
+      end
+
+      def calculate_all
+        futures = INDICATOR_CLASSES.keys.map do |indicator|
           Concurrent::Future.execute do
             instance_variable_get("@#{indicator}").calculate_all
-          end.value
+          end
         end
+
+        results = futures.map(&:value).reduce({}) do |acc, struct|
+          acc.merge(struct.to_h)
+        end
+
+        OpenStruct.new(results)
       end
 
       private
