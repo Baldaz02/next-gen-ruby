@@ -136,11 +136,14 @@ RSpec.describe NextGen::Services::IndicatorService do
   end
 
   context 'Sentiment (FGI, ADI, MFI)' do
+    before { Timecop.freeze(Time.local(2025, 3, 4)) }
+
     it do
       data = described_class.new(tickers).sentiment
 
       # FGI
-      expect(data.fgi_values.count).to eq 0
+      expect(data.fgi_values.data.count).to eq 10
+      expect(data.fgi_values.data.map(&:value).map(&:to_i)).to eq [15, 33, 26, 20, 16, 10, 21, 25, 49, 50]
 
       # ADI
       expect(data.adi_values.count).to eq 20
