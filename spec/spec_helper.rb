@@ -3,6 +3,8 @@
 require('byebug')
 require('simplecov')
 require('ostruct')
+require('timecop')
+require('webmock/rspec')
 
 SimpleCov.start do
   minimum_coverage(100)
@@ -43,3 +45,5 @@ RSpec.configure do |config|
   config.order = :random
   Kernel.srand(config.seed)
 end
+
+WebMock.disable_net_connect!(allow_localhost: true)
