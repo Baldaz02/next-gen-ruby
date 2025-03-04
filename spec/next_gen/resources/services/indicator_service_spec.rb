@@ -158,4 +158,39 @@ RSpec.describe NextGen::Services::IndicatorService do
       expect(first_mfi.mfi).to eq 49.90181972128826
     end
   end
+
+  context 'all indicators' do
+    before { Timecop.freeze(Time.local(2025, 3, 4)) }
+
+    it do
+      data = described_class.new(tickers).calculate_all
+
+      # Trend Following
+      expect(data.sma_values.sma10.count).to eq 6
+      expect(data.sma_values.sma20.count).to eq 6
+      expect(data.ema_values.ema10.count).to eq 6
+      expect(data.ema_values.ema20.count).to eq 6
+      expect(data.macd_values.count).to eq 6
+
+      # Momentum
+      expect(data.rsi_values.count).to eq 6
+      expect(data.sr_values.count).to eq 6
+      expect(data.tsi_values.count).to eq 6
+
+      # Volatility
+      expect(data.bb_values.count).to eq 6
+      expect(data.atr_values.count).to eq 6
+      expect(data.kc_values.count).to eq 6
+
+      # Volume Based
+      expect(data.obv_values.count).to eq 20
+      expect(data.cmf_values.count).to eq 6
+      expect(data.vwap_values.count).to eq 25
+
+      # Sentiment
+      expect(data.fgi_values.data.count).to eq 6
+      expect(data.adi_values.count).to eq 20
+      expect(data.mfi_values.count).to eq 6
+    end
+  end
 end
