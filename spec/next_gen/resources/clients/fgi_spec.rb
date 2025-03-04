@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe NextGen::Clients::Fgi do
-  let(:params) { { limit: 10 } }
+  let(:params) { { limit: 6 } }
 
   let(:client) { described_class.new(OpenStruct.new(params)) }
   
@@ -18,7 +18,7 @@ RSpec.describe NextGen::Clients::Fgi do
 
       it do
         response = client.values
-        expect(response['data'].count).to eq 10
+        expect(response['data'].count).to eq 6
         
         first_fgi = response['data'].first
         expect(first_fgi['value']).to eq '15'
@@ -28,7 +28,7 @@ RSpec.describe NextGen::Clients::Fgi do
 
         file_path = client.send(:data_file_path)
         saved_data = JSON.parse(File.read(file_path))
-        expect(saved_data['data'].count).to eq 10
+        expect(saved_data['data'].count).to eq 6
         expect(saved_data['data'].first['value']).to eq '15'
       end
     end
@@ -38,7 +38,7 @@ RSpec.describe NextGen::Clients::Fgi do
         expect(RestClient).not_to receive(:get)
 
         response = client.values
-        expect(response['data'].count).to eq 10
+        expect(response['data'].count).to eq 6
         
         first_fgi = response['data'].first
         expect(first_fgi['value']).to eq '15'

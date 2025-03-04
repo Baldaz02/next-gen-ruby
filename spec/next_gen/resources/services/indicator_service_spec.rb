@@ -142,8 +142,8 @@ RSpec.describe NextGen::Services::IndicatorService do
       data = described_class.new(tickers).sentiment
 
       # FGI
-      expect(data.fgi_values.data.count).to eq 10
-      expect(data.fgi_values.data.map(&:value).map(&:to_i)).to eq [15, 33, 26, 20, 16, 10, 21, 25, 49, 50]
+      expect(data.fgi_values.data.count).to eq 6
+      expect(data.fgi_values.data.map(&:value).map(&:to_i)).to eq [15, 33, 26, 20, 16, 10]
 
       # ADI
       expect(data.adi_values.count).to eq 20
