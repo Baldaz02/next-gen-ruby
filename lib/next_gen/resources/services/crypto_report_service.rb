@@ -16,10 +16,14 @@ module NextGen
       end
 
       def call
+        json = []
         cryptos.each do |crypto|
           tickers = fetch_ticker_data(crypto)
-          Services::IndicatorService.new(tickers).calculate_all
+          indicators = Services::IndicatorService.new(tickers).calculate_all
+          json << Models::CryptoMarketData.new(crypto, tickers, indicators).to_json
         end
+
+        json
       end
 
       private
