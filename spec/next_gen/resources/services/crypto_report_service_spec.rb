@@ -9,7 +9,7 @@ RSpec.describe NextGen::Services::CryptoReportService do
   let(:candlestick_data) { [{ open: 50000, high: 51000, low: 49500, close: 50500 }] }
 
   before do
-    allow(CSV).to receive(:foreach).and_yield(crypto_data)
+    allow(CSV).to receive(:foreach).and_return([crypto_data])
     allow(NextGen::Clients::Binance).to receive(:new).and_return(binance_client)
     allow(binance_client).to receive(:candlestick).and_return(candlestick_data)
     allow(NextGen::Services::IndicatorService).to receive(:new).and_return(indicator_service)

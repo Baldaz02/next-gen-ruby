@@ -12,31 +12,32 @@ module NextGen
       attr_reader :cryptos
 
       def initialize
-        @cryptos = []
-
-        CSV.foreach(FILE_PATH, headers: true) do |row|
-          params = { name: row['Name'], symbol: row['Symbol'] }
-          @cryptos << Models::Crypto.new(params)
-        end
+        @cryptos = load_cryptos
       end
 
       def call
         cryptos.each do |crypto|
-          params = OpenStruct.new(DEFAULT_PARAMS.merge({ symbol: "#{crypto.symbol}USDT" }))
-          client = Clients::Binance.new(OpenStruct.new(params))
-          data = client.candlestick
-          tickers = parse_data(data, crypto)
-
+          tickers = fetch_ticker_data(crypto)
           Services::IndicatorService.new(tickers).calculate_all
         end
       end
 
       private
 
-      def parse_data(data, crypto)
-        data.map do |entry|
-          Models::Ticker.new(entry, crypto)
+      def fetch_ticker_data(crypto)
+        params = DEFAULT_PARAMS.merge(symbol: "#{crypto.symbol}USDT")
+        client = Clients::Binance.new(OpenStruct.new(params))
+        parse_data(client.candlestick, crypto)
+      end
+
+      def load_cryptos
+        CSV.foreach(FILE_PATH, headers: true).map do |row|
+          Models::Crypto.new(name: row['Name'], symbol: row['Symbol'])
         end
+      end
+
+      def parse_data(data, crypto)
+        data.map { |entry| Models::Ticker.new(entry, crypto) }
       end
     end
   end
