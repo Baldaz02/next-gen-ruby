@@ -7,7 +7,7 @@ module NextGen
   module Services
     class CryptoReportService
       DEFAULT_PARAMS = { interval: '1h', limit: 50 }.freeze
-      FILE_PATH = 'data/cryptos.csv'.freeze
+      FILE_PATH = 'data/cryptos.csv'
 
       attr_reader :cryptos
 

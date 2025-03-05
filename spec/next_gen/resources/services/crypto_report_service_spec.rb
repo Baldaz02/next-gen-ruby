@@ -4,9 +4,9 @@ RSpec.describe NextGen::Services::CryptoReportService do
   before { Timecop.freeze(Time.local(2025, 3, 4)) }
 
   let(:crypto_data) { CSV::Row.new(%w[Name Symbol], %w[Bitcoin BTC]) }
-  let(:binance_client) { instance_double("NextGen::Clients::Binance") }
-  let(:indicator_service) { instance_double("NextGen::Services::IndicatorService", calculate_all: true) }
-  let(:candlestick_data) { [{ open: 50000, high: 51000, low: 49500, close: 50500 }] }
+  let(:binance_client) { instance_double('NextGen::Clients::Binance') }
+  let(:indicator_service) { instance_double('NextGen::Services::IndicatorService', calculate_all: true) }
+  let(:candlestick_data) { [{ open: 50_000, high: 51_000, low: 49_500, close: 50_500 }] }
 
   before do
     allow(CSV).to receive(:foreach).and_return([crypto_data])
