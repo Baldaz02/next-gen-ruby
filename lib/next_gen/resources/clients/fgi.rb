@@ -22,7 +22,7 @@ module NextGen
           JSON.parse(File.read(file_path))
         else
           response = RestClient.get(BASE_URL, { params: { limit: params[:limit] } })
-          json_data = JSON.parse(response.body)
+          json_data = JSON.parse(response.body)['data']
           save_data(file_path, json_data)
           json_data
         end
