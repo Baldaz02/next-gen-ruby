@@ -1,28 +1,30 @@
 # frozen_string_literal: true
 
 RSpec.describe NextGen::Services::CryptoReportService do
-  before { Timecop.freeze(Time.local(2025, 3, 4)) }
-
   let(:crypto_data) { CSV::Row.new(%w[Name Symbol], %w[Bitcoin BTC]) }
-  let(:binance_client) { instance_double('NextGen::Clients::Binance') }
-  let(:indicator_service) { instance_double('NextGen::Services::IndicatorService', calculate_all: true) }
-  let(:candlestick_data) { [{ open: 50_000, high: 51_000, low: 49_500, close: 50_500 }] }
 
   before do
+    Timecop.freeze(Time.local(2025, 3, 4))
     allow(CSV).to receive(:foreach).and_return([crypto_data])
-    allow(NextGen::Clients::Binance).to receive(:new).and_return(binance_client)
-    allow(binance_client).to receive(:candlestick).and_return(candlestick_data)
-    allow(NextGen::Services::IndicatorService).to receive(:new).and_return(indicator_service)
   end
 
-  it do
-    expect(NextGen::Clients::Binance).to receive(:new).with(
-      have_attributes(symbol: 'BTCUSDT', interval: '1h', limit: 50)
-    ).and_return(binance_client)
+  context '#call', vcr: true do
+    it do
+      service_response = JSON.parse(described_class.new.call.first)
 
-    expect(NextGen::Services::IndicatorService).to receive(:new).with(kind_of(Array)).and_return(indicator_service)
-    expect(indicator_service).to receive(:calculate_all)
+      # Crypto data
+      expect(service_response['crypto']['name']).to eq 'Bitcoin'
+      expect(service_response['crypto']['symbol']).to eq 'BTC'
 
-    expect { described_class.new.call }.not_to raise_error
+      # Ticker data
+      expect(service_response['data'].size).to eq 50
+      first_data = service_response['data'].first
+      expect(first_data).to have_key('date')
+      expect(first_data).to have_key('open_price')
+      expect(first_data).to have_key('close_price')
+      expect(first_data).to have_key('high_price')
+      expect(first_data).to have_key('low_price')
+      expect(first_data).to have_key('volume')
+    end
   end
 end
