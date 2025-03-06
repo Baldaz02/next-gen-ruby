@@ -10,6 +10,7 @@ module NextGen
 
       def initialize
         @cryptos = Models::Crypto.all
+        Config::Application.set_timezone('GMT')
       end
 
       def call
