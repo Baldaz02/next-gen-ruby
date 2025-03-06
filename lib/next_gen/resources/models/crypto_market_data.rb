@@ -12,22 +12,11 @@ module NextGen
       end
 
       def to_h
-        {
-          crypto: {
-            name: crypto.name,
-            symbol: crypto.symbol
-          },
-          data: tickers.to_a.sort_by { |ticker| -ticker.date.to_time.to_i }.map do |ticker|
-            {
-              date: ticker.date,
-              open_price: ticker.open_price,
-              close_price: ticker.close_price,
-              high_price: ticker.high_price,
-              low_price: ticker.low_price,
-              volume: ticker.volume
-            }.merge(format_indicators(ticker.date))
+        crypto.to_h.merge({
+          data: Models::Ticker.sorted_by_date(tickers).map do |ticker|
+            ticker.to_h.merge(format_indicators(ticker.date))
           end
-        }
+        })
       end
 
       private
