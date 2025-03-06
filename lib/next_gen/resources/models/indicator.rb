@@ -33,7 +33,45 @@ module NextGen
         end
       end
 
+      def self.filter_by_datetime(values, datetime, index = 0)
+        return [] unless values.any?(&:date_time)
+
+        filtered_indicators = values.select { |value| value.date_time == datetime }
+        return [] if filtered_indicators.empty?
+
+        filtered_indicators.each_with_object({}).with_index do |(indicator, data), idx|
+          indicator.instance_variables.each do |var|
+            attribute = var.to_s.delete('@')
+            next if attribute == 'date_time'
+
+            attribute = adjust_attribute(attribute, idx)
+            data[attribute.to_sym] = indicator.instance_variable_get(var)
+          end
+        end
+      end
+
+      def self.filter_by_today(data, ticker_datetime)
+        ticker_start_of_day = DateTime.new(ticker_datetime.year, ticker_datetime.month, ticker_datetime.day)
+        ticker_timestamp = ticker_start_of_day.to_time.to_i
+
+        data.select { |d| d.timestamp == ticker_timestamp }.map do |d|
+          {
+            value: d.value.to_i,
+            value_classification: d.value_classification,
+            timestamp: Config::Application.timestamp_to_date(d.timestamp.to_i),
+            time_until_update: d.time_until_update&.to_i
+          }
+        end
+      end
+
       private
+
+      def self.adjust_attribute(attribute, index)
+        return attribute unless %w[sma ema].include?(attribute)
+
+        suffix = (index.even? ? '10' : '20')
+        "#{attribute}#{suffix}"
+      end
 
       def cache_data_by_periods(periods)
         periods.each { |period| cache_data[period] ||= tickers.last(period) }
