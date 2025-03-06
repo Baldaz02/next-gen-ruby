@@ -10,21 +10,17 @@ RSpec.describe NextGen::Services::CryptoReportService do
 
   context '#call', vcr: true do
     it do
-      service_response = JSON.parse(described_class.new.call.first)
+      service = NextGen::Services::CryptoReportService.new
+      result = service.call
 
-      # Crypto data
-      expect(service_response['crypto']['name']).to eq 'Bitcoin'
-      expect(service_response['crypto']['symbol']).to eq 'BTC'
+      file_path = 'spec/data/2025-03-04 00/Bitcoin.json'
+      expect(File.exist?(file_path)).to be_truthy
+      json_data = JSON.parse(File.read(file_path))
 
-      # Ticker data
-      expect(service_response['data'].size).to eq 50
-      first_data = service_response['data'].first
-      expect(first_data).to have_key('date')
-      expect(first_data).to have_key('open_price')
-      expect(first_data).to have_key('close_price')
-      expect(first_data).to have_key('high_price')
-      expect(first_data).to have_key('low_price')
-      expect(first_data).to have_key('volume')
+      market_data_path = 'spec/fixtures/data/market_data.json'
+      json_fixture_data = JSON.parse(File.read(market_data_path))
+
+      expect(json_data).to eq json_fixture_data
     end
   end
 end
