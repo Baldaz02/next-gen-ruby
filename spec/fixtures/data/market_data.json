@@ -5,7 +5,7 @@
   },
   "data": [
     {
-      "date": "2025-03-04 17:00:00 +0100",
+      "date": "2025-03-04 16:00:00 +0000",
       "open_price": 82985.05,
       "close_price": 82867.93,
       "high_price": 83143.78,
@@ -62,13 +62,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 16:00:00 +0100",
+      "date": "2025-03-04 15:00:00 +0000",
       "open_price": 83201.4,
       "close_price": 82985.06,
       "high_price": 83373.42,
@@ -125,13 +125,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 15:00:00 +0100",
+      "date": "2025-03-04 14:00:00 +0000",
       "open_price": 82804.0,
       "close_price": 83201.41,
       "high_price": 84977.65,
@@ -188,13 +188,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 14:00:00 +0100",
+      "date": "2025-03-04 13:00:00 +0000",
       "open_price": 83763.73,
       "close_price": 82804.0,
       "high_price": 83764.56,
@@ -251,13 +251,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 13:00:00 +0100",
+      "date": "2025-03-04 12:00:00 +0000",
       "open_price": 83937.93,
       "close_price": 83763.73,
       "high_price": 83979.66,
@@ -314,13 +314,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 12:00:00 +0100",
+      "date": "2025-03-04 11:00:00 +0000",
       "open_price": 83971.93,
       "close_price": 83937.94,
       "high_price": 84373.84,
@@ -377,13 +377,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 11:00:00 +0100",
+      "date": "2025-03-04 10:00:00 +0000",
       "open_price": 83748.0,
       "close_price": 83971.93,
       "high_price": 84067.02,
@@ -405,13 +405,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 10:00:00 +0100",
+      "date": "2025-03-04 09:00:00 +0000",
       "open_price": 83893.09,
       "close_price": 83748.0,
       "high_price": 84181.53,
@@ -433,13 +433,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 09:00:00 +0100",
+      "date": "2025-03-04 08:00:00 +0000",
       "open_price": 83186.4,
       "close_price": 83893.09,
       "high_price": 83934.51,
@@ -461,13 +461,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 08:00:00 +0100",
+      "date": "2025-03-04 07:00:00 +0000",
       "open_price": 83884.06,
       "close_price": 83186.4,
       "high_price": 84024.0,
@@ -489,13 +489,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 07:00:00 +0100",
+      "date": "2025-03-04 06:00:00 +0000",
       "open_price": 84274.0,
       "close_price": 83883.58,
       "high_price": 84411.76,
@@ -517,13 +517,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 06:00:00 +0100",
+      "date": "2025-03-04 05:00:00 +0000",
       "open_price": 83416.95,
       "close_price": 84273.99,
       "high_price": 84581.6,
@@ -545,13 +545,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 05:00:00 +0100",
+      "date": "2025-03-04 04:00:00 +0000",
       "open_price": 83983.73,
       "close_price": 83416.95,
       "high_price": 84037.74,
@@ -573,13 +573,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 04:00:00 +0100",
+      "date": "2025-03-04 03:00:00 +0000",
       "open_price": 83936.41,
       "close_price": 83983.72,
       "high_price": 84465.48,
@@ -601,13 +601,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 03:00:00 +0100",
+      "date": "2025-03-04 02:00:00 +0000",
       "open_price": 83380.72,
       "close_price": 83936.41,
       "high_price": 84413.62,
@@ -629,13 +629,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 02:00:00 +0100",
+      "date": "2025-03-04 01:00:00 +0000",
       "open_price": 86046.43,
       "close_price": 83380.55,
       "high_price": 86196.0,
@@ -657,13 +657,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 01:00:00 +0100",
+      "date": "2025-03-04 00:00:00 +0000",
       "open_price": 86221.16,
       "close_price": 86046.43,
       "high_price": 86807.98,
@@ -685,13 +685,13 @@
         {
           "value": "15",
           "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
+          "timestamp": "2025-03-04 00:00:00 +0000",
           "time_until_update": "55004"
         }
       ]
     },
     {
-      "date": "2025-03-04 00:00:00 +0100",
+      "date": "2025-03-03 23:00:00 +0000",
       "open_price": 86650.96,
       "close_price": 86220.61,
       "high_price": 86808.0,
@@ -711,15 +711,15 @@
       },
       "fgi_values": [
         {
-          "value": "15",
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 01:00:00 +0100",
-          "time_until_update": "55004"
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 00:00:00 +0000",
+          "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 23:00:00 +0100",
+      "date": "2025-03-03 22:00:00 +0000",
       "open_price": 85374.33,
       "close_price": 86650.96,
       "high_price": 87038.46,
@@ -741,13 +741,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 22:00:00 +0100",
+      "date": "2025-03-03 21:00:00 +0000",
       "open_price": 86073.99,
       "close_price": 85374.33,
       "high_price": 86582.12,
@@ -769,13 +769,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 21:00:00 +0100",
+      "date": "2025-03-03 20:00:00 +0000",
       "open_price": 85606.01,
       "close_price": 86074.0,
       "high_price": 86412.0,
@@ -795,13 +795,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 20:00:00 +0100",
+      "date": "2025-03-03 19:00:00 +0000",
       "open_price": 87132.8,
       "close_price": 85606.0,
       "high_price": 87724.13,
@@ -821,13 +821,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 19:00:00 +0100",
+      "date": "2025-03-03 18:00:00 +0000",
       "open_price": 90300.01,
       "close_price": 87132.8,
       "high_price": 90450.47,
@@ -847,13 +847,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 18:00:00 +0100",
+      "date": "2025-03-03 17:00:00 +0000",
       "open_price": 90154.0,
       "close_price": 90300.01,
       "high_price": 91000.0,
@@ -873,13 +873,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 17:00:00 +0100",
+      "date": "2025-03-03 16:00:00 +0000",
       "open_price": 90035.38,
       "close_price": 90154.0,
       "high_price": 90750.91,
@@ -899,13 +899,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 16:00:00 +0100",
+      "date": "2025-03-03 15:00:00 +0000",
       "open_price": 89264.51,
       "close_price": 90035.37,
       "high_price": 91307.0,
@@ -925,13 +925,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 15:00:00 +0100",
+      "date": "2025-03-03 14:00:00 +0000",
       "open_price": 93586.82,
       "close_price": 89278.88,
       "high_price": 93721.37,
@@ -951,13 +951,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 14:00:00 +0100",
+      "date": "2025-03-03 13:00:00 +0000",
       "open_price": 93027.35,
       "close_price": 93586.83,
       "high_price": 93690.0,
@@ -977,13 +977,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 13:00:00 +0100",
+      "date": "2025-03-03 12:00:00 +0000",
       "open_price": 92740.0,
       "close_price": 93027.34,
       "high_price": 93255.58,
@@ -1003,13 +1003,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 12:00:00 +0100",
+      "date": "2025-03-03 11:00:00 +0000",
       "open_price": 92546.76,
       "close_price": 92739.99,
       "high_price": 92917.99,
@@ -1029,13 +1029,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 11:00:00 +0100",
+      "date": "2025-03-03 10:00:00 +0000",
       "open_price": 91847.76,
       "close_price": 92546.77,
       "high_price": 92581.86,
@@ -1055,13 +1055,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 10:00:00 +0100",
+      "date": "2025-03-03 09:00:00 +0000",
       "open_price": 91477.54,
       "close_price": 91847.76,
       "high_price": 92082.75,
@@ -1081,13 +1081,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 09:00:00 +0100",
+      "date": "2025-03-03 08:00:00 +0000",
       "open_price": 92363.58,
       "close_price": 91477.54,
       "high_price": 92394.03,
@@ -1107,13 +1107,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 08:00:00 +0100",
+      "date": "2025-03-03 07:00:00 +0000",
       "open_price": 91646.0,
       "close_price": 92363.58,
       "high_price": 92564.3,
@@ -1133,13 +1133,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 07:00:00 +0100",
+      "date": "2025-03-03 06:00:00 +0000",
       "open_price": 93344.78,
       "close_price": 91645.99,
       "high_price": 93344.78,
@@ -1159,13 +1159,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 06:00:00 +0100",
+      "date": "2025-03-03 05:00:00 +0000",
       "open_price": 92866.01,
       "close_price": 93344.0,
       "high_price": 93361.46,
@@ -1185,13 +1185,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 05:00:00 +0100",
+      "date": "2025-03-03 04:00:00 +0000",
       "open_price": 92709.98,
       "close_price": 92866.0,
       "high_price": 92947.67,
@@ -1211,13 +1211,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 04:00:00 +0100",
+      "date": "2025-03-03 03:00:00 +0000",
       "open_price": 93318.23,
       "close_price": 92709.98,
       "high_price": 93437.68,
@@ -1237,13 +1237,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 03:00:00 +0100",
+      "date": "2025-03-03 02:00:00 +0000",
       "open_price": 93084.64,
       "close_price": 93318.24,
       "high_price": 93442.83,
@@ -1263,13 +1263,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 02:00:00 +0100",
+      "date": "2025-03-03 01:00:00 +0000",
       "open_price": 93314.89,
       "close_price": 93084.64,
       "high_price": 93419.99,
@@ -1289,13 +1289,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 01:00:00 +0100",
+      "date": "2025-03-03 00:00:00 +0000",
       "open_price": 94269.99,
       "close_price": 93314.89,
       "high_price": 94416.46,
@@ -1315,13 +1315,13 @@
         {
           "value": "33",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-03 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-03 00:00:00 +0100",
+      "date": "2025-03-02 23:00:00 +0000",
       "open_price": 94247.4,
       "close_price": 94270.0,
       "high_price": 94883.51,
@@ -1339,15 +1339,15 @@
       "obv_values": [],
       "fgi_values": [
         {
-          "value": "33",
+          "value": "26",
           "value_classification": "Fear",
-          "timestamp": "2025-03-03 01:00:00 +0100",
+          "timestamp": "2025-03-02 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-02 23:00:00 +0100",
+      "date": "2025-03-02 22:00:00 +0000",
       "open_price": 94298.01,
       "close_price": 94247.4,
       "high_price": 94760.0,
@@ -1367,13 +1367,13 @@
         {
           "value": "26",
           "value_classification": "Fear",
-          "timestamp": "2025-03-02 01:00:00 +0100",
+          "timestamp": "2025-03-02 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-02 22:00:00 +0100",
+      "date": "2025-03-02 21:00:00 +0000",
       "open_price": 94330.0,
       "close_price": 94298.0,
       "high_price": 94419.83,
@@ -1393,13 +1393,13 @@
         {
           "value": "26",
           "value_classification": "Fear",
-          "timestamp": "2025-03-02 01:00:00 +0100",
+          "timestamp": "2025-03-02 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-02 21:00:00 +0100",
+      "date": "2025-03-02 20:00:00 +0000",
       "open_price": 93522.01,
       "close_price": 94330.0,
       "high_price": 94446.27,
@@ -1419,13 +1419,13 @@
         {
           "value": "26",
           "value_classification": "Fear",
-          "timestamp": "2025-03-02 01:00:00 +0100",
+          "timestamp": "2025-03-02 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-02 20:00:00 +0100",
+      "date": "2025-03-02 19:00:00 +0000",
       "open_price": 92794.19,
       "close_price": 93522.0,
       "high_price": 93555.81,
@@ -1445,13 +1445,13 @@
         {
           "value": "26",
           "value_classification": "Fear",
-          "timestamp": "2025-03-02 01:00:00 +0100",
+          "timestamp": "2025-03-02 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-02 19:00:00 +0100",
+      "date": "2025-03-02 18:00:00 +0000",
       "open_price": 94093.74,
       "close_price": 92794.19,
       "high_price": 94399.8,
@@ -1471,13 +1471,13 @@
         {
           "value": "26",
           "value_classification": "Fear",
-          "timestamp": "2025-03-02 01:00:00 +0100",
+          "timestamp": "2025-03-02 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-02 18:00:00 +0100",
+      "date": "2025-03-02 17:00:00 +0000",
       "open_price": 91200.0,
       "close_price": 94093.75,
       "high_price": 95000.0,
@@ -1497,13 +1497,13 @@
         {
           "value": "26",
           "value_classification": "Fear",
-          "timestamp": "2025-03-02 01:00:00 +0100",
+          "timestamp": "2025-03-02 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-02 17:00:00 +0100",
+      "date": "2025-03-02 16:00:00 +0000",
       "open_price": 87428.0,
       "close_price": 91200.0,
       "high_price": 91959.99,
@@ -1523,13 +1523,13 @@
         {
           "value": "26",
           "value_classification": "Fear",
-          "timestamp": "2025-03-02 01:00:00 +0100",
+          "timestamp": "2025-03-02 00:00:00 +0000",
           "time_until_update": null
         }
       ]
     },
     {
-      "date": "2025-03-02 16:00:00 +0100",
+      "date": "2025-03-02 15:00:00 +0000",
       "open_price": 85107.45,
       "close_price": 87427.99,
       "high_price": 88673.09,
@@ -1549,7 +1549,7 @@
         {
           "value": "26",
           "value_classification": "Fear",
-          "timestamp": "2025-03-02 01:00:00 +0100",
+          "timestamp": "2025-03-02 00:00:00 +0000",
           "time_until_update": null
         }
       ]

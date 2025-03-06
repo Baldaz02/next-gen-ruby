@@ -6,9 +6,13 @@ require 'tzinfo'
 module NextGen
   module Config
     module Application
+      def self.set_timezone(timezone)
+        ENV['TZ'] = timezone
+      end
+
       def self.timestamp_to_date(timestamp)
         utc_time = Time.at(timestamp).utc
-        tz = TZInfo::Timezone.get('Europe/Rome')
+        tz = TZInfo::Timezone.get('GMT')
 
         tz.utc_to_local(utc_time)
       end
