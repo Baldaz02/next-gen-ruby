@@ -18,6 +18,15 @@ module NextGen
         end
       end
 
+      def to_h
+        {
+          crypto: {
+            name: name,
+            symbol: symbol
+          }
+        }
+      end
+
       def tickers(params = nil)
         params = params || DEFAULT_TICKER_PARAMS.merge(symbol: "#{symbol}USDT")
         client = Clients::Binance.new(OpenStruct.new(params))
