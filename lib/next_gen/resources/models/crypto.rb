@@ -18,6 +18,13 @@ module NextGen
         end
       end
 
+      def tickers(params = nil)
+        params = params || DEFAULT_TICKER_PARAMS.merge(symbol: "#{symbol}USDT")
+        client = Clients::Binance.new(OpenStruct.new(params))
+
+        client.candlestick.map { |entry| Models::Ticker.new(entry, self) }
+      end
+
       def to_h
         {
           crypto: {
@@ -25,13 +32,6 @@ module NextGen
             symbol: symbol
           }
         }
-      end
-
-      def tickers(params = nil)
-        params = params || DEFAULT_TICKER_PARAMS.merge(symbol: "#{symbol}USDT")
-        client = Clients::Binance.new(OpenStruct.new(params))
-
-        client.candlestick.map { |entry| Models::Ticker.new(entry, self) }
       end
     end
   end
