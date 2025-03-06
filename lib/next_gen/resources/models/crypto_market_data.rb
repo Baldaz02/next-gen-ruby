@@ -86,7 +86,7 @@ module NextGen
         ticker_timestamp = ticker_start_of_day.to_time.to_i
 
         filtered_data = data.select do |d|
-          d.timestamp.to_i == ticker_timestamp
+          d.timestamp == ticker_timestamp
         end
 
         filtered_data.map do |d|
