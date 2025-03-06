@@ -1,0 +1,1558 @@
+{
+  "crypto": {
+    "name": "Bitcoin",
+    "symbol": "BTC"
+  },
+  "data": [
+    {
+      "date": "2025-03-04 17:00:00 +0100",
+      "open_price": 82985.05,
+      "close_price": 82867.93,
+      "high_price": 83143.78,
+      "low_price": 82013.11,
+      "volume": 1599.27881,
+      "sma_values": [
+        {
+          "sma10": 83435.949
+        },
+        {
+          "sma20": 84076.351
+        }
+      ],
+      "ema_values": [
+        {
+          "ema10": 83342.81218663033
+        },
+        {
+          "ema20": 84406.08137926437
+        }
+      ],
+      "macd_values": {
+        "macd_line": -1986.4803570708318,
+        "macd_histogram": 380.9419987996598,
+        "signal_line": -2367.4223558704916
+      },
+      "rsi_values": {
+        "rsi": 37.75332841852701
+      },
+      "sr_values": {
+        "sr": 39.33489569105561,
+        "sr_signal": 36.53291484358466
+      },
+      "tsi_values": {
+        "tsi": -37.779474251243336
+      },
+      "bb_values": {
+        "lower_band": 81832.64379433484,
+        "middle_band": 84076.351,
+        "upper_band": 86320.05820566515
+      },
+      "atr_values": {
+        "atr": 1304.871791866059
+      },
+      "kc_values": {
+        "lower_band": 82242.153,
+        "middle_band": 83410.524,
+        "upper_band": 84578.895
+      },
+      "obv_values": {
+        "obv": -6695.99476
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 16:00:00 +0100",
+      "open_price": 83201.4,
+      "close_price": 82985.06,
+      "high_price": 83373.42,
+      "low_price": 81500.0,
+      "volume": 4824.82043,
+      "sma_values": [
+        {
+          "sma10": 83537.514
+        },
+        {
+          "sma20": 84236.65449999999
+        }
+      ],
+      "ema_values": [
+        {
+          "ema10": 83448.34156143706
+        },
+        {
+          "ema20": 84567.99205076588
+        }
+      ],
+      "macd_values": {
+        "macd_line": -2064.0222004312964,
+        "macd_histogram": 398.63565513911,
+        "signal_line": -2462.6578555704064
+      },
+      "rsi_values": {
+        "rsi": 38.343180977331215
+      },
+      "sr_values": {
+        "sr": 42.702974709933436,
+        "sr_signal": 27.148007554927307
+      },
+      "tsi_values": {
+        "tsi": -38.005081161363776
+      },
+      "bb_values": {
+        "lower_band": 81900.26364457248,
+        "middle_band": 84236.65449999999,
+        "upper_band": 86573.0453554275
+      },
+      "atr_values": {
+        "atr": 1318.27192970191
+      },
+      "kc_values": {
+        "lower_band": 82401.048,
+        "middle_band": 83539.038,
+        "upper_band": 84677.028
+      },
+      "obv_values": {
+        "obv": -5096.71595
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 15:00:00 +0100",
+      "open_price": 82804.0,
+      "close_price": 83201.41,
+      "high_price": 84977.65,
+      "low_price": 82062.06,
+      "volume": 6008.25724,
+      "sma_values": [
+        {
+          "sma10": 83666.40699999999
+        },
+        {
+          "sma20": 84367.7015
+        }
+      ],
+      "ema_values": [
+        {
+          "ema10": 83551.29301953419
+        },
+        {
+          "ema20": 84734.61647716229
+        }
+      ],
+      "macd_values": {
+        "macd_line": -2144.8976121323794,
+        "macd_histogram": 417.4191572228042,
+        "signal_line": -2562.3167693551836
+      },
+      "rsi_values": {
+        "rsi": 39.398970051640894
+      },
+      "sr_values": {
+        "sr": 27.56087412976495,
+        "sr_signal": 22.88253789372865
+      },
+      "tsi_values": {
+        "tsi": -38.411459783927995
+      },
+      "bb_values": {
+        "lower_band": 82032.88120618023,
+        "middle_band": 84367.7015,
+        "upper_band": 86702.52179381976
+      },
+      "atr_values": {
+        "atr": 1275.5682319866726
+      },
+      "kc_values": {
+        "lower_band": 82610.703,
+        "middle_band": 83684.08399999999,
+        "upper_band": 84757.46499999998
+      },
+      "obv_values": {
+        "obv": -271.89552000000003
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 14:00:00 +0100",
+      "open_price": 83763.73,
+      "close_price": 82804.0,
+      "high_price": 83764.56,
+      "low_price": 82300.0,
+      "volume": 2427.20219,
+      "sma_values": [
+        {
+          "sma10": 83687.96099999998
+        },
+        {
+          "sma20": 84564.271
+        }
+      ],
+      "ema_values": [
+        {
+          "ema10": 83629.0448016529
+        },
+        {
+          "ema20": 84896.00663265305
+        }
+      ],
+      "macd_values": {
+        "macd_line": -2238.9538996180054,
+        "macd_histogram": 427.7176590428794,
+        "signal_line": -2666.671558660885
+      },
+      "rsi_values": {
+        "rsi": 36.41250130737938
+      },
+      "sr_values": {
+        "sr": 11.180173825083529,
+        "sr_signal": 24.431787347671378
+      },
+      "tsi_values": {
+        "tsi": -39.14483403548232
+      },
+      "bb_values": {
+        "lower_band": 81992.89720964548,
+        "middle_band": 84564.271,
+        "upper_band": 87135.6447903545
+      },
+      "atr_values": {
+        "atr": 1149.4127113702632
+      },
+      "kc_values": {
+        "lower_band": 82847.72699999998,
+        "middle_band": 83701.733,
+        "upper_band": 84555.739
+      },
+      "obv_values": {
+        "obv": -6280.15276
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 13:00:00 +0100",
+      "open_price": 83937.93,
+      "close_price": 83763.73,
+      "high_price": 83979.66,
+      "low_price": 83248.66,
+      "volume": 1007.91883,
+      "sma_values": [
+        {
+          "sma10": 83805.93299999999
+        },
+        {
+          "sma20": 84939.0715
+        }
+      ],
+      "ema_values": [
+        {
+          "ema10": 83812.3880909091
+        },
+        {
+          "ema20": 85116.21785714285
+        }
+      ],
+      "macd_values": {
+        "macd_line": -2285.9737589234137,
+        "macd_histogram": 487.6272144981908,
+        "signal_line": -2773.6009734216045
+      },
+      "rsi_values": {
+        "rsi": 40.93640399852419
+      },
+      "sr_values": {
+        "sr": 29.90656572633747,
+        "sr_signal": 31.688995233337504
+      },
+      "tsi_values": {
+        "tsi": -39.023422889116965
+      },
+      "bb_values": {
+        "lower_band": 81432.76246018245,
+        "middle_band": 84939.0715,
+        "upper_band": 88445.38053981756
+      },
+      "atr_values": {
+        "atr": 1125.170612244899
+      },
+      "kc_values": {
+        "lower_band": 83014.031,
+        "middle_band": 83807.848,
+        "upper_band": 84601.665
+      },
+      "obv_values": {
+        "obv": -3852.95057
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 12:00:00 +0100",
+      "open_price": 83971.93,
+      "close_price": 83937.94,
+      "high_price": 84373.84,
+      "low_price": 83698.11,
+      "volume": 1132.88002,
+      "sma_values": [
+        {
+          "sma10": 83823.201
+        },
+        {
+          "sma20": 85258.58499999999
+        }
+      ],
+      "ema_values": [
+        {
+          "ema10": 83823.201
+        },
+        {
+          "ema20": 85258.58499999999
+        }
+      ],
+      "macd_values": {
+        "macd_line": -2410.4556337616086,
+        "macd_histogram": 485.0521432845435,
+        "signal_line": -2895.507777046152
+      },
+      "rsi_values": {
+        "rsi": 41.811998435809485
+      },
+      "sr_values": {
+        "sr": 32.20862249159315,
+        "sr_signal": 31.07203192802781
+      },
+      "tsi_values": {
+        "tsi": -39.901651340054464
+      },
+      "bb_values": {
+        "lower_band": 81099.39128441925,
+        "middle_band": 85258.58499999999,
+        "upper_band": 89417.77871558073
+      },
+      "atr_values": {
+        "atr": 1155.4914285714299
+      },
+      "kc_values": {
+        "lower_band": 82886.34699999998,
+        "middle_band": 83801.94199999998,
+        "upper_band": 84717.53699999998
+      },
+      "obv_values": {
+        "obv": -2845.03174
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 11:00:00 +0100",
+      "open_price": 83748.0,
+      "close_price": 83971.93,
+      "high_price": 84067.02,
+      "low_price": 83492.02,
+      "volume": 845.80624,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -1712.1517199999998
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 10:00:00 +0100",
+      "open_price": 83893.09,
+      "close_price": 83748.0,
+      "high_price": 84181.53,
+      "low_price": 83642.01,
+      "volume": 990.95954,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -2557.9579599999997
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 09:00:00 +0100",
+      "open_price": 83186.4,
+      "close_price": 83893.09,
+      "high_price": 83934.51,
+      "low_price": 83040.29,
+      "volume": 1496.65224,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -1566.99842
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 08:00:00 +0100",
+      "open_price": 83884.06,
+      "close_price": 83186.4,
+      "high_price": 84024.0,
+      "low_price": 83140.0,
+      "volume": 1401.0781,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -3063.65066
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 07:00:00 +0100",
+      "open_price": 84274.0,
+      "close_price": 83883.58,
+      "high_price": 84411.76,
+      "low_price": 83584.9,
+      "volume": 854.00368,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -1662.5725599999998
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 06:00:00 +0100",
+      "open_price": 83416.95,
+      "close_price": 84273.99,
+      "high_price": 84581.6,
+      "low_price": 83354.27,
+      "volume": 1392.08932,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -808.5688799999998
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 05:00:00 +0100",
+      "open_price": 83983.73,
+      "close_price": 83416.95,
+      "high_price": 84037.74,
+      "low_price": 83315.9,
+      "volume": 1308.62514,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -2200.6582
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 04:00:00 +0100",
+      "open_price": 83936.41,
+      "close_price": 83983.72,
+      "high_price": 84465.48,
+      "low_price": 83602.81,
+      "volume": 1821.83781,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -892.0330599999998
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 03:00:00 +0100",
+      "open_price": 83380.72,
+      "close_price": 83936.41,
+      "high_price": 84413.62,
+      "low_price": 82464.84,
+      "volume": 4168.58785,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -2713.8708699999997
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 02:00:00 +0100",
+      "open_price": 86046.43,
+      "close_price": 83380.55,
+      "high_price": 86196.0,
+      "low_price": 82641.51,
+      "volume": 5790.28933,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -6882.45872
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 01:00:00 +0100",
+      "open_price": 86221.16,
+      "close_price": 86046.43,
+      "high_price": 86807.98,
+      "low_price": 85880.0,
+      "volume": 1487.09374,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": -1092.16939
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-04 00:00:00 +0100",
+      "open_price": 86650.96,
+      "close_price": 86220.61,
+      "high_price": 86808.0,
+      "low_price": 86000.0,
+      "volume": 1138.91356,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": 394.92435
+      },
+      "fgi_values": [
+        {
+          "value": "15",
+          "value_classification": "Extreme Fear",
+          "timestamp": "2025-03-04 01:00:00 +0100",
+          "time_until_update": "55004"
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 23:00:00 +0100",
+      "open_price": 85374.33,
+      "close_price": 86650.96,
+      "high_price": 87038.46,
+      "low_price": 85308.0,
+      "volume": 1533.83791,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": 1533.83791
+      },
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 22:00:00 +0100",
+      "open_price": 86073.99,
+      "close_price": 85374.33,
+      "high_price": 86582.12,
+      "low_price": 85117.11,
+      "volume": 1914.40913,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": {
+        "obv": 0
+      },
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 21:00:00 +0100",
+      "open_price": 85606.01,
+      "close_price": 86074.0,
+      "high_price": 86412.0,
+      "low_price": 85200.01,
+      "volume": 5130.45282,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 20:00:00 +0100",
+      "open_price": 87132.8,
+      "close_price": 85606.0,
+      "high_price": 87724.13,
+      "low_price": 85555.45,
+      "volume": 5058.10691,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 19:00:00 +0100",
+      "open_price": 90300.01,
+      "close_price": 87132.8,
+      "high_price": 90450.47,
+      "low_price": 86781.98,
+      "volume": 7319.60685,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 18:00:00 +0100",
+      "open_price": 90154.0,
+      "close_price": 90300.01,
+      "high_price": 91000.0,
+      "low_price": 89912.0,
+      "volume": 1626.75033,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 17:00:00 +0100",
+      "open_price": 90035.38,
+      "close_price": 90154.0,
+      "high_price": 90750.91,
+      "low_price": 89691.02,
+      "volume": 2111.23659,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 16:00:00 +0100",
+      "open_price": 89264.51,
+      "close_price": 90035.37,
+      "high_price": 91307.0,
+      "low_price": 89117.0,
+      "volume": 5771.66863,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 15:00:00 +0100",
+      "open_price": 93586.82,
+      "close_price": 89278.88,
+      "high_price": 93721.37,
+      "low_price": 89136.45,
+      "volume": 6172.59027,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 14:00:00 +0100",
+      "open_price": 93027.35,
+      "close_price": 93586.83,
+      "high_price": 93690.0,
+      "low_price": 92882.38,
+      "volume": 1261.80234,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 13:00:00 +0100",
+      "open_price": 92740.0,
+      "close_price": 93027.34,
+      "high_price": 93255.58,
+      "low_price": 92663.19,
+      "volume": 1342.19068,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 12:00:00 +0100",
+      "open_price": 92546.76,
+      "close_price": 92739.99,
+      "high_price": 92917.99,
+      "low_price": 92415.57,
+      "volume": 1193.27894,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 11:00:00 +0100",
+      "open_price": 91847.76,
+      "close_price": 92546.77,
+      "high_price": 92581.86,
+      "low_price": 91546.71,
+      "volume": 1133.77337,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 10:00:00 +0100",
+      "open_price": 91477.54,
+      "close_price": 91847.76,
+      "high_price": 92082.75,
+      "low_price": 91190.27,
+      "volume": 1993.82412,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 09:00:00 +0100",
+      "open_price": 92363.58,
+      "close_price": 91477.54,
+      "high_price": 92394.03,
+      "low_price": 91142.0,
+      "volume": 1993.37636,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 08:00:00 +0100",
+      "open_price": 91646.0,
+      "close_price": 92363.58,
+      "high_price": 92564.3,
+      "low_price": 91181.0,
+      "volume": 1644.8485,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 07:00:00 +0100",
+      "open_price": 93344.78,
+      "close_price": 91645.99,
+      "high_price": 93344.78,
+      "low_price": 91341.64,
+      "volume": 2089.28035,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 06:00:00 +0100",
+      "open_price": 92866.01,
+      "close_price": 93344.0,
+      "high_price": 93361.46,
+      "low_price": 92830.44,
+      "volume": 1122.18278,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 05:00:00 +0100",
+      "open_price": 92709.98,
+      "close_price": 92866.0,
+      "high_price": 92947.67,
+      "low_price": 92590.25,
+      "volume": 996.20708,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 04:00:00 +0100",
+      "open_price": 93318.23,
+      "close_price": 92709.98,
+      "high_price": 93437.68,
+      "low_price": 92450.0,
+      "volume": 1333.44949,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 03:00:00 +0100",
+      "open_price": 93084.64,
+      "close_price": 93318.24,
+      "high_price": 93442.83,
+      "low_price": 92433.5,
+      "volume": 1492.22069,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 02:00:00 +0100",
+      "open_price": 93314.89,
+      "close_price": 93084.64,
+      "high_price": 93419.99,
+      "low_price": 92649.58,
+      "volume": 1902.36584,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 01:00:00 +0100",
+      "open_price": 94269.99,
+      "close_price": 93314.89,
+      "high_price": 94416.46,
+      "low_price": 93289.79,
+      "volume": 1894.72864,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-03 00:00:00 +0100",
+      "open_price": 94247.4,
+      "close_price": 94270.0,
+      "high_price": 94883.51,
+      "low_price": 93800.0,
+      "volume": 2888.64518,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "33",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-03 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-02 23:00:00 +0100",
+      "open_price": 94298.01,
+      "close_price": 94247.4,
+      "high_price": 94760.0,
+      "low_price": 93911.11,
+      "volume": 1309.20675,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "26",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-02 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-02 22:00:00 +0100",
+      "open_price": 94330.0,
+      "close_price": 94298.0,
+      "high_price": 94419.83,
+      "low_price": 93670.72,
+      "volume": 1491.71759,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "26",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-02 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-02 21:00:00 +0100",
+      "open_price": 93522.01,
+      "close_price": 94330.0,
+      "high_price": 94446.27,
+      "low_price": 93502.0,
+      "volume": 2236.99961,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "26",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-02 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-02 20:00:00 +0100",
+      "open_price": 92794.19,
+      "close_price": 93522.0,
+      "high_price": 93555.81,
+      "low_price": 92608.69,
+      "volume": 2361.41051,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "26",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-02 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-02 19:00:00 +0100",
+      "open_price": 94093.74,
+      "close_price": 92794.19,
+      "high_price": 94399.8,
+      "low_price": 92364.39,
+      "volume": 5106.30539,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "26",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-02 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-02 18:00:00 +0100",
+      "open_price": 91200.0,
+      "close_price": 94093.75,
+      "high_price": 95000.0,
+      "low_price": 90636.0,
+      "volume": 11108.97765,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "26",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-02 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-02 17:00:00 +0100",
+      "open_price": 87428.0,
+      "close_price": 91200.0,
+      "high_price": 91959.99,
+      "low_price": 87278.51,
+      "volume": 11741.72701,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "26",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-02 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    },
+    {
+      "date": "2025-03-02 16:00:00 +0100",
+      "open_price": 85107.45,
+      "close_price": 87427.99,
+      "high_price": 88673.09,
+      "low_price": 85075.47,
+      "volume": 7619.5081,
+      "sma_values": [],
+      "ema_values": [],
+      "macd_values": [],
+      "rsi_values": [],
+      "sr_values": [],
+      "tsi_values": [],
+      "bb_values": [],
+      "atr_values": [],
+      "kc_values": [],
+      "obv_values": [],
+      "fgi_values": [
+        {
+          "value": "26",
+          "value_classification": "Fear",
+          "timestamp": "2025-03-02 01:00:00 +0100",
+          "time_until_update": null
+        }
+      ]
+    }
+  ]
+}
