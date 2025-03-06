@@ -4,6 +4,7 @@ RSpec.describe NextGen::Services::CryptoReportService do
   let(:crypto_data) { CSV::Row.new(%w[Name Symbol], %w[Bitcoin BTC]) }
 
   before do
+    NextGen::Config::Application.set_timezone('GMT')
     Timecop.freeze(Time.local(2025, 3, 4))
     allow(CSV).to receive(:foreach).and_return([crypto_data])
   end
