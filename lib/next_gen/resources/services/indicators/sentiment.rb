@@ -27,12 +27,16 @@ module NextGen
         def deep_struct(obj)
           case obj
           when Hash
-            OpenStruct.new(obj.transform_values { |v| deep_struct(v) })
+            OpenStruct.new(obj.transform_values { |v| deep_struct(to_i(v)) })
           when Array
             obj.map { |v| deep_struct(v) }
           else
-            obj
+            to_i(obj)
           end
+        end
+        
+        def to_i(value)
+          value.to_s.match?(/^\d+$/) ? value.to_i : value
         end
       end
     end
