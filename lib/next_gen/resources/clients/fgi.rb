@@ -18,9 +18,9 @@ module NextGen
       def values
         base_path = "data/#{Time.now.strftime('%Y-%m-%d')}"
         file_repo = Repositories::FileStorageRepository.new(base_path, 'fgi.json')
-      
-        if data = file_repo.load
-          return data
+
+        if (data = file_repo.load)
+          data
         else
           response = RestClient.get(BASE_URL, { params: { limit: params[:limit] } })
           json_data = JSON.parse(response.body)['data']
