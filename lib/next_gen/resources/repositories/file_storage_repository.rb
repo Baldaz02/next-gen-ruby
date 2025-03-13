@@ -21,6 +21,7 @@ module NextGen
 
       def load
         return JSON.parse(File.read(file_name)) if File.exist?(file_name)
+
         nil
       end
 
