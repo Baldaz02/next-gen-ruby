@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'concurrent'
-
 module NextGen
   module Services
     class IndicatorService
@@ -17,7 +15,7 @@ module NextGen
 
       def initialize(tickers)
         price_data = load_data(tickers).freeze
-        @indicator_obj = Models::Indicator.new(price_data)
+        @indicator_obj = Models::Indicator.new(tickers: price_data)
 
         initialize_indicators
       end
