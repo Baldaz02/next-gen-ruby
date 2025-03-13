@@ -19,7 +19,7 @@ module NextGen
       end
 
       def tickers(params = nil)
-        params = params || DEFAULT_TICKER_PARAMS.merge(symbol: "#{symbol}USDT")
+        params ||= DEFAULT_TICKER_PARAMS.merge(symbol: "#{symbol}USDT")
         client = Clients::Binance.new(OpenStruct.new(params))
 
         client.candlestick.map { |entry| Models::Ticker.new(entry, self) }
