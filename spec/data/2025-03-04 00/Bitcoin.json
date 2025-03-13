@@ -11,22 +11,14 @@
       "high_price": 83143.78,
       "low_price": 82013.11,
       "volume": 1599.27881,
-      "sma_values": [
-        {
-          "sma10": 83435.949
-        },
-        {
-          "sma20": 84076.351
-        }
-      ],
-      "ema_values": [
-        {
-          "ema10": 83342.81218663033
-        },
-        {
-          "ema20": 84406.08137926437
-        }
-      ],
+      "sma_values": {
+        "sma10": 83435.949,
+        "sma20": 84076.351
+      },
+      "ema_values": {
+        "ema10": 83342.81218663033,
+        "ema20": 84406.08137926437
+      },
       "macd_values": {
         "macd_line": -1986.4803570708318,
         "macd_histogram": 380.9419987996598,
@@ -58,14 +50,12 @@
       "obv_values": {
         "obv": -6695.99476
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 15:00:00 +0000",
@@ -74,22 +64,14 @@
       "high_price": 83373.42,
       "low_price": 81500.0,
       "volume": 4824.82043,
-      "sma_values": [
-        {
-          "sma10": 83537.514
-        },
-        {
-          "sma20": 84236.65449999999
-        }
-      ],
-      "ema_values": [
-        {
-          "ema10": 83448.34156143706
-        },
-        {
-          "ema20": 84567.99205076588
-        }
-      ],
+      "sma_values": {
+        "sma10": 83537.514,
+        "sma20": 84236.65449999999
+      },
+      "ema_values": {
+        "ema10": 83448.34156143706,
+        "ema20": 84567.99205076588
+      },
       "macd_values": {
         "macd_line": -2064.0222004312964,
         "macd_histogram": 398.63565513911,
@@ -121,14 +103,12 @@
       "obv_values": {
         "obv": -5096.71595
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 14:00:00 +0000",
@@ -137,22 +117,14 @@
       "high_price": 84977.65,
       "low_price": 82062.06,
       "volume": 6008.25724,
-      "sma_values": [
-        {
-          "sma10": 83666.40699999999
-        },
-        {
-          "sma20": 84367.7015
-        }
-      ],
-      "ema_values": [
-        {
-          "ema10": 83551.29301953419
-        },
-        {
-          "ema20": 84734.61647716229
-        }
-      ],
+      "sma_values": {
+        "sma10": 83666.40699999999,
+        "sma20": 84367.7015
+      },
+      "ema_values": {
+        "ema10": 83551.29301953419,
+        "ema20": 84734.61647716229
+      },
       "macd_values": {
         "macd_line": -2144.8976121323794,
         "macd_histogram": 417.4191572228042,
@@ -184,14 +156,12 @@
       "obv_values": {
         "obv": -271.89552000000003
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 13:00:00 +0000",
@@ -200,22 +170,14 @@
       "high_price": 83764.56,
       "low_price": 82300.0,
       "volume": 2427.20219,
-      "sma_values": [
-        {
-          "sma10": 83687.96099999998
-        },
-        {
-          "sma20": 84564.271
-        }
-      ],
-      "ema_values": [
-        {
-          "ema10": 83629.0448016529
-        },
-        {
-          "ema20": 84896.00663265305
-        }
-      ],
+      "sma_values": {
+        "sma10": 83687.96099999998,
+        "sma20": 84564.271
+      },
+      "ema_values": {
+        "ema10": 83629.0448016529,
+        "ema20": 84896.00663265305
+      },
       "macd_values": {
         "macd_line": -2238.9538996180054,
         "macd_histogram": 427.7176590428794,
@@ -247,14 +209,12 @@
       "obv_values": {
         "obv": -6280.15276
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 12:00:00 +0000",
@@ -263,22 +223,14 @@
       "high_price": 83979.66,
       "low_price": 83248.66,
       "volume": 1007.91883,
-      "sma_values": [
-        {
-          "sma10": 83805.93299999999
-        },
-        {
-          "sma20": 84939.0715
-        }
-      ],
-      "ema_values": [
-        {
-          "ema10": 83812.3880909091
-        },
-        {
-          "ema20": 85116.21785714285
-        }
-      ],
+      "sma_values": {
+        "sma10": 83805.93299999999,
+        "sma20": 84939.0715
+      },
+      "ema_values": {
+        "ema10": 83812.3880909091,
+        "ema20": 85116.21785714285
+      },
       "macd_values": {
         "macd_line": -2285.9737589234137,
         "macd_histogram": 487.6272144981908,
@@ -310,14 +262,12 @@
       "obv_values": {
         "obv": -3852.95057
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 11:00:00 +0000",
@@ -326,22 +276,14 @@
       "high_price": 84373.84,
       "low_price": 83698.11,
       "volume": 1132.88002,
-      "sma_values": [
-        {
-          "sma10": 83823.201
-        },
-        {
-          "sma20": 85258.58499999999
-        }
-      ],
-      "ema_values": [
-        {
-          "ema10": 83823.201
-        },
-        {
-          "ema20": 85258.58499999999
-        }
-      ],
+      "sma_values": {
+        "sma10": 83823.201,
+        "sma20": 85258.58499999999
+      },
+      "ema_values": {
+        "ema10": 83823.201,
+        "ema20": 85258.58499999999
+      },
       "macd_values": {
         "macd_line": -2410.4556337616086,
         "macd_histogram": 485.0521432845435,
@@ -373,14 +315,12 @@
       "obv_values": {
         "obv": -2845.03174
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 10:00:00 +0000",
@@ -389,26 +329,24 @@
       "high_price": 84067.02,
       "low_price": 83492.02,
       "volume": 845.80624,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -1712.1517199999998
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 09:00:00 +0000",
@@ -417,26 +355,24 @@
       "high_price": 84181.53,
       "low_price": 83642.01,
       "volume": 990.95954,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -2557.9579599999997
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 08:00:00 +0000",
@@ -445,26 +381,24 @@
       "high_price": 83934.51,
       "low_price": 83040.29,
       "volume": 1496.65224,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -1566.99842
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 07:00:00 +0000",
@@ -473,26 +407,24 @@
       "high_price": 84024.0,
       "low_price": 83140.0,
       "volume": 1401.0781,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -3063.65066
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 06:00:00 +0000",
@@ -501,26 +433,24 @@
       "high_price": 84411.76,
       "low_price": 83584.9,
       "volume": 854.00368,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -1662.5725599999998
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 05:00:00 +0000",
@@ -529,26 +459,24 @@
       "high_price": 84581.6,
       "low_price": 83354.27,
       "volume": 1392.08932,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -808.5688799999998
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 04:00:00 +0000",
@@ -557,26 +485,24 @@
       "high_price": 84037.74,
       "low_price": 83315.9,
       "volume": 1308.62514,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -2200.6582
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 03:00:00 +0000",
@@ -585,26 +511,24 @@
       "high_price": 84465.48,
       "low_price": 83602.81,
       "volume": 1821.83781,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -892.0330599999998
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 02:00:00 +0000",
@@ -613,26 +537,24 @@
       "high_price": 84413.62,
       "low_price": 82464.84,
       "volume": 4168.58785,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -2713.8708699999997
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 01:00:00 +0000",
@@ -641,26 +563,24 @@
       "high_price": 86196.0,
       "low_price": 82641.51,
       "volume": 5790.28933,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -6882.45872
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-04 00:00:00 +0000",
@@ -669,26 +589,24 @@
       "high_price": 86807.98,
       "low_price": 85880.0,
       "volume": 1487.09374,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": -1092.16939
       },
-      "fgi_values": [
-        {
-          "value": 15,
-          "value_classification": "Extreme Fear",
-          "timestamp": "2025-03-04 00:00:00 +0000",
-          "time_until_update": 55004
-        }
-      ]
+      "fgi_values": {
+        "value": 15,
+        "value_classification": "Extreme Fear",
+        "timestamp": "2025-03-04 00:00:00 +0000",
+        "time_until_update": 55004
+      }
     },
     {
       "date": "2025-03-03 23:00:00 +0000",
@@ -697,26 +615,24 @@
       "high_price": 86808.0,
       "low_price": 86000.0,
       "volume": 1138.91356,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": 394.92435
       },
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 22:00:00 +0000",
@@ -725,26 +641,24 @@
       "high_price": 87038.46,
       "low_price": 85308.0,
       "volume": 1533.83791,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": 1533.83791
       },
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 21:00:00 +0000",
@@ -753,26 +667,24 @@
       "high_price": 86582.12,
       "low_price": 85117.11,
       "volume": 1914.40913,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
       "obv_values": {
         "obv": 0
       },
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 20:00:00 +0000",
@@ -781,24 +693,22 @@
       "high_price": 86412.0,
       "low_price": 85200.01,
       "volume": 5130.45282,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 19:00:00 +0000",
@@ -807,24 +717,22 @@
       "high_price": 87724.13,
       "low_price": 85555.45,
       "volume": 5058.10691,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 18:00:00 +0000",
@@ -833,24 +741,22 @@
       "high_price": 90450.47,
       "low_price": 86781.98,
       "volume": 7319.60685,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 17:00:00 +0000",
@@ -859,24 +765,22 @@
       "high_price": 91000.0,
       "low_price": 89912.0,
       "volume": 1626.75033,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 16:00:00 +0000",
@@ -885,24 +789,22 @@
       "high_price": 90750.91,
       "low_price": 89691.02,
       "volume": 2111.23659,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 15:00:00 +0000",
@@ -911,24 +813,22 @@
       "high_price": 91307.0,
       "low_price": 89117.0,
       "volume": 5771.66863,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 14:00:00 +0000",
@@ -937,24 +837,22 @@
       "high_price": 93721.37,
       "low_price": 89136.45,
       "volume": 6172.59027,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 13:00:00 +0000",
@@ -963,24 +861,22 @@
       "high_price": 93690.0,
       "low_price": 92882.38,
       "volume": 1261.80234,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 12:00:00 +0000",
@@ -989,24 +885,22 @@
       "high_price": 93255.58,
       "low_price": 92663.19,
       "volume": 1342.19068,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 11:00:00 +0000",
@@ -1015,24 +909,22 @@
       "high_price": 92917.99,
       "low_price": 92415.57,
       "volume": 1193.27894,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 10:00:00 +0000",
@@ -1041,24 +933,22 @@
       "high_price": 92581.86,
       "low_price": 91546.71,
       "volume": 1133.77337,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 09:00:00 +0000",
@@ -1067,24 +957,22 @@
       "high_price": 92082.75,
       "low_price": 91190.27,
       "volume": 1993.82412,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 08:00:00 +0000",
@@ -1093,24 +981,22 @@
       "high_price": 92394.03,
       "low_price": 91142.0,
       "volume": 1993.37636,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 07:00:00 +0000",
@@ -1119,24 +1005,22 @@
       "high_price": 92564.3,
       "low_price": 91181.0,
       "volume": 1644.8485,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 06:00:00 +0000",
@@ -1145,24 +1029,22 @@
       "high_price": 93344.78,
       "low_price": 91341.64,
       "volume": 2089.28035,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 05:00:00 +0000",
@@ -1171,24 +1053,22 @@
       "high_price": 93361.46,
       "low_price": 92830.44,
       "volume": 1122.18278,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 04:00:00 +0000",
@@ -1197,24 +1077,22 @@
       "high_price": 92947.67,
       "low_price": 92590.25,
       "volume": 996.20708,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 03:00:00 +0000",
@@ -1223,24 +1101,22 @@
       "high_price": 93437.68,
       "low_price": 92450.0,
       "volume": 1333.44949,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 02:00:00 +0000",
@@ -1249,24 +1125,22 @@
       "high_price": 93442.83,
       "low_price": 92433.5,
       "volume": 1492.22069,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 01:00:00 +0000",
@@ -1275,24 +1149,22 @@
       "high_price": 93419.99,
       "low_price": 92649.58,
       "volume": 1902.36584,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-03 00:00:00 +0000",
@@ -1301,24 +1173,22 @@
       "high_price": 94416.46,
       "low_price": 93289.79,
       "volume": 1894.72864,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 33,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-03 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 33,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-03 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-02 23:00:00 +0000",
@@ -1327,24 +1197,22 @@
       "high_price": 94883.51,
       "low_price": 93800.0,
       "volume": 2888.64518,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 26,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-02 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 26,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-02 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-02 22:00:00 +0000",
@@ -1353,24 +1221,22 @@
       "high_price": 94760.0,
       "low_price": 93911.11,
       "volume": 1309.20675,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 26,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-02 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 26,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-02 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-02 21:00:00 +0000",
@@ -1379,24 +1245,22 @@
       "high_price": 94419.83,
       "low_price": 93670.72,
       "volume": 1491.71759,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 26,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-02 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 26,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-02 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-02 20:00:00 +0000",
@@ -1405,24 +1269,22 @@
       "high_price": 94446.27,
       "low_price": 93502.0,
       "volume": 2236.99961,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 26,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-02 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 26,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-02 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-02 19:00:00 +0000",
@@ -1431,24 +1293,22 @@
       "high_price": 93555.81,
       "low_price": 92608.69,
       "volume": 2361.41051,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 26,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-02 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 26,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-02 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-02 18:00:00 +0000",
@@ -1457,24 +1317,22 @@
       "high_price": 94399.8,
       "low_price": 92364.39,
       "volume": 5106.30539,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 26,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-02 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 26,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-02 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-02 17:00:00 +0000",
@@ -1483,24 +1341,22 @@
       "high_price": 95000.0,
       "low_price": 90636.0,
       "volume": 11108.97765,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 26,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-02 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 26,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-02 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-02 16:00:00 +0000",
@@ -1509,24 +1365,22 @@
       "high_price": 91959.99,
       "low_price": 87278.51,
       "volume": 11741.72701,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 26,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-02 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 26,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-02 00:00:00 +0000",
+        "time_until_update": null
+      }
     },
     {
       "date": "2025-03-02 15:00:00 +0000",
@@ -1535,24 +1389,22 @@
       "high_price": 88673.09,
       "low_price": 85075.47,
       "volume": 7619.5081,
-      "sma_values": [],
-      "ema_values": [],
-      "macd_values": [],
-      "rsi_values": [],
-      "sr_values": [],
-      "tsi_values": [],
-      "bb_values": [],
-      "atr_values": [],
-      "kc_values": [],
-      "obv_values": [],
-      "fgi_values": [
-        {
-          "value": 26,
-          "value_classification": "Fear",
-          "timestamp": "2025-03-02 00:00:00 +0000",
-          "time_until_update": null
-        }
-      ]
+      "sma_values": {},
+      "ema_values": {},
+      "macd_values": {},
+      "rsi_values": {},
+      "sr_values": {},
+      "tsi_values": {},
+      "bb_values": {},
+      "atr_values": {},
+      "kc_values": {},
+      "obv_values": {},
+      "fgi_values": {
+        "value": 26,
+        "value_classification": "Fear",
+        "timestamp": "2025-03-02 00:00:00 +0000",
+        "time_until_update": null
+      }
     }
   ]
 }
