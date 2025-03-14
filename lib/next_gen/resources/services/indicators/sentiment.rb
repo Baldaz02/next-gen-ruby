@@ -34,7 +34,7 @@ module NextGen
             to_i(obj)
           end
         end
-        
+
         def to_i(value)
           value.to_s.match?(/^\d+$/) ? value.to_i : value
         end

@@ -16,33 +16,17 @@ module NextGen
       end
 
       def values
-        file_path = data_file_path
+        base_path = "data/#{Time.now.strftime('%Y-%m-%d')}"
+        file_repo = Repositories::FileStorageRepository.new(base_path, 'fgi.json')
 
-        if File.exist?(file_path)
-          JSON.parse(File.read(file_path))
+        if (data = file_repo.load)
+          data
         else
           response = RestClient.get(BASE_URL, { params: { limit: params[:limit] } })
           json_data = JSON.parse(response.body)['data']
-          save_data(file_path, json_data)
+          file_repo.save(json_data)
           json_data
         end
-      end
-
-      private
-
-      def data_file_path
-        base_path = File.join(Dir.pwd, 'data', Time.now.strftime('%Y-%m-%d'))
-        file_path = File.join(base_path, 'fgi.json')
-
-        file_path.sub!('data', 'spec/data') if defined?(RSpec)
-
-        FileUtils.mkdir_p(File.dirname(file_path))
-
-        file_path
-      end
-
-      def save_data(file_path, data)
-        File.write(file_path, JSON.pretty_generate(data))
       end
     end
   end
