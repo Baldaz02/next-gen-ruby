@@ -51,7 +51,7 @@ module NextGen
         [filtered_indicators, index].flatten
       end
 
-      def filter_by_today(data, ticker_datetime)
+      def filter_by_day(data, ticker_datetime)
         ticker_timestamp = ticker_datetime.to_date.to_time.to_i
 
         data.select { |d| d.timestamp == ticker_timestamp }
