@@ -6,7 +6,7 @@ require 'tzinfo'
 module NextGen
   module Config
     module Application
-      def self.set_timezone(timezone)
+      def self.set_timezone(timezone) # rubocop: disable Naming/AccessorMethodName
         ENV['TZ'] = timezone
       end
 
