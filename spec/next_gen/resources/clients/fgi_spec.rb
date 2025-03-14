@@ -26,7 +26,7 @@ RSpec.describe NextGen::Clients::Fgi do
         expect(first_fgi['timestamp']).to eq '1741046400'
         expect(first_fgi['time_until_update']).to eq '55004'
 
-        file_path = client.send(:data_file_path)
+        file_path = 'spec/data/2025-03-04/fgi.json'
         saved_data = JSON.parse(File.read(file_path))
         expect(saved_data.count).to eq 6
         expect(saved_data.first['value']).to eq '15'
