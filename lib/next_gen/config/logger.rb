@@ -12,7 +12,7 @@ module NextGen
 
       def initialize
         log_directory = defined?(RSpec) ? 'spec/' : File.expand_path('', Dir.pwd)
-        log_file = "#{log_directory}/#{base_path_day}/production.log"
+        log_file = "#{log_directory}/#{base_path_day}/#{file_name}"
         FileUtils.mkdir_p(File.dirname(log_file))
 
         @logger = ::Logger.new(log_file, 'daily')
@@ -25,6 +25,14 @@ module NextGen
 
       def error(message)
         @logger.error(message)
+      end
+
+      private
+
+      def file_name
+        env = ENV['APP_ENV'] || 'development'
+
+        "#{env}.log"
       end
     end
   end
