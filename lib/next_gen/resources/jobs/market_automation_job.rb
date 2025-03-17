@@ -26,12 +26,11 @@ module NextGen
         @cryptos.each do |crypto|
           futures << Concurrent::Promises.future do
             process_crypto(crypto)
-        end
+          end
 
-        Concurrent::Promises.zip(*futures).value!
-        logger.info("MarketAutomationJob completed successfully")
-
-        rescue => e
+          Concurrent::Promises.zip(*futures).value!
+          logger.info('MarketAutomationJob completed successfully')
+        rescue StandardError => e
           logger.error("Error processing #{crypto.name}: #{e.message}")
         end
       end
