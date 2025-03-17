@@ -7,14 +7,16 @@ require 'concurrent'
 module NextGen
   module Jobs
     class MarketAutomationJob
+      include NextGen::Helpers::FileHelper
+
       attr_reader :cryptos, :file_base_path, :futures
 
       def initialize
         @cryptos = Models::Crypto.all
         Config::Application.set_timezone('GMT')
-
-        @file_base_path = "data/#{Time.now.strftime('%Y-%m-%d %H')}"
         @futures = []
+
+        @file_base_path = base_path_hour
       end
 
       def perform
