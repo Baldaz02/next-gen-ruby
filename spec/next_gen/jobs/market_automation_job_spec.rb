@@ -2,7 +2,7 @@
 
 RSpec.describe NextGen::Jobs::MarketAutomationJob do
   let(:crypto_data) { CSV::Row.new(%w[Name Symbol], %w[Bitcoin BTC]) }
-  let(:file_path) { 'spec/data/2025-03-04 00/Bitcoin.json' }
+  let(:file_path) { 'spec/data/2025-03-04/00/Bitcoin.json' }
 
   before do
     NextGen::Config::Application.set_timezone('GMT')
