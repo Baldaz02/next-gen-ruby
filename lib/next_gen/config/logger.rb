@@ -11,7 +11,7 @@ module NextGen
       include NextGen::Helpers::FileHelper
 
       def initialize
-        log_directory = defined?(RSpec) ? 'spec/' : File.expand_path('', Dir.pwd)
+        log_directory = defined?(RSpec) ? 'spec' : File.expand_path('', Dir.pwd)
         log_file = "#{log_directory}/#{base_path_day}/#{file_name}"
         FileUtils.mkdir_p(File.dirname(log_file))
 
