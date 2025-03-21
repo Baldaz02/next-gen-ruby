@@ -8,14 +8,16 @@ module NextGen
     class Binance
       BASE_URL = 'https://api.binance.com/api/v3'
 
-      attr_reader :params
+      attr_reader :logger, :params
 
       def initialize(params)
         @params = params
+        @logger = Config::Logger.instance
       end
 
       def candlestick
         response = RestClient.get("#{BASE_URL}/klines", { params: candlestick_params })
+        logger.info("Binance API response for #{params.symbol}: HTTP #{response.code}")
         candlestick_response(response)
       end
 
