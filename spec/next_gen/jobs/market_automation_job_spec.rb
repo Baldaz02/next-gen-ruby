@@ -17,7 +17,8 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
   context '#perform', vcr: true do
     it do
       expect(logger).to receive(:info).with('MarketAutomationJob started with 1 cryptos')
-      expect(logger).to receive(:info).with('MarketAutomationJob completed successfully')
+      expect(logger).to receive(:info).with('Binance API response for BTCUSDT: HTTP 200')
+      expect(logger).to receive(:info).with("MarketAutomationJob completed successfully \n")
       described_class.new.perform
 
       expect(File.exist?(file_path)).to be_truthy
@@ -34,7 +35,8 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
         allow_any_instance_of(NextGen::Jobs::MarketAutomationJob).to receive(:process_crypto).and_raise(StandardError,
                                                                                                         'Test error')
         expect(logger).to receive(:info).with('MarketAutomationJob started with 1 cryptos')
-        expect(logger).to receive(:error).with('Error processing Bitcoin: Test error')
+        expect(logger).to receive(:error).with('Error processing: Test error')
+        expect(Sentry).to receive(:capture_exception).with(instance_of(StandardError))
 
         described_class.new.perform
       end
