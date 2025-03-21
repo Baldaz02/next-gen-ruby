@@ -12,10 +12,12 @@ module NextGen
       attr_reader :cryptos, :logger, :file_base_path, :futures
 
       def initialize
+        Config::SentryClient.setup
+
         @cryptos = Models::Crypto.all
         Config::Application.set_timezone('GMT')
-
         @futures = []
+
         @logger = Config::Logger.instance
         @file_base_path = base_path_hour
       end
@@ -23,15 +25,18 @@ module NextGen
       def perform
         logger.info("MarketAutomationJob started with #{@cryptos.size} cryptos")
 
-        @cryptos.each do |crypto|
-          futures << Concurrent::Promises.future do
-            process_crypto(crypto)
+        begin
+          @cryptos.each do |crypto|
+            futures << Concurrent::Promises.future do
+              process_crypto(crypto)
+            end
           end
 
           Concurrent::Promises.zip(*futures).value!
-          logger.info('MarketAutomationJob completed successfully')
+          logger.info("MarketAutomationJob completed successfully \n")
         rescue StandardError => e
-          logger.error("Error processing #{crypto.name}: #{e.message}")
+          logger.error("Error processing: #{e.message}")
+          Sentry.capture_exception(e)
         end
       end
 
