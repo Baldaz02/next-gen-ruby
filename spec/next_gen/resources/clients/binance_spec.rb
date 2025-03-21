@@ -16,6 +16,11 @@ RSpec.describe NextGen::Clients::Binance do
     }
   end
 
+  before do
+    Timecop.freeze(Time.local(2025, 3, 4))
+    ENV['APP_ENV'] = 'test'
+  end
+
   context '#candlestick', vcr: true do
     context 'params not all present' do
       it do
