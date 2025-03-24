@@ -28,6 +28,7 @@ Gem::Specification.new do |specification|
   specification.add_dependency('json')
   specification.add_dependency('ostruct', '~> 0.6')
   specification.add_dependency('rest-client')
+  specification.add_dependency('sentry-ruby')
   specification.add_dependency('technical-analysis')
   specification.add_dependency('tzinfo', '~> 2.0.6')
   specification.add_dependency('vcr')
