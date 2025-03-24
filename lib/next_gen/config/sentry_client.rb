@@ -9,9 +9,9 @@ module NextGen
         return unless defined?(Sentry)
 
         Sentry.init do |config|
-          config.dsn                = ENV['SENTRY_DSN']
+          config.dsn                = ENV.fetch('SENTRY_DSN', nil)
           config.traces_sample_rate = 0.2
-          config.environment        = ENV['APP_ENV'] || 'development'
+          config.environment        = ENV.fetch('APP_ENV', 'development')
           config.send_default_pii   = true
         end
       end
