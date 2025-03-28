@@ -22,7 +22,7 @@ module NextGen
         @file_base_path = base_path_hour
       end
 
-      def perform
+      def perform # rubocop: disable Metrics/MethodLength, Metrics/AbcSize
         logger.info("MarketAutomationJob started with #{@cryptos.size} cryptos")
 
         begin
