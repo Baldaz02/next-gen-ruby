@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://binance.us/api/v3/klines?interval=1h&limit=50&symbol=BTCUSDT
+    uri: https://api.binance.us/api/v3/klines?interval=1h&limit=50&symbol=BTCUSDT
     body:
       encoding: US-ASCII
       string: ''
@@ -14,7 +14,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Host:
-      - api.binance.com
+      - api.binance.us
   response:
     status:
       code: 200
