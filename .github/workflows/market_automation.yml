@@ -1,0 +1,38 @@
+name: Schedule Market Automation
+
+on:
+  schedule:
+    - cron: '0,10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  scheduled-task:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code on production branch
+        uses: actions/checkout@v2
+        with:
+          ref: production
+
+      - name: Install dependencies
+        run: |
+          bundle install
+
+      - name: Execute NextGen Job
+        run: |
+          irb -Ilib -r next_gen -e 'NextGen::Jobs::MarketAutomationJob.new.perform'
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+          APP_ENV: ${{ secrets.APP_ENV }}
+
+      - name: Commit generated data
+        run: |
+          git config --global user.name "Baldaz02"
+          git config --global user.email "stefanobaldazzi40@gmail.com"
+
+          git add ./data
+          git commit -m "Auto commit: Updated data" || echo "No changes to commit" 
+          git push origin production
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
