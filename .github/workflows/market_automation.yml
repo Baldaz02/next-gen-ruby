@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check Public IP
+        run: curl -s https://ifconfig.me
+
       - name: Checkout code on production branch
         uses: actions/checkout@v2
         with:
