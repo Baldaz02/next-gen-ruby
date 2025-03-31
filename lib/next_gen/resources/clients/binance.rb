@@ -6,7 +6,7 @@ require 'json'
 module NextGen
   module Clients
     class Binance
-      BASE_URL = 'https://api.binance.com/api/v3'
+      BASE_URL = 'https://binance.us/api/v3'
 
       attr_reader :logger, :params
 

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.binance.com/api/v3/klines?endTime=1699106400000&interval=1m&startTime=1699102800000&symbol=BTCUSDT
+    uri: https://binance.us/api/v3/klines?endTime=1699106400000&interval=1m&startTime=1699102800000&symbol=BTCUSDT
     body:
       encoding: US-ASCII
       string: ''
