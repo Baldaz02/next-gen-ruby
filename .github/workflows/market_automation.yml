@@ -31,7 +31,7 @@ jobs:
 
       - name: Execute NextGen Job
         run: |
-          irb -Ilib -r next_gen -e 'NextGen::Jobs::MarketAutomationJob.new.perform'
+          ruby -Ilib -r next_gen -e 'NextGen::Jobs::MarketAutomationJob.new.perform'
         env:
           SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
           APP_ENV: ${{ secrets.APP_ENV }}
