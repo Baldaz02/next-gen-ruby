@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe NextGen::Config::Logger do
-  let(:log_directory) { 'spec/data/2025-03-04' }
+  let(:log_directory) { 'spec/data/2025-03-04/00/' }
   let(:log_file) { "#{log_directory}/test.log" }
   let(:logger) { described_class.instance }
 
