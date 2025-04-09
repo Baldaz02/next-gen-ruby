@@ -1,0 +1,296 @@
+{
+  "crypto": {
+    "name": "Ethereum",
+    "symbol": "ETH"
+  },
+  "data": [
+    {
+      "date": "2023-11-06 14:00:00 +0000",
+      "open_price": 1897,
+      "close_price": 1913.13,
+      "high_price": 1914.23,
+      "low_price": 1896.77,
+      "volume": 27024.5299,
+      "sma_values": {
+        "sma10": 1891.366,
+        "sma20": 1888.2205
+      },
+      "ema_values": {
+        "ema10": 1896.1086049698542,
+        "ema20": 1891.412931973401
+      },
+      "macd_values": {
+        "macd_line": 6.143862018410573,
+        "macd_histogram": 2.286856095631491,
+        "signal_line": 3.857005922779082
+      },
+      "rsi_values": {
+        "rsi": 61.268522205657824
+      },
+      "sr_values": {
+        "sr": 97.59562841530075,
+        "sr_signal": 84.39159783081006
+      },
+      "tsi_values": {
+        "tsi": 26.850418364958053
+      },
+      "bb_values": {
+        "lower_band": 1866.7697687156922,
+        "middle_band": 1888.2205,
+        "upper_band": 1909.6712312843076
+      },
+      "atr_values": {
+        "atr": 14.630249825487255
+      },
+      "kc_values": {
+        "lower_band": 1877.1380000000004,
+        "middle_band": 1889.5940000000003,
+        "upper_band": 1902.0500000000002
+      },
+      "obv_values": {
+        "obv": 37639.452
+      },
+      "fgi_values": {}
+    },
+    {
+      "date": "2023-11-06 13:00:00 +0000",
+      "open_price": 1905.8,
+      "close_price": 1897,
+      "high_price": 1911.13,
+      "low_price": 1887.98,
+      "volume": 26403.508,
+      "sma_values": {
+        "sma10": 1887.8739999999998,
+        "sma20": 1887.22
+      },
+      "ema_values": {
+        "ema10": 1892.326072740933,
+        "ema20": 1889.1269248127064
+      },
+      "macd_values": {
+        "macd_line": 4.732459992105987,
+        "macd_histogram": 1.4471680932347777,
+        "signal_line": 3.2852918988712094
+      },
+      "rsi_values": {
+        "rsi": 53.61020370097822
+      },
+      "sr_values": {
+        "sr": 66.86987104337614,
+        "sr_signal": 76.21315362260027
+      },
+      "tsi_values": {
+        "tsi": 25.071037208744386
+      },
+      "bb_values": {
+        "lower_band": 1869.044610045449,
+        "middle_band": 1887.22,
+        "upper_band": 1905.395389954551
+      },
+      "atr_values": {
+        "atr": 14.412576735140117
+      },
+      "kc_values": {
+        "lower_band": 1874.5413333333336,
+        "middle_band": 1886.8523333333335,
+        "upper_band": 1899.1633333333334
+      },
+      "obv_values": {
+        "obv": 10614.922099999996
+      },
+      "fgi_values": {}
+    },
+    {
+      "date": "2023-11-06 12:00:00 +0000",
+      "open_price": 1898.72,
+      "close_price": 1905.8,
+      "high_price": 1906.35,
+      "low_price": 1890.91,
+      "volume": 18590.8469,
+      "sma_values": {
+        "sma10": 1886.8949999999998,
+        "sma20": 1887.3735000000001
+      },
+      "ema_values": {
+        "ema10": 1891.287422238918,
+        "ema20": 1888.2981800561492
+      },
+      "macd_values": {
+        "macd_line": 4.504489260464879,
+        "macd_histogram": 1.5809893849023644,
+        "signal_line": 2.923499875562515
+      },
+      "rsi_values": {
+        "rsi": 59.57807494123483
+      },
+      "sr_values": {
+        "sr": 88.70929403375325,
+        "sr_signal": 78.1155741036044
+      },
+      "tsi_values": {
+        "tsi": 25.305458030364164
+      },
+      "bb_values": {
+        "lower_band": 1868.8027779665922,
+        "middle_band": 1887.3735000000001,
+        "upper_band": 1905.944222033408
+      },
+      "atr_values": {
+        "atr": 13.740467253227811
+      },
+      "kc_values": {
+        "lower_band": 1874.7123333333338,
+        "middle_band": 1885.5253333333337,
+        "upper_band": 1896.3383333333336
+      },
+      "obv_values": {
+        "obv": 37018.4301
+      },
+      "fgi_values": {}
+    },
+    {
+      "date": "2023-11-06 11:00:00 +0000",
+      "open_price": 1895.43,
+      "close_price": 1898.71,
+      "high_price": 1898.96,
+      "low_price": 1890.76,
+      "volume": 8582.5693,
+      "sma_values": {
+        "sma10": 1884.875,
+        "sma20": 1886.2115000000001
+      },
+      "ema_values": {
+        "ema10": 1888.0624049586775,
+        "ema20": 1886.4558832199543
+      },
+      "macd_values": {
+        "macd_line": 3.251995864654191,
+        "macd_histogram": 0.7237433353172671,
+        "signal_line": 2.528252529336924
+      },
+      "rsi_values": {
+        "rsi": 55.905826332470745
+      },
+      "sr_values": {
+        "sr": 73.06029579067143,
+        "sr_signal": 68.17073380560203
+      },
+      "tsi_values": {
+        "tsi": 23.387689283579427
+      },
+      "bb_values": {
+        "lower_band": 1869.7014095925203,
+        "middle_band": 1886.2115000000001,
+        "upper_band": 1902.7215904074799
+      },
+      "atr_values": {
+        "atr": 13.609733965014579
+      },
+      "kc_values": {
+        "lower_band": 1873.717,
+        "middle_band": 1883.9720000000002,
+        "upper_band": 1894.2270000000003
+      },
+      "obv_values": {
+        "obv": 18427.583199999997
+      },
+      "fgi_values": {}
+    },
+    {
+      "date": "2023-11-06 10:00:00 +0000",
+      "open_price": 1887.89,
+      "close_price": 1895.44,
+      "high_price": 1898.99,
+      "low_price": 1886.68,
+      "volume": 13589.0145,
+      "sma_values": {
+        "sma10": 1883.575,
+        "sma20": 1884.9934999999998
+      },
+      "ema_values": {
+        "ema10": 1885.6962727272726,
+        "ema20": 1885.165976190476
+      },
+      "macd_values": {
+        "macd_line": 2.3279479905156677,
+        "macd_histogram": -0.0193687049919391,
+        "signal_line": 2.347316695507607
+      },
+      "rsi_values": {
+        "rsi": 54.1207866321797
+      },
+      "sr_values": {
+        "sr": 72.57713248638852,
+        "sr_signal": 61.67574107683013
+      },
+      "tsi_values": {
+        "tsi": 22.13032906603144
+      },
+      "bb_values": {
+        "lower_band": 1868.7740713969163,
+        "middle_band": 1884.9934999999998,
+        "upper_band": 1901.2129286030834
+      },
+      "atr_values": {
+        "atr": 14.025867346938773
+      },
+      "kc_values": {
+        "lower_band": 1872.2796666666666,
+        "middle_band": 1883.3386666666665,
+        "upper_band": 1894.3976666666665
+      },
+      "obv_values": {
+        "obv": 9845.013899999998
+      },
+      "fgi_values": {}
+    },
+    {
+      "date": "2023-11-06 09:00:00 +0000",
+      "open_price": 1884.97,
+      "close_price": 1887.89,
+      "high_price": 1889.9,
+      "low_price": 1882.92,
+      "volume": 8967.6243,
+      "sma_values": {
+        "sma10": 1883.5309999999997,
+        "sma20": 1884.0844999999997
+      },
+      "ema_values": {
+        "ema10": 1883.5309999999997,
+        "ema20": 1884.0844999999997
+      },
+      "macd_values": {
+        "macd_line": 1.4476112785712303,
+        "macd_histogram": -0.9045475931843612,
+        "signal_line": 2.3521588717555915
+      },
+      "rsi_values": {
+        "rsi": 49.76037405026309
+      },
+      "sr_values": {
+        "sr": 58.87477313974612,
+        "sr_signal": 51.33091349062314
+      },
+      "tsi_values": {
+        "tsi": 21.10179665027894
+      },
+      "bb_values": {
+        "lower_band": 1868.29820417769,
+        "middle_band": 1884.0844999999997,
+        "upper_band": 1899.8707958223094
+      },
+      "atr_values": {
+        "atr": 14.157857142857145
+      },
+      "kc_values": {
+        "lower_band": 1872.516333333333,
+        "middle_band": 1883.323333333333,
+        "upper_band": 1894.130333333333
+      },
+      "obv_values": {
+        "obv": -3744.000600000001
+      },
+      "fgi_values": {}
+    }
+  ]
+}
