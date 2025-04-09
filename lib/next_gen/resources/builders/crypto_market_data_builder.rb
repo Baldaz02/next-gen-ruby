@@ -21,7 +21,7 @@ module NextGen
       private
 
       def build_tickers_data
-        Models::Ticker.sorted_by_date(tickers).map do |ticker|
+        Models::Ticker.sorted_by_date(tickers).first(6).map do |ticker|
           ticker_data(ticker)
         end
       end
