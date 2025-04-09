@@ -31,7 +31,7 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
     end
 
     context 'with params' do
-      before  do
+      before do
         allow(CSV).to receive(:foreach).and_return([CSV::Row.new(%w[Name Symbol], %w[Ethereum ETH])])
       end
 
@@ -40,7 +40,7 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
         expect(logger).to receive(:info).with('Binance API response for ETHUSDT: HTTP 200')
         expect(logger).to receive(:info).with("MarketAutomationJob completed successfully \n")
 
-        params = { interval: '1h', limit: 50, timestamps: { start: 1_699_102_800_000, end: 1_699_282_280_000_000 }}
+        params = { interval: '1h', limit: 50, timestamps: { start: 1_740_866_400_000, end: 1_741_046_400_000 } }
         described_class.new(params).perform
 
         file_path = 'spec/data/2025-03-04/00/Ethereum.json'
