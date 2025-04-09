@@ -9,9 +9,9 @@ module NextGen
     class MarketAutomationJob
       include NextGen::Helpers::FileHelper
 
-      attr_reader :cryptos, :logger, :file_base_path, :futures
+      attr_reader :cryptos, :logger, :file_base_path, :futures, :params
 
-      def initialize
+      def initialize(params = nil)
         Config::SentryClient.setup
 
         @cryptos = Models::Crypto.all
@@ -20,6 +20,7 @@ module NextGen
 
         @logger = Config::Logger.instance
         @file_base_path = base_path_hour
+        @params = params
       end
 
       def perform # rubocop: disable Metrics/MethodLength, Metrics/AbcSize
@@ -49,7 +50,7 @@ module NextGen
       end
 
       def process_crypto(crypto)
-        tickers = crypto.tickers
+        tickers = crypto.tickers(params)
         indicators = Services::IndicatorService.new(tickers).calculate_all
         export_data(crypto, tickers, indicators)
       end

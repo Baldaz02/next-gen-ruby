@@ -30,6 +30,30 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
       expect(json_data).to eq json_fixture_data
     end
 
+    context 'with params' do
+      before  do
+        allow(CSV).to receive(:foreach).and_return([CSV::Row.new(%w[Name Symbol], %w[Ethereum ETH])])
+      end
+
+      it do
+        expect(logger).to receive(:info).with('MarketAutomationJob started with 1 cryptos')
+        expect(logger).to receive(:info).with('Binance API response for ETHUSDT: HTTP 200')
+        expect(logger).to receive(:info).with("MarketAutomationJob completed successfully \n")
+
+        params = { interval: '1h', limit: 50, timestamps: { start: 1_699_102_800_000, end: 1_699_282_280_000_000 }}
+        described_class.new(params).perform
+
+        file_path = 'spec/data/2025-03-04/00/Ethereum.json'
+        expect(File.exist?(file_path)).to be_truthy
+        json_data = JSON.parse(File.read(file_path))
+
+        market_data_path = 'spec/fixtures/data/ethereum_market_data.json'
+        json_fixture_data = JSON.parse(File.read(market_data_path))
+
+        expect(json_data).to eq json_fixture_data
+      end
+    end
+
     context 'error' do
       it do
         allow_any_instance_of(NextGen::Jobs::MarketAutomationJob).to receive(:process_crypto).and_raise(StandardError,
