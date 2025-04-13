@@ -2,7 +2,8 @@
 
 RSpec.describe NextGen::Jobs::MarketAutomationJob do
   let(:crypto_data) { CSV::Row.new(%w[Name Symbol], %w[Bitcoin BTC]) }
-  let(:file_path) { 'spec/data/2025-03-04/00/Bitcoin.json' }
+  let(:bitcoin_file_path) { 'spec/data/2025-03-04/00/Bitcoin.json' }
+  let(:ethereum_file_path) { 'spec/data/2025-03-04/00/Ethereum.json' }
   let(:logger) { instance_double('NextGen::Config::Logger') }
 
   before do
@@ -10,8 +11,13 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
     Timecop.freeze(Time.local(2025, 3, 4))
     allow(CSV).to receive(:foreach).and_return([crypto_data])
 
-    FileUtils.rm_f(file_path)
+    FileUtils.rm_f(bitcoin_file_path)
     allow(NextGen::Config::Logger).to receive(:instance).and_return(logger)
+  end
+
+  after do
+    FileUtils.rm_f(bitcoin_file_path)
+    FileUtils.rm_f(ethereum_file_path)
   end
 
   context '#perform', vcr: true do
@@ -21,8 +27,8 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
       expect(logger).to receive(:info).with("MarketAutomationJob completed successfully \n")
       described_class.new.perform
 
-      expect(File.exist?(file_path)).to be_truthy
-      json_data = JSON.parse(File.read(file_path))
+      expect(File.exist?(bitcoin_file_path)).to be_truthy
+      json_data = JSON.parse(File.read(bitcoin_file_path))
 
       market_data_path = 'spec/fixtures/data/market_data.json'
       json_fixture_data = JSON.parse(File.read(market_data_path))
@@ -43,9 +49,8 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
         params = { interval: '1h', limit: 50, timestamps: { start: 1_740_866_400_000, end: 1_741_046_400_000 } }
         described_class.new(params).perform
 
-        file_path = 'spec/data/2025-03-04/00/Ethereum.json'
-        expect(File.exist?(file_path)).to be_truthy
-        json_data = JSON.parse(File.read(file_path))
+        expect(File.exist?(ethereum_file_path)).to be_truthy
+        json_data = JSON.parse(File.read(ethereum_file_path))
 
         market_data_path = 'spec/fixtures/data/ethereum_market_data.json'
         json_fixture_data = JSON.parse(File.read(market_data_path))
