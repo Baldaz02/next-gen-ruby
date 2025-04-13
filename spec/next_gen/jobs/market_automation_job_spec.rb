@@ -7,7 +7,6 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
   let(:logger) { instance_double('NextGen::Config::Logger') }
 
   before do
-    NextGen::Config::Application.set_timezone('GMT')
     Timecop.freeze(Time.local(2025, 3, 4))
     allow(CSV).to receive(:foreach).and_return([crypto_data])
 

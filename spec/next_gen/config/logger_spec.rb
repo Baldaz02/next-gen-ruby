@@ -8,8 +8,6 @@ RSpec.describe NextGen::Config::Logger do
   before do
     FileUtils.mkdir_p(log_directory)
     Timecop.freeze(Time.local(2025, 3, 4))
-
-    ENV['APP_ENV'] = 'test'
   end
 
   after { FileUtils.rm_f(log_file) }
