@@ -8,6 +8,7 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
 
   before do
     Timecop.freeze(Time.local(2025, 3, 4))
+    ENV['DATETIME'] = '2025-03-04 00:00:00 +0000'
     allow(CSV).to receive(:foreach).and_return([crypto_data])
 
     FileUtils.rm_f(bitcoin_file_path)

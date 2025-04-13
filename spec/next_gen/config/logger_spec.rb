@@ -8,6 +8,9 @@ RSpec.describe NextGen::Config::Logger do
   before do
     FileUtils.mkdir_p(log_directory)
     Timecop.freeze(Time.local(2025, 3, 4))
+
+    ENV['DATETIME'] = '2025-03-04 00:00:00 +0000'
+    ENV['APP_ENV'] = 'test'
   end
 
   after { FileUtils.rm_f(log_file) }
