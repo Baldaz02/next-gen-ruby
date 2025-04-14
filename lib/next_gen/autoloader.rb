@@ -33,7 +33,8 @@ module NextGen
 
       def ignored_paths
         [
-          ::File.join(LIB_PATH, 'next_gen', 'patches')
+          ::File.join(LIB_PATH, 'next_gen', 'patches'),
+          ::File.join(LIB_PATH, 'next_gen', 'config', 'schedule.rb')
         ].freeze
       end
     end

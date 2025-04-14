@@ -9,6 +9,8 @@ require('webmock/rspec')
 SimpleCov.start do
   minimum_coverage(100)
   add_filter('/spec/')
+
+  add_filter('lib/next_gen/config/schedule.rb')
 end
 
 require('next_gen')

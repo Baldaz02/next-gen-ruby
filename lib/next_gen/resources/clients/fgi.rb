@@ -16,17 +16,17 @@ module NextGen
       end
 
       def values
-        base_path = "data/#{Time.now.strftime('%Y-%m-%d')}"
-        file_repo = Repositories::FileStorageRepository.new(base_path, 'fgi.json')
+        datetime = DateTime.parse(ENV.fetch('DATETIME', nil))
+        base_path = "data/#{datetime.strftime('%Y-%m-%d')}"
 
-        if (data = file_repo.load)
-          data
-        else
-          response = RestClient.get(BASE_URL, { params: { limit: params[:limit] } })
-          json_data = JSON.parse(response.body)['data']
-          file_repo.save(json_data)
-          json_data
-        end
+        file_repo = Repositories::FileStorageRepository.new(base_path, 'fgi.json')
+        data = file_repo.load
+        return data if data
+
+        response = RestClient.get(BASE_URL, params: { limit: params[:limit] })
+        json_data = JSON.parse(response.body)['data']
+        file_repo.save(json_data)
+        json_data
       end
     end
   end
