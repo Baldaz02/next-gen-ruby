@@ -18,9 +18,6 @@ RSpec.describe NextGen::Clients::Binance do
 
   before do
     Timecop.freeze(Time.local(2025, 3, 4))
-    
-    ENV['DATETIME'] = '2025-03-04 00:00:00 +0000'
-    ENV['APP_ENV'] = 'test'
   end
 
   context '#candlestick', vcr: true do
