@@ -1,16 +1,13 @@
 # frozen_string_literal: true
 
 RSpec.describe NextGen::Config::Logger do
-  let(:log_directory) { 'spec/data/2025-03-04/00/' }
+  let(:log_directory) { 'spec/data/2025-03-04/00' }
   let(:log_file) { "#{log_directory}/test.log" }
-  let(:logger) { described_class.instance }
+  let(:logger) { described_class.send(:new) }
 
   before do
     FileUtils.mkdir_p(log_directory)
     Timecop.freeze(Time.local(2025, 3, 4))
-
-    ENV['DATETIME'] = '2025-03-04 00:00:00 +0000'
-    ENV['APP_ENV'] = 'test'
   end
 
   after { FileUtils.rm_f(log_file) }

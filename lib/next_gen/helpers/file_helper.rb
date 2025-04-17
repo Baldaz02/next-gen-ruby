@@ -4,7 +4,7 @@ module NextGen
   module Helpers
     module FileHelper
       def initialize_time
-        @today ||= DateTime.parse(ENV.fetch('DATETIME', nil))
+        @today ||= DateTime.parse(ENV.fetch('DATETIME', DateTime.now))
       end
 
       def base_path_day
