@@ -2,10 +2,7 @@
 
 RSpec.describe NextGen::Clients::Fgi do
   let(:params) { { limit: 6 } }
-
   let(:client) { described_class.new(OpenStruct.new(params)) }
-
-  before { Timecop.freeze(Time.local(2025, 3, 4)) }
 
   context '#values' do
     context 'not call today' do

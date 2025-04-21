@@ -5,10 +5,7 @@ RSpec.describe NextGen::Config::Logger do
   let(:log_file) { "#{log_directory}/test.log" }
   let(:logger) { described_class.send(:new) }
 
-  before do
-    FileUtils.mkdir_p(log_directory)
-    Timecop.freeze(Time.local(2025, 3, 4))
-  end
+  before { FileUtils.mkdir_p(log_directory) }
 
   after { FileUtils.rm_f(log_file) }
 

@@ -136,8 +136,6 @@ RSpec.describe NextGen::Services::IndicatorService do
   end
 
   context 'Sentiment (FGI, ADI, MFI)' do
-    before { Timecop.freeze(Time.local(2025, 3, 4)) }
-
     it do
       data = described_class.new(tickers).sentiment
 
@@ -160,8 +158,6 @@ RSpec.describe NextGen::Services::IndicatorService do
   end
 
   context 'all indicators' do
-    before { Timecop.freeze(Time.local(2025, 3, 4)) }
-
     it do
       data = described_class.new(tickers).calculate_all
 
