@@ -18,7 +18,7 @@ module NextGen
         end
 
         def fear_greed_index(limit = 6)
-          params = OpenStruct.new({ limit: limit })
+          params = { limit: limit }
           deep_struct(Clients::Fgi.new(params).values)
         end
 

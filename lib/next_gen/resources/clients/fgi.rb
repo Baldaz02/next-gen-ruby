@@ -9,14 +9,17 @@ module NextGen
     class Fgi
       BASE_URL = 'https://api.alternative.me/fng/'
 
-      attr_reader :params
+      attr_accessor :params
+      attr_reader :today
 
       def initialize(params)
         @params = params
+        @today = Date.today
       end
 
       def values
         datetime = DateTime.parse(ENV.fetch('DATETIME', nil))
+        params[:limit] = 10000 if datetime.to_date < today
         base_path = "data/#{datetime.strftime('%Y-%m-%d')}"
 
         file_repo = Repositories::FileStorageRepository.new(base_path, 'fgi.json')

@@ -5,322 +5,292 @@
   },
   "data": [
     {
-      "date": "2025-03-04 16:00:00 +0000",
-      "open_price": 82985.05,
-      "close_price": 82867.93,
-      "high_price": 83143.78,
-      "low_price": 82013.11,
-      "volume": 1599.27881,
+      "date": "2025-04-22 10:00:00 +0000",
+      "open_price": 88574.33,
+      "close_price": 88538.33,
+      "high_price": 88596.97,
+      "low_price": 88488,
+      "volume": 157.8931,
       "sma_values": {
-        "sma10": 83435.949,
-        "sma20": 84076.351
+        "sma10": 88342.51199999999,
+        "sma20": 87836.63700000002
       },
       "ema_values": {
-        "ema10": 83342.81218663033,
-        "ema20": 84406.08137926437
+        "ema10": 88235.75183301563,
+        "ema20": 87911.94397427524
       },
       "macd_values": {
-        "macd_line": -1986.4803570708318,
-        "macd_histogram": 380.9419987996598,
-        "signal_line": -2367.4223558704916
+        "macd_line": 430.69282633250987,
+        "macd_histogram": 44.12961632934787,
+        "signal_line": 386.563210003162
       },
       "rsi_values": {
-        "rsi": 37.75332841852701
+        "rsi": 55.63834535312236
       },
       "sr_values": {
-        "sr": 39.33489569105561,
-        "sr_signal": 36.53291484358466
+        "sr": 82.98012412995969,
+        "sr_signal": 82.13151901053003
       },
       "tsi_values": {
-        "tsi": -37.779474251243336
+        "tsi": 39.13429604443248
       },
       "bb_values": {
-        "lower_band": 81832.64379433484,
-        "middle_band": 84076.351,
-        "upper_band": 86320.05820566515
+        "lower_band": 86651.28362890678,
+        "middle_band": 87836.63700000002,
+        "upper_band": 89021.99037109326
       },
       "atr_values": {
-        "atr": 1304.871791866059
+        "atr": 542.8612538501716
       },
       "kc_values": {
-        "lower_band": 82242.153,
-        "middle_band": 83410.524,
-        "upper_band": 84578.895
+        "lower_band": 87817.83733333334,
+        "middle_band": 88312.85933333334,
+        "upper_band": 88807.88133333334
       },
       "obv_values": {
-        "obv": -6695.99476
+        "obv": -2275.398010000001
       },
-      "fgi_values": {
-        "value": 15,
-        "value_classification": "Extreme Fear",
-        "timestamp": "2025-03-04 00:00:00 +0000",
-        "time_until_update": 55004
-      }
+      "fgi_values": {}
     },
     {
-      "date": "2025-03-04 15:00:00 +0000",
-      "open_price": 83201.4,
-      "close_price": 82985.06,
-      "high_price": 83373.42,
-      "low_price": 81500,
-      "volume": 4824.82043,
+      "date": "2025-04-22 09:00:00 +0000",
+      "open_price": 88414.33,
+      "close_price": 88574.34,
+      "high_price": 88600,
+      "low_price": 88312.7,
+      "volume": 616.35026,
       "sma_values": {
-        "sma10": 83537.514,
-        "sma20": 84236.65449999999
+        "sma10": 88259.66399999998,
+        "sma20": 87820.13900000001
       },
       "ema_values": {
-        "ema10": 83448.34156143706,
-        "ema20": 84567.99205076588
+        "ema10": 88168.51224035244,
+        "ema20": 87846.00860314633
       },
       "macd_values": {
-        "macd_line": -2064.0222004312964,
-        "macd_histogram": 398.63565513911,
-        "signal_line": -2462.6578555704064
+        "macd_line": 430.49296998280624,
+        "macd_histogram": 54.962164061981184,
+        "signal_line": 375.53080592082506
       },
       "rsi_values": {
-        "rsi": 38.343180977331215
+        "rsi": 56.24799375769207
       },
       "sr_values": {
-        "sr": 42.702974709933436,
-        "sr_signal": 27.148007554927307
+        "sr": 84.78980827700568,
+        "sr_signal": 81.84865052283119
       },
       "tsi_values": {
-        "tsi": -38.005081161363776
+        "tsi": 38.98576374415772
       },
       "bb_values": {
-        "lower_band": 81900.26364457248,
-        "middle_band": 84236.65449999999,
-        "upper_band": 86573.0453554275
+        "lower_band": 86667.16425748394,
+        "middle_band": 87820.13900000001,
+        "upper_band": 88973.11374251609
       },
       "atr_values": {
-        "atr": 1318.27192970191
+        "atr": 576.2375041463386
       },
       "kc_values": {
-        "lower_band": 82401.048,
-        "middle_band": 83539.038,
-        "upper_band": 84677.028
+        "lower_band": 87659.63600000001,
+        "middle_band": 88209.339,
+        "upper_band": 88759.042
       },
       "obv_values": {
-        "obv": -5096.71595
+        "obv": -2117.504910000001
       },
-      "fgi_values": {
-        "value": 15,
-        "value_classification": "Extreme Fear",
-        "timestamp": "2025-03-04 00:00:00 +0000",
-        "time_until_update": 55004
-      }
+      "fgi_values": {}
     },
     {
-      "date": "2025-03-04 14:00:00 +0000",
-      "open_price": 82804,
-      "close_price": 83201.41,
-      "high_price": 84977.65,
-      "low_price": 82062.06,
-      "volume": 6008.25724,
+      "date": "2025-04-22 08:00:00 +0000",
+      "open_price": 88476.82,
+      "close_price": 88414.33,
+      "high_price": 88688,
+      "low_price": 88320,
+      "volume": 667.61336,
       "sma_values": {
-        "sma10": 83666.40699999999,
-        "sma20": 84367.7015
+        "sma10": 88153.85299999999,
+        "sma20": 87742.8265
       },
       "ema_values": {
-        "ema10": 83551.29301953419,
-        "ema20": 84734.61647716229
+        "ema10": 88078.32829376409,
+        "ema20": 87769.34214031963
       },
       "macd_values": {
-        "macd_line": -2144.8976121323794,
-        "macd_histogram": 417.4191572228042,
-        "signal_line": -2562.3167693551836
+        "macd_line": 420.30969195124635,
+        "macd_histogram": 58.519427045916586,
+        "signal_line": 361.79026490532976
       },
       "rsi_values": {
-        "rsi": 39.398970051640894
+        "rsi": 54.176254276023656
       },
       "sr_values": {
-        "sr": 27.56087412976495,
-        "sr_signal": 22.88253789372865
+        "sr": 78.6246246246247,
+        "sr_signal": 78.46831599368709
       },
       "tsi_values": {
-        "tsi": -38.411459783927995
+        "tsi": 38.541036199736524
       },
       "bb_values": {
-        "lower_band": 82032.88120618023,
-        "middle_band": 84367.7015,
-        "upper_band": 86702.52179381976
+        "lower_band": 86595.43640783842,
+        "middle_band": 87742.8265,
+        "upper_band": 88890.21659216157
       },
       "atr_values": {
-        "atr": 1275.5682319866726
+        "atr": 598.463466003749
       },
       "kc_values": {
-        "lower_band": 82610.703,
-        "middle_band": 83684.08399999999,
-        "upper_band": 84757.46499999998
+        "lower_band": 87518.38033333333,
+        "middle_band": 88098.85633333333,
+        "upper_band": 88679.33233333332
       },
       "obv_values": {
-        "obv": -271.89552000000003
+        "obv": -2733.855170000001
       },
-      "fgi_values": {
-        "value": 15,
-        "value_classification": "Extreme Fear",
-        "timestamp": "2025-03-04 00:00:00 +0000",
-        "time_until_update": 55004
-      }
+      "fgi_values": {}
     },
     {
-      "date": "2025-03-04 13:00:00 +0000",
-      "open_price": 83763.73,
-      "close_price": 82804,
-      "high_price": 83764.56,
-      "low_price": 82300,
-      "volume": 2427.20219,
+      "date": "2025-04-22 07:00:00 +0000",
+      "open_price": 88246.46,
+      "close_price": 88476.83,
+      "high_price": 88486,
+      "low_price": 88172.18,
+      "volume": 948.01204,
       "sma_values": {
-        "sma10": 83687.96099999998,
-        "sma20": 84564.271
+        "sma10": 88029.228,
+        "sma20": 87674.04550000001
       },
       "ema_values": {
-        "ema10": 83629.0448016529,
-        "ema20": 84896.00663265305
+        "ema10": 88003.66124793388,
+        "ema20": 87701.4486814059
       },
       "macd_values": {
-        "macd_line": -2238.9538996180054,
-        "macd_histogram": 427.7176590428794,
-        "signal_line": -2666.671558660885
+        "macd_line": 417.49045792620745,
+        "macd_histogram": 70.33004978235681,
+        "signal_line": 347.16040814385065
       },
       "rsi_values": {
-        "rsi": 36.41250130737938
+        "rsi": 55.12296644627659
       },
       "sr_values": {
-        "sr": 11.180173825083529,
-        "sr_signal": 24.431787347671378
+        "sr": 82.1315186668632,
+        "sr_signal": 79.0837636475793
       },
       "tsi_values": {
-        "tsi": -39.14483403548232
+        "tsi": 38.51038695093753
       },
       "bb_values": {
-        "lower_band": 81992.89720964548,
-        "middle_band": 84564.271,
-        "upper_band": 87135.6447903545
+        "lower_band": 86531.2289711975,
+        "middle_band": 87674.04550000001,
+        "upper_band": 88816.86202880251
       },
       "atr_values": {
-        "atr": 1149.4127113702632
+        "atr": 616.1914249271142
       },
       "kc_values": {
-        "lower_band": 82847.72699999998,
-        "middle_band": 83701.733,
-        "upper_band": 84555.739
+        "lower_band": 87385.02066666666,
+        "middle_band": 87964.09766666667,
+        "upper_band": 88543.17466666667
       },
       "obv_values": {
-        "obv": -6280.15276
+        "obv": -2066.2418100000014
       },
-      "fgi_values": {
-        "value": 15,
-        "value_classification": "Extreme Fear",
-        "timestamp": "2025-03-04 00:00:00 +0000",
-        "time_until_update": 55004
-      }
+      "fgi_values": {}
     },
     {
-      "date": "2025-03-04 12:00:00 +0000",
-      "open_price": 83937.93,
-      "close_price": 83763.73,
-      "high_price": 83979.66,
-      "low_price": 83248.66,
-      "volume": 1007.91883,
+      "date": "2025-04-22 06:00:00 +0000",
+      "open_price": 88391.27,
+      "close_price": 88246.46,
+      "high_price": 88459.03,
+      "low_price": 88000,
+      "volume": 556.23716,
       "sma_values": {
-        "sma10": 83805.93299999999,
-        "sma20": 84939.0715
+        "sma10": 87909.04500000001,
+        "sma20": 87598.80000000002
       },
       "ema_values": {
-        "ema10": 83812.3880909091,
-        "ema20": 85116.21785714285
+        "ema10": 87898.51263636364,
+        "ema20": 87619.8295952381
       },
       "macd_values": {
-        "macd_line": -2285.9737589234137,
-        "macd_histogram": 487.6272144981908,
-        "signal_line": -2773.6009734216045
+        "macd_line": 401.4558652916894,
+        "macd_histogram": 71.87796959342796,
+        "signal_line": 329.57789569826144
       },
       "rsi_values": {
-        "rsi": 40.93640399852419
+        "rsi": 52.268148013835464
       },
       "sr_values": {
-        "sr": 29.90656572633747,
-        "sr_signal": 31.688995233337504
+        "sr": 74.64880468957337,
+        "sr_signal": 74.04759798757924
       },
       "tsi_values": {
-        "tsi": -39.023422889116965
+        "tsi": 38.0276655202794
       },
       "bb_values": {
-        "lower_band": 81432.76246018245,
-        "middle_band": 84939.0715,
-        "upper_band": 88445.38053981756
+        "lower_band": 86480.63230268162,
+        "middle_band": 87598.80000000002,
+        "upper_band": 88716.96769731841
       },
       "atr_values": {
-        "atr": 1125.170612244899
+        "atr": 639.4507653061224
       },
       "kc_values": {
-        "lower_band": 83014.031,
-        "middle_band": 83807.848,
-        "upper_band": 84601.665
+        "lower_band": 87246.95966666668,
+        "middle_band": 87844.53366666667,
+        "upper_band": 88442.10766666666
       },
       "obv_values": {
-        "obv": -3852.95057
+        "obv": -3014.2538500000014
       },
-      "fgi_values": {
-        "value": 15,
-        "value_classification": "Extreme Fear",
-        "timestamp": "2025-03-04 00:00:00 +0000",
-        "time_until_update": 55004
-      }
+      "fgi_values": {}
     },
     {
-      "date": "2025-03-04 11:00:00 +0000",
-      "open_price": 83971.93,
-      "close_price": 83937.94,
-      "high_price": 84373.84,
-      "low_price": 83698.11,
-      "volume": 1132.88002,
+      "date": "2025-04-22 05:00:00 +0000",
+      "open_price": 88056.79,
+      "close_price": 88391.27,
+      "high_price": 88413.12,
+      "low_price": 87953.86,
+      "volume": 539.11056,
       "sma_values": {
-        "sma10": 83823.201,
-        "sma20": 85258.58499999999
+        "sma10": 87821.191,
+        "sma20": 87553.86850000001
       },
       "ema_values": {
-        "ema10": 83823.201,
-        "ema20": 85258.58499999999
+        "ema10": 87821.191,
+        "ema20": 87553.86850000001
       },
       "macd_values": {
-        "macd_line": -2410.4556337616086,
-        "macd_histogram": 485.0521432845435,
-        "signal_line": -2895.507777046152
+        "macd_line": 398.60639083392743,
+        "macd_histogram": 86.99798753402297,
+        "signal_line": 311.60840329990447
       },
       "rsi_values": {
-        "rsi": 41.811998435809485
+        "rsi": 54.28378548802289
       },
       "sr_values": {
-        "sr": 32.20862249159315,
-        "sr_signal": 31.07203192802781
+        "sr": 80.47096758630134,
+        "sr_signal": 72.856040076873
       },
       "tsi_values": {
-        "tsi": -39.901651340054464
+        "tsi": 38.156933855301176
       },
       "bb_values": {
-        "lower_band": 81099.39128441925,
-        "middle_band": 85258.58499999999,
-        "upper_band": 89417.77871558073
+        "lower_band": 86473.70614200347,
+        "middle_band": 87553.86850000001,
+        "upper_band": 88634.03085799655
       },
       "atr_values": {
-        "atr": 1155.4914285714299
+        "atr": 653.3292857142858
       },
       "kc_values": {
-        "lower_band": 82886.34699999998,
-        "middle_band": 83801.94199999998,
-        "upper_band": 84717.53699999998
+        "lower_band": 87171.53566666669,
+        "middle_band": 87752.78766666669,
+        "upper_band": 88334.03966666668
       },
       "obv_values": {
-        "obv": -2845.03174
+        "obv": -2458.0166900000013
       },
-      "fgi_values": {
-        "value": 15,
-        "value_classification": "Extreme Fear",
-        "timestamp": "2025-03-04 00:00:00 +0000",
-        "time_until_update": 55004
-      }
+      "fgi_values": {}
     }
   ]
 }
