@@ -5,6 +5,7 @@ require 'sentry-ruby'
 RSpec.describe 'schedule.rb' do
   let(:job_instance) { instance_double(NextGen::Jobs::MarketAutomationJob, perform: true) }
   let(:script_path) { File.expand_path('lib/next_gen/config/schedule.rb') }
+  let(:logger) { instance_double('NextGen::Config::Logger') }
 
   before do
     Timecop.freeze(Time.local(2025, 3, 3))
@@ -60,11 +61,14 @@ RSpec.describe 'schedule.rb' do
   end
 
   context 'invalid json' do
+    before { allow(NextGen::Config::Logger).to receive(:instance).and_return(logger) }
+
     it do
       invalid_json = '{invalid: json'
       stub_const('ARGV', [invalid_json])
 
       expect(Sentry).to receive(:capture_exception).with(instance_of(JSON::ParserError)).once
+      expect(logger).to receive(:error).with("Error occured: expected object key, got 'invalid: json")
       expect { load script_path }.to raise_error(JSON::ParserError)
     end
   end

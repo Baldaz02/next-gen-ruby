@@ -12,10 +12,7 @@ module NextGen
       attr_reader :cryptos, :logger, :file_base_path, :futures, :params
 
       def initialize(params = nil)
-        Config::SentryClient.setup
-
         @cryptos = Models::Crypto.all
-        Config::Application.set_timezone('GMT')
         @futures = []
 
         @logger = Config::Logger.instance
@@ -23,22 +20,18 @@ module NextGen
         @params = params
       end
 
-      def perform # rubocop: disable Metrics/MethodLength, Metrics/AbcSize
+      def perform
         logger.info("MarketAutomationJob started with #{@cryptos.size} cryptos")
 
-        begin
-          @cryptos.each do |crypto|
-            futures << Concurrent::Promises.future do
-              process_crypto(crypto)
-            end
+        @cryptos.each do |crypto|
+          futures << Concurrent::Promises.future do
+            logger.info("Processing crypto #{crypto.name} ...")
+            process_crypto(crypto)
           end
-
-          Concurrent::Promises.zip(*futures).value!
-          logger.info("MarketAutomationJob completed successfully \n")
-        rescue StandardError => e
-          logger.error("Error processing: #{e.message}")
-          Sentry.capture_exception(e)
         end
+
+        Concurrent::Promises.zip(*futures).value!
+        logger.info('MarketAutomationJob completed successfully')
       end
 
       private
@@ -51,8 +44,14 @@ module NextGen
 
       def process_crypto(crypto)
         tickers = crypto.tickers(params)
+        crypto_name = crypto.name
+        logger.info("Founded #{tickers.count} tickers for #{crypto_name}")
+
         indicators = Services::IndicatorService.new(tickers).calculate_all
+        logger.info("Calculation of indicators for #{crypto_name}: OK")
+
         export_data(crypto, tickers, indicators)
+        logger.info("Export data for #{crypto.name}")
       end
     end
   end

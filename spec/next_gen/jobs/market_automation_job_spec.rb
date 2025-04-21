@@ -23,7 +23,12 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
   context '#perform', vcr: true do
     it do
       expect(logger).to receive(:info).with('MarketAutomationJob started with 1 cryptos')
-      expect(logger).to receive(:info).with("MarketAutomationJob completed successfully \n")
+      expect(logger).to receive(:info).with('Processing crypto Bitcoin ...')
+      expect(logger).to receive(:info).with('Founded 50 tickers for Bitcoin')
+      expect(logger).to receive(:info).with('Calculation of indicators for Bitcoin: OK')
+      expect(logger).to receive(:info).with('Export data for Bitcoin')
+      expect(logger).to receive(:info).with('MarketAutomationJob completed successfully')
+
       described_class.new.perform
 
       expect(File.exist?(bitcoin_file_path)).to be_truthy
@@ -42,7 +47,11 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
 
       it do
         expect(logger).to receive(:info).with('MarketAutomationJob started with 1 cryptos')
-        expect(logger).to receive(:info).with("MarketAutomationJob completed successfully \n")
+        expect(logger).to receive(:info).with('Processing crypto Ethereum ...')
+        expect(logger).to receive(:info).with('Founded 50 tickers for Ethereum')
+        expect(logger).to receive(:info).with('Calculation of indicators for Ethereum: OK')
+        expect(logger).to receive(:info).with('Export data for Ethereum')
+        expect(logger).to receive(:info).with('MarketAutomationJob completed successfully')
 
         params = { interval: '1h', limit: 50, timestamps: { start: 1_740_866_400_000, end: 1_741_046_400_000 } }
         described_class.new(params).perform
@@ -54,18 +63,6 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
         json_fixture_data = JSON.parse(File.read(market_data_path))
 
         expect(json_data).to eq json_fixture_data
-      end
-    end
-
-    context 'error' do
-      it do
-        allow_any_instance_of(NextGen::Jobs::MarketAutomationJob).to receive(:process_crypto).and_raise(StandardError,
-                                                                                                        'Test error')
-        expect(logger).to receive(:info).with('MarketAutomationJob started with 1 cryptos')
-        expect(logger).to receive(:error).with('Error processing: Test error')
-        expect(Sentry).to receive(:capture_exception).with(instance_of(StandardError))
-
-        described_class.new.perform
       end
     end
   end
