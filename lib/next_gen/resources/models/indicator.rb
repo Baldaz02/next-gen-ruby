@@ -52,7 +52,8 @@ module NextGen
       end
 
       def filter_by_day(data, ticker_datetime)
-        ticker_timestamp = ticker_datetime.to_date.to_time.to_i
+        ticker_time = Time.parse(ticker_datetime)
+        ticker_timestamp = ticker_time.to_date.to_time.to_i
 
         data.select { |d| d.timestamp == ticker_timestamp }
       end

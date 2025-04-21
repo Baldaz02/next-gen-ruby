@@ -21,9 +21,9 @@ module NextGen
       def tickers(params = nil)
         params = DEFAULT_TICKER_PARAMS.merge(params || {})
                                       .merge(symbol: "#{symbol}USDT")
-        client = Clients::Binance.new(OpenStruct.new(params))
-
-        client.candlestick.map { |entry| Models::Ticker.new(entry, self) }
+        client = Clients::Binance.new(params)
+        candles = client.candlestick['body']
+        candles.map { |entry| Models::Ticker.new(entry, self) }
       end
 
       def to_h

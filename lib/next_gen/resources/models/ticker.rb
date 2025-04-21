@@ -7,13 +7,13 @@ module NextGen
 
       def initialize(candle_params, crypto)
         @date, @open_price, @close_price, @high_price, @low_price, @volume =
-          candle_params.values_at(:date, :open_price, :close_price, :high_price, :low_price, :volume)
+          %i[date open_price close_price high_price low_price volume].map { |k| candle_params[k.to_s] }
 
         @crypto = crypto
       end
 
       def self.sorted_by_date(tickers)
-        tickers.sort_by { |ticker| -ticker.date.to_time.to_i }
+        tickers.sort_by { |ticker| -Time.parse(ticker.date).to_i }
       end
 
       def to_h
