@@ -7,27 +7,33 @@ require 'fileutils'
 module NextGen
   module Clients
     class Fgi
-      BASE_URL = 'https://api.alternative.me/fng/'
-
       attr_accessor :params
-      attr_reader :today
+      attr_reader :client, :today
 
       def initialize(params)
         @params = params
+        @client = Clients::Aws.new
         @today = Date.today
       end
 
       def values
         datetime = DateTime.parse(ENV.fetch('DATETIME', nil))
-        params[:limit] = 10000 if datetime.to_date < today
+        params[:limit] = 10_000 if datetime.to_date < today
         base_path = "data/#{datetime.strftime('%Y-%m-%d')}"
 
         file_repo = Repositories::FileStorageRepository.new(base_path, 'fgi.json')
         data = file_repo.load
         return data if data
 
-        response = RestClient.get(BASE_URL, params: { limit: params[:limit] })
-        json_data = JSON.parse(response.body)['data']
+        lambda_params = { lambda: { class: 'Clients::Fgi', method: 'values' } }
+        response = client.invoke({
+                                   function_name: 'NextGen',
+                                   invocation_type: 'RequestResponse',
+                                   log_type: 'Tail',
+                                   payload: JSON.generate(lambda_params.merge(params))
+                                 })
+
+        json_data = JSON.parse(response.payload.string)['body']
         file_repo.save(json_data)
         json_data
       end

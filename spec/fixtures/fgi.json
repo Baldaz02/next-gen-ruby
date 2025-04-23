@@ -1,6 +1,6 @@
 {
-  "name": "Fear and Greed Index",
-  "data": [
+  "statusCode": 200,
+  "body": [
     {
       "value": "15",
       "value_classification": "Extreme Fear",
@@ -32,8 +32,5 @@
       "value_classification": "Extreme Fear",
       "timestamp": "1740614400"
     }
-  ],
-  "metadata": {
-    "error": null
-  }
+  ]
 }
