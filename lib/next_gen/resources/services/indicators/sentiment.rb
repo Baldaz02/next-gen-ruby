@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'concurrent'
+
 module NextGen
   module Services
     module Indicators
@@ -8,6 +10,8 @@ module NextGen
           adi: { period: 14, price_key: :close },
           mfi: {}
         }.freeze
+
+        @fgi_semaphore = Concurrent::Semaphore.new(1)
 
         def calculate_all
           OpenStruct.new({
@@ -19,7 +23,13 @@ module NextGen
 
         def fear_greed_index(limit = 6)
           params = { limit: limit }
-          deep_struct(Clients::Fgi.new(params).values)
+          self.class.fgi_semaphore.acquire
+
+          begin
+            deep_struct(Clients::Fgi.new(params).values)
+          ensure
+            self.class.fgi_semaphore.release
+          end
         end
 
         private
@@ -37,6 +47,10 @@ module NextGen
 
         def to_i(value)
           value.to_s.match?(/^\d+$/) ? value.to_i : value
+        end
+
+        def self.fgi_semaphore
+          @fgi_semaphore
         end
       end
     end
