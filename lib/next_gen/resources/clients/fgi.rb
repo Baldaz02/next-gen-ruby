@@ -8,7 +8,7 @@ module NextGen
   module Clients
     class Fgi
       attr_accessor :params
-      attr_reader :client, :today
+      attr_reader :client, :logger, :today
 
       def initialize(params)
         @params = params
@@ -26,14 +26,7 @@ module NextGen
         return data if data
 
         lambda_params = { lambda: { class: 'Clients::Fgi', method: 'values' } }
-        response = client.invoke({
-                                   function_name: 'NextGen',
-                                   invocation_type: 'RequestResponse',
-                                   log_type: 'Tail',
-                                   payload: JSON.generate(lambda_params.merge(params))
-                                 })
-
-        json_data = JSON.parse(response.payload.string)['body']
+        json_data = client.invoke(lambda_params.merge(params))
         file_repo.save(json_data)
         json_data
       end

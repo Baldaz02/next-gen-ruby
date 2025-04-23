@@ -40,9 +40,8 @@ RSpec.describe NextGen::Clients::Binance do
         expected_candle = candles.map { |c| c.transform_keys(&:to_s) }.first
         response = client.candlestick
 
-        expect(response).to be_an(Hash)
-        expect(response['statusCode']).to eq 200
-        expect(response['body'].first).to eq expected_candle
+        expect(response).to be_an(Array)
+        expect(response.first).to eq expected_candle
       end
     end
 
@@ -52,9 +51,8 @@ RSpec.describe NextGen::Clients::Binance do
         expected_candle = candles.map { |c| c.transform_keys(&:to_s) }.first
         response = client.candlestick
 
-        expect(response).to be_an(Hash)
-        expect(response['statusCode']).to eq 200
-        expect(response['body'].first).to eq expected_candle
+        expect(response).to be_an(Array)
+        expect(response.first).to eq expected_candle
       end
     end
   end

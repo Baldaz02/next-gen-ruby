@@ -6,7 +6,6 @@ require 'json'
 ENV.fetch('APP_ENV', 'development')
 NextGen::Config::SentryClient.setup
 NextGen::Config::Application.set_timezone('GMT')
-logger = NextGen::Config::Logger.instance
 
 begin
   raw_params = ARGV[0]
@@ -20,11 +19,13 @@ begin
     ENV['DATETIME'] = Time.now.to_s
   end
 
+  logger = NextGen::Config::Logger.instance
   logger.info("[#{Time.now}] Schedule MarketAutomationJob ok with params: #{parsed_params.inspect}")
   logger.info("→ ENV['DATETIME'] = #{ENV['DATETIME']}") if ENV['DATETIME']
 
   NextGen::Jobs::MarketAutomationJob.new(parsed_params).perform
 rescue StandardError => e
+  logger ||= NextGen::Config::Logger.instance
   logger.error("Error occured: #{e.message}")
   Sentry.capture_exception(e)
   raise e

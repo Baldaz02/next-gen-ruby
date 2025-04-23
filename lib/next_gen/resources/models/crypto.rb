@@ -21,8 +21,8 @@ module NextGen
       def tickers(params = nil)
         params = DEFAULT_TICKER_PARAMS.merge(params || {})
                                       .merge(symbol: "#{symbol}USDT")
-        client = Clients::Binance.new(params)
-        candles = client.candlestick['body']
+
+        candles = Clients::Binance.new(params).candlestick
         candles.map { |entry| Models::Ticker.new(entry, self) }
       end
 

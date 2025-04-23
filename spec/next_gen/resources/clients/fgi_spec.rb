@@ -3,7 +3,7 @@
 RSpec.describe NextGen::Clients::Fgi do
   let(:params) { { limit: 6 } }
   let(:client) { described_class.new(params) }
-  let(:aws_client) { instance_double("Clients::Aws") }
+  let(:aws_client) { instance_double('Clients::Aws') }
   let(:file_path) { 'spec/data/2025-03-04/fgi.json' }
 
   context '#values' do
@@ -20,11 +20,11 @@ RSpec.describe NextGen::Clients::Fgi do
       end
 
       after(:all) do
-        datetime = DateTime.parse(ENV['DATETIME'])
+        datetime = DateTime.parse(ENV.fetch('DATETIME', nil))
         dir_path = "spec/data/#{datetime.strftime('%Y-%m-%d')}"
         file_path = "#{dir_path}/fgi.json"
-    
-        File.delete(file_path) if File.exist?(file_path)
+
+        FileUtils.rm_f(file_path)
         Dir.rmdir(dir_path) if Dir.exist?(dir_path) && Dir.empty?(dir_path)
       end
 
@@ -32,18 +32,18 @@ RSpec.describe NextGen::Clients::Fgi do
         before do
           allow(File).to receive(:exist?).and_return(false)
         end
-      
+
         it do
           response = client.values
           expect(response.count).to eq 6
-      
+
           first_fgi = response.first
           expect(first_fgi['value']).to eq '15'
           expect(first_fgi['value_classification']).to eq 'Extreme Fear'
           expect(first_fgi['timestamp']).to eq '1741046400'
           expect(first_fgi['time_until_update']).to eq '55004'
 
-          datetime = DateTime.parse(ENV['DATETIME'])
+          datetime = DateTime.parse(ENV.fetch('DATETIME', nil))
           file_path = "spec/data/#{datetime.strftime('%Y-%m-%d')}/fgi.json"
           saved_data = JSON.parse(File.read(file_path))
           expect(saved_data.count).to eq 6
@@ -94,7 +94,7 @@ RSpec.describe NextGen::Clients::Fgi do
       context 'already call for today' do
         it do
           expect(File.exist?(file_path)).to be_truthy
-  
+
           expect(aws_client).not_to receive(:invoke)
 
           response = client.values
