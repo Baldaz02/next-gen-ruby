@@ -17,12 +17,12 @@ RSpec.describe 'schedule.rb' do
 
     base_dir = File.expand_path('../../data', __dir__)
     log_files = Dir.glob("#{base_dir}/**/*.log")
-  
+
     log_files.each do |log_file|
       File.delete(log_file)
-  
+
       current_dir = File.dirname(log_file)
-  
+
       while current_dir.start_with?(base_dir) && Dir.empty?(current_dir)
         Dir.rmdir(current_dir)
         current_dir = File.dirname(current_dir)

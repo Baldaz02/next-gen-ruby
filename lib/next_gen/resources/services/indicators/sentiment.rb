@@ -49,8 +49,8 @@ module NextGen
           value.to_s.match?(/^\d+$/) ? value.to_i : value
         end
 
-        def self.fgi_semaphore
-          @fgi_semaphore
+        class << self
+          attr_reader :fgi_semaphore
         end
       end
     end
