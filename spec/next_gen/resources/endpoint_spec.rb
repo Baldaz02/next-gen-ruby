@@ -46,7 +46,7 @@ RSpec.describe NextGen::Endpoint do
       expect(controller_instance).to receive(:execute_job).and_return(true)
 
       described_class.new(params).call
-      expect(ENV['DATETIME']).to eq '2025-03-03 00:00:00 +0000'
+      expect(ENV.fetch('DATETIME', nil)).to eq '2025-03-03 00:00:00 +0000'
     end
   end
 
@@ -75,7 +75,7 @@ RSpec.describe NextGen::Endpoint do
       expect(controller_instance).to receive(:execute_job).and_return(true)
 
       described_class.new(params).call
-      expect(ENV['DATETIME']).to eq '2025-03-04 00:00:00 +0000'
+      expect(ENV.fetch('DATETIME', nil)).to eq '2025-03-04 00:00:00 +0000'
     end
   end
 
@@ -87,21 +87,21 @@ RSpec.describe NextGen::Endpoint do
         data: {}
       }
     end
-  
+
     it do
       error = StandardError.new('Something went wrong')
       controller_instance = instance_double('NextGen::Controllers::MarketAutomationController')
-  
+
       allow(NextGen::Controllers::MarketAutomationController)
         .to receive(:new).and_return(controller_instance)
       allow(controller_instance)
         .to receive(:execute_job)
         .and_raise(error)
-  
+
       allow(NextGen::Config::Logger).to receive(:instance).and_return(logger)
       expect(logger).to receive(:error).with("Error occured: #{error.message}")
       expect(Sentry).to receive(:capture_exception).with(error)
-  
+
       expect { described_class.new(params).call }.to raise_error(StandardError, 'Something went wrong')
     end
   end
