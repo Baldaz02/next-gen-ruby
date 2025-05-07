@@ -18,7 +18,6 @@ module NextGen
       data = params[:data]
       controller = Object.const_get(params[:controller_name]).new(data)
       controller.send(params[:action_name])
-
     rescue StandardError => e
       logger.error("Error occured: #{e.message}")
       Sentry.capture_exception(e)
