@@ -5,6 +5,8 @@ require 'ostruct'
 module NextGen
   module Jobs
     class MarketAutomationJob
+      include NextGen::Helpers::Loggable
+
       attr_reader :params
 
       def initialize(params = nil)
@@ -14,12 +16,12 @@ module NextGen
 
       def perform
         cryptos = Models::Crypto.all
-        log("MarketAutomationJob started with #{cryptos.size} cryptos")
+        log_info("MarketAutomationJob started with #{cryptos.size} cryptos")
 
         futures = create_pipelines(cryptos)
         Concurrent::Promises.zip(*futures).value!
 
-        log('MarketAutomationJob completed successfully')
+        log_info('MarketAutomationJob completed successfully')
       end
 
       private
@@ -31,10 +33,6 @@ module NextGen
             Services::CryptoMarketDataPipeline.new(context).process
           end
         end
-      end
-
-      def log(message)
-        @logger.info(message)
       end
     end
   end

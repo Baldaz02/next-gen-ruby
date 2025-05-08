@@ -4,30 +4,31 @@ module NextGen
   module Services
     class CryptoMarketDataPipeline
       include NextGen::Helpers::FileHelper
+      include NextGen::Helpers::Loggable
+
       attr_reader :crypto, :params
 
       def initialize(context)
         @crypto = context.crypto
         @params = context.params
         @file_base_path = base_path_hour
-        @logger = Config::Logger.instance
       end
 
       def process
-        log("Processing crypto #{crypto.name} ...")
+        log_info("Processing crypto #{crypto.name} ...")
 
         tickers = retrieve_tickers
         indicators = calculate_indicators(tickers)
         export_data(tickers, indicators)
 
-        log("Export data for #{crypto.name}")
+        log_info("Export data for #{crypto.name}")
       end
 
       private
 
       def calculate_indicators(tickers)
         indicators = Services::IndicatorService.new(tickers).calculate_all
-        log("Calculation of indicators for #{crypto.name}: OK")
+        log_info("Calculation of indicators for #{crypto.name}: OK")
         indicators
       end
 
@@ -36,13 +37,9 @@ module NextGen
         Repositories::FileStorageRepository.new(@file_base_path, "#{crypto.name}.json").save(data)
       end
 
-      def log(msg)
-        @logger.info(msg)
-      end
-
       def retrieve_tickers
         tickers = crypto.tickers(params)
-        log("Found #{tickers.count} tickers for #{crypto.name}")
+        log_info("Found #{tickers.count} tickers for #{crypto.name}")
         tickers
       end
     end

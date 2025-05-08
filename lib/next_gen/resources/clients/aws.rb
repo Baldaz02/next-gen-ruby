@@ -5,7 +5,9 @@ require 'aws-sdk-lambda'
 module NextGen
   module Clients
     class Aws
-      attr_reader :client, :logger
+      include NextGen::Helpers::Loggable
+
+      attr_reader :client
 
       def initialize
         @client = ::Aws::Lambda::Client.new(
@@ -13,8 +15,6 @@ module NextGen
           secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
           region: ENV.fetch('AWS_REGION', 'eu-west-2')
         )
-
-        @logger = Config::Logger.instance
       end
 
       def invoke(params)
@@ -26,7 +26,7 @@ module NextGen
                                  })
 
         payload = JSON.parse(response.payload.string)
-        logger.info("Lambda call with params: #{params} - status: #{payload['statusCode']}")
+        log_info("Lambda call with params: #{params} - status: #{payload['statusCode']}")
         payload['body']
       end
     end
