@@ -19,11 +19,11 @@ module NextGen
 
       def invoke(params)
         response = client.invoke({
-                                    function_name: 'NextGen',
-                                    invocation_type: 'RequestResponse',
-                                    log_type: 'Tail',
-                                    payload: JSON.generate(params)
-                                  })
+                                   function_name: 'NextGen',
+                                   invocation_type: 'RequestResponse',
+                                   log_type: 'Tail',
+                                   payload: JSON.generate(params)
+                                 })
 
         payload = JSON.parse(response.payload.string)
         logger.info("Lambda call with params: #{params} - status: #{payload['statusCode']}")
