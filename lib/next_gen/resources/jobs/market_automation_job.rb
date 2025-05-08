@@ -1,57 +1,40 @@
 # frozen_string_literal: true
 
-require 'csv'
 require 'ostruct'
-require 'concurrent'
 
 module NextGen
   module Jobs
     class MarketAutomationJob
-      include NextGen::Helpers::FileHelper
-
-      attr_reader :cryptos, :logger, :file_base_path, :futures, :params
+      attr_reader :params
 
       def initialize(params = nil)
-        @cryptos = Models::Crypto.all
-        @futures = []
-
-        @logger = Config::Logger.instance
-        @file_base_path = base_path_hour
         @params = params
+        @logger = Config::Logger.instance
       end
 
       def perform
-        logger.info("MarketAutomationJob started with #{@cryptos.size} cryptos")
+        cryptos = Models::Crypto.all
+        log("MarketAutomationJob started with #{cryptos.size} cryptos")
 
-        @cryptos.each do |crypto|
-          futures << Concurrent::Promises.future do
-            logger.info("Processing crypto #{crypto.name} ...")
-            process_crypto(crypto)
-          end
-        end
-
+        futures = create_pipelines(cryptos)
         Concurrent::Promises.zip(*futures).value!
-        logger.info('MarketAutomationJob completed successfully')
+
+        log("MarketAutomationJob completed successfully")
       end
 
       private
 
-      def export_data(crypto, tickers, indicators)
-        data = Models::CryptoMarketData.new(crypto, tickers, indicators).to_h
-        file_repo = Repositories::FileStorageRepository.new(file_base_path, "#{crypto.name}.json")
-        file_repo.save(data)
+      def create_pipelines(cryptos)
+        cryptos.map do |crypto|
+          Concurrent::Promises.future do
+            context = OpenStruct.new(crypto: crypto, params: params)
+            Services::CryptoMarketDataPipeline.new(context).process
+          end
+        end
       end
 
-      def process_crypto(crypto)
-        tickers = crypto.tickers(params)
-        crypto_name = crypto.name
-        logger.info("Founded #{tickers.count} tickers for #{crypto_name}")
-
-        indicators = Services::IndicatorService.new(tickers).calculate_all
-        logger.info("Calculation of indicators for #{crypto_name}: OK")
-
-        export_data(crypto, tickers, indicators)
-        logger.info("Export data for #{crypto.name}")
+      def log(message)
+        @logger.info(message)
       end
     end
   end
