@@ -19,7 +19,7 @@ module NextGen
         futures = create_pipelines(cryptos)
         Concurrent::Promises.zip(*futures).value!
 
-        log("MarketAutomationJob completed successfully")
+        log('MarketAutomationJob completed successfully')
       end
 
       private

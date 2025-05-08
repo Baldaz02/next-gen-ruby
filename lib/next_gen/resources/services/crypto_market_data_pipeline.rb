@@ -16,22 +16,34 @@ module NextGen
       def process
         log("Processing crypto #{crypto.name} ...")
 
-        tickers = crypto.tickers(params)
-        log("Found #{tickers.count} tickers for #{crypto.name}")
-
-        indicators = Services::IndicatorService.new(tickers).calculate_all
-        log("Calculation of indicators for #{crypto.name}: OK")
-
-        data = Models::CryptoMarketData.new(crypto, tickers, indicators).to_h
-        Repositories::FileStorageRepository.new(@file_base_path, "#{crypto.name}.json").save(data)
+        tickers = retrieve_tickers
+        indicators = calculate_indicators(tickers)
+        export_data(tickers, indicators)
 
         log("Export data for #{crypto.name}")
       end
 
       private
 
+      def calculate_indicators(tickers)
+        indicators = Services::IndicatorService.new(tickers).calculate_all
+        log("Calculation of indicators for #{crypto.name}: OK")
+        indicators
+      end
+
+      def export_data(tickers, indicators)
+        data = Models::CryptoMarketData.new(crypto, tickers, indicators).to_h
+        Repositories::FileStorageRepository.new(@file_base_path, "#{crypto.name}.json").save(data)
+      end
+
       def log(msg)
         @logger.info(msg)
+      end
+
+      def retrieve_tickers
+        tickers = crypto.tickers(params)
+        log("Found #{tickers.count} tickers for #{crypto.name}")
+        tickers
       end
     end
   end
