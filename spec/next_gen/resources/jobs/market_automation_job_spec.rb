@@ -28,7 +28,7 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
         'Lambda call with params: {:lambda=>{:class=>"Clients::Binance", :method=>"candlestick"}, ' \
         ':interval=>"1h", :limit=>50, :symbol=>"BTCUSDT"} - status: 200'
       )
-      expect(logger).to receive(:info).with('Founded 50 tickers for Bitcoin')
+      expect(logger).to receive(:info).with('Found 50 tickers for Bitcoin')
       expect(logger).to receive(:info).with('Calculation of indicators for Bitcoin: OK')
       expect(logger).to receive(:info).with('Export data for Bitcoin')
       expect(logger).to receive(:info).with('MarketAutomationJob completed successfully')
@@ -57,7 +57,7 @@ RSpec.describe NextGen::Jobs::MarketAutomationJob do
           ':interval=>"1h", :limit=>50, :timestamps=>{:start=>1740866400000, :end=>1741046400000}, ' \
           ':symbol=>"ETHUSDT"} - status: 200'
         )
-        expect(logger).to receive(:info).with('Founded 50 tickers for Ethereum')
+        expect(logger).to receive(:info).with('Found 50 tickers for Ethereum')
         expect(logger).to receive(:info).with('Calculation of indicators for Ethereum: OK')
         expect(logger).to receive(:info).with('Export data for Ethereum')
         expect(logger).to receive(:info).with('MarketAutomationJob completed successfully')

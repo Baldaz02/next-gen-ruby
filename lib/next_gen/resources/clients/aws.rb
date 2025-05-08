@@ -5,7 +5,7 @@ require 'aws-sdk-lambda'
 module NextGen
   module Clients
     class Aws
-      attr_reader :logger
+      attr_reader :client, :logger
 
       def initialize
         @client = ::Aws::Lambda::Client.new(
@@ -18,7 +18,7 @@ module NextGen
       end
 
       def invoke(params)
-        response = @client.invoke({
+        response = client.invoke({
                                     function_name: 'NextGen',
                                     invocation_type: 'RequestResponse',
                                     log_type: 'Tail',
