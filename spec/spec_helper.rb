@@ -10,10 +10,10 @@ SimpleCov.start do
   minimum_coverage(100)
   add_filter('/spec/')
 
-  add_filter('lib/next_gen/config/schedule.rb')
+  add_filter('lib/lunaris/config/schedule.rb')
 end
 
-require('next_gen')
+require('lunaris')
 
 # Requires supporting ruby files
 Dir[File.join(__dir__, 'support', '**', '*.rb')].sort.each { |file| require(file) }

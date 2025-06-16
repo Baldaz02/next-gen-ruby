@@ -1,0 +1,173 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://lambda.eu-west-2.amazonaws.com/2015-03-31/functions/Lunaris/invocations
+    body:
+      encoding: UTF-8
+      string: '{"lambda":{"class":"Clients::Binance","method":"candlestick"},"interval":"1h","limit":50,"timestamps":{"start":1740866400000,"end":1741046400000},"symbol":"ETHUSDT"}'
+    headers:
+      Accept-Encoding:
+      - ''
+      Amz-Sdk-Invocation-Id:
+      - b80ab1d3-da9d-4cd6-9edf-12aadcfc2c6d
+      X-Amz-Invocation-Type:
+      - RequestResponse
+      X-Amz-Log-Type:
+      - Tail
+      Content-Type:
+      - application/octet-stream
+      Host:
+      - lambda.eu-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20250422T103351Z
+      X-Amz-Content-Sha256:
+      - 14696e64af3d7d1f3d7982a57ae4ce1f3f0eb2c1064d9a296f73741a790dd0f8
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AWS_ACCESS_KEY_ID/20250422/eu-west-2/lambda/aws4_request,
+        SignedHeaders=amz-sdk-invocation-id;content-type;host;x-amz-content-sha256;x-amz-date;x-amz-invocation-type;x-amz-log-type,
+        Signature=c7e83d41d54346e7428fbd32c08529d06755de53f453bfa08d295f705b6a139c
+      User-Agent:
+      - aws-sdk-ruby3/3.222.2 ua/2.1 api/lambda#1.148.0 os/macos#22 md/x86_64 lang/ruby#2.7.6
+        md/2.7.6 m/Z,b,D,n
+      Content-Length:
+      - '165'
+      Accept:
+      - "*/*"
+      Sentry-Trace:
+      - 77092b58b5814d459eb4f07b877506fb-60030dd5a151489a
+      Baggage:
+      - sentry-trace_id=77092b58b5814d459eb4f07b877506fb,sentry-environment=test
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 21 Apr 2025 18:51:53 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '8681'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 552fae2a-55ed-4105-8b2b-be870496f67c
+      X-Amzn-Remapped-Content-Length:
+      - '0'
+      X-Amz-Executed-Version:
+      - "$LATEST"
+      X-Amz-Log-Result:
+      - U1RBUlQgUmVxdWVzdElkOiA1NTJmYWUyYS01NWVkLTQxMDUtOGIyYi1iZTg3MDQ5NmY2N2MgVmVyc2lvbjogJExBVEVTVAovdmFyL3Rhc2svdmVuZG9yL2J1bmRsZS9ydWJ5LzMuMi4wL2dlbXMvbG9nZ2VyLTEuNy4wL2xpYi9sb2dnZXIucmI6Njc3OiB3YXJuaW5nOiBMb2dnZXIgbm90IGluaXRpYWxpemVkIHByb3Blcmx5Ci92YXIvcnVudGltZS9saWIvcnVudGltZS5yYjoyNjogaW5mbzogTG9nZ2VyUGF0Y2gjaW5pdGlhbGl6ZTogZG9lcyBub3QgY2FsbCBzdXBlciBwcm9iYWJseQpJLCBbMjAyNS0wNC0yMlQxMDozMzo1My42NjU0ODkgIzhdICBJTkZPIDU1MmZhZTJhLTU1ZWQtNDEwNS04YjJiLWJlODcwNDk2ZjY3YyAtLSA6IEJpbmFuY2UgQVBJIHJlc3BvbnNlIGZvciBFVEhVU0RUOiBIVFRQIDIwMApFTkQgUmVxdWVzdElkOiA1NTJmYWUyYS01NWVkLTQxMDUtOGIyYi1iZTg3MDQ5NmY2N2MKUkVQT1JUIFJlcXVlc3RJZDogNTUyZmFlMmEtNTVlZC00MTA1LThiMmItYmU4NzA0OTZmNjdjCUR1cmF0aW9uOiA3MDYuODQgbXMJQmlsbGVkIER1cmF0aW9uOiA3MDcgbXMJTWVtb3J5IFNpemU6IDEyOCBNQglNYXggTWVtb3J5IFVzZWQ6IDc1IE1CCUluaXQgRHVyYXRpb246IDYzNi4yNCBtcwkK
+      X-Amzn-Trace-Id:
+      - Root=1-68077090-383274d4748536e712a4ae5a;Parent=0c74cd6a1f14f050;Sampled=0;Lineage=1:971add7d:0
+    body:
+      encoding: UTF-8
+      string: '{"statusCode":200,"body":[{"unix_timestamp":1740866400000.0,"open_price":2229.5,"high_price":2235.99,"low_price":2211.09,"close_price":2214.99,"volume":13803.3194,"date":"2025-03-01
+        22:00:00 +0000"},{"unix_timestamp":1740870000000.0,"open_price":2214.99,"high_price":2219.95,"low_price":2191.1,"close_price":2217.39,"volume":16488.444,"date":"2025-03-01
+        23:00:00 +0000"},{"unix_timestamp":1740873600000.0,"open_price":2217.4,"high_price":2225.07,"low_price":2203.51,"close_price":2215.49,"volume":14977.2413,"date":"2025-03-02
+        00:00:00 +0000"},{"unix_timestamp":1740877200000.0,"open_price":2215.5,"high_price":2226.53,"low_price":2209.13,"close_price":2220.53,"volume":15009.0267,"date":"2025-03-02
+        01:00:00 +0000"},{"unix_timestamp":1740880800000.0,"open_price":2220.53,"high_price":2228.16,"low_price":2201.1,"close_price":2209.81,"volume":20427.1506,"date":"2025-03-02
+        02:00:00 +0000"},{"unix_timestamp":1740884400000.0,"open_price":2209.8,"high_price":2230.82,"low_price":2209.8,"close_price":2220.18,"volume":14371.237,"date":"2025-03-02
+        03:00:00 +0000"},{"unix_timestamp":1740888000000.0,"open_price":2220.19,"high_price":2235.6,"low_price":2219.1,"close_price":2227.11,"volume":11913.3635,"date":"2025-03-02
+        04:00:00 +0000"},{"unix_timestamp":1740891600000.0,"open_price":2227.11,"high_price":2234.51,"low_price":2224.0,"close_price":2229.5,"volume":8369.5452,"date":"2025-03-02
+        05:00:00 +0000"},{"unix_timestamp":1740895200000.0,"open_price":2229.5,"high_price":2233.67,"low_price":2218.2,"close_price":2222.96,"volume":11905.7946,"date":"2025-03-02
+        06:00:00 +0000"},{"unix_timestamp":1740898800000.0,"open_price":2222.95,"high_price":2226.9,"low_price":2218.59,"close_price":2221.4,"volume":11139.9352,"date":"2025-03-02
+        07:00:00 +0000"},{"unix_timestamp":1740902400000.0,"open_price":2221.4,"high_price":2223.07,"low_price":2208.06,"close_price":2212.59,"volume":26312.1112,"date":"2025-03-02
+        08:00:00 +0000"},{"unix_timestamp":1740906000000.0,"open_price":2212.58,"high_price":2255.1,"low_price":2211.93,"close_price":2242.2,"volume":32135.8152,"date":"2025-03-02
+        09:00:00 +0000"},{"unix_timestamp":1740909600000.0,"open_price":2242.21,"high_price":2260.84,"low_price":2240.0,"close_price":2246.01,"volume":20109.9476,"date":"2025-03-02
+        10:00:00 +0000"},{"unix_timestamp":1740913200000.0,"open_price":2246.01,"high_price":2247.9,"low_price":2236.52,"close_price":2238.88,"volume":12879.535,"date":"2025-03-02
+        11:00:00 +0000"},{"unix_timestamp":1740916800000.0,"open_price":2238.88,"high_price":2240.2,"low_price":2223.0,"close_price":2232.9,"volume":10615.2488,"date":"2025-03-02
+        12:00:00 +0000"},{"unix_timestamp":1740920400000.0,"open_price":2232.89,"high_price":2232.89,"low_price":2206.31,"close_price":2212.31,"volume":21896.7516,"date":"2025-03-02
+        13:00:00 +0000"},{"unix_timestamp":1740924000000.0,"open_price":2212.3,"high_price":2214.53,"low_price":2172.04,"close_price":2196.23,"volume":44460.0718,"date":"2025-03-02
+        14:00:00 +0000"},{"unix_timestamp":1740927600000.0,"open_price":2196.24,"high_price":2291.76,"low_price":2196.06,"close_price":2229.51,"volume":161936.9916,"date":"2025-03-02
+        15:00:00 +0000"},{"unix_timestamp":1740931200000.0,"open_price":2229.51,"high_price":2500.0,"low_price":2212.35,"close_price":2442.55,"volume":331427.3456,"date":"2025-03-02
+        16:00:00 +0000"},{"unix_timestamp":1740934800000.0,"open_price":2442.54,"high_price":2510.82,"low_price":2395.36,"close_price":2480.49,"volume":214821.1792,"date":"2025-03-02
+        17:00:00 +0000"},{"unix_timestamp":1740938400000.0,"open_price":2480.5,"high_price":2518.0,"low_price":2454.02,"close_price":2474.69,"volume":93586.2347,"date":"2025-03-02
+        18:00:00 +0000"},{"unix_timestamp":1740942000000.0,"open_price":2474.69,"high_price":2499.97,"low_price":2465.9,"close_price":2486.42,"volume":33875.7249,"date":"2025-03-02
+        19:00:00 +0000"},{"unix_timestamp":1740945600000.0,"open_price":2486.42,"high_price":2520.92,"low_price":2480.19,"close_price":2510.8,"volume":40096.9883,"date":"2025-03-02
+        20:00:00 +0000"},{"unix_timestamp":1740949200000.0,"open_price":2510.8,"high_price":2540.86,"low_price":2498.73,"close_price":2525.01,"volume":45877.9706,"date":"2025-03-02
+        21:00:00 +0000"},{"unix_timestamp":1740952800000.0,"open_price":2525.01,"high_price":2549.88,"low_price":2507.18,"close_price":2538.62,"volume":29403.994,"date":"2025-03-02
+        22:00:00 +0000"},{"unix_timestamp":1740956400000.0,"open_price":2538.62,"high_price":2550.58,"low_price":2508.39,"close_price":2518.11,"volume":39135.5706,"date":"2025-03-02
+        23:00:00 +0000"},{"unix_timestamp":1740960000000.0,"open_price":2518.12,"high_price":2523.56,"low_price":2464.27,"close_price":2465.52,"volume":42756.7935,"date":"2025-03-03
+        00:00:00 +0000"},{"unix_timestamp":1740963600000.0,"open_price":2465.52,"high_price":2476.13,"low_price":2450.52,"close_price":2458.8,"volume":27023.4712,"date":"2025-03-03
+        01:00:00 +0000"},{"unix_timestamp":1740967200000.0,"open_price":2458.8,"high_price":2461.5,"low_price":2418.67,"close_price":2447.48,"volume":36329.0703,"date":"2025-03-03
+        02:00:00 +0000"},{"unix_timestamp":1740970800000.0,"open_price":2447.49,"high_price":2455.7,"low_price":2425.17,"close_price":2441.15,"volume":19949.9149,"date":"2025-03-03
+        03:00:00 +0000"},{"unix_timestamp":1740974400000.0,"open_price":2441.16,"high_price":2452.9,"low_price":2432.68,"close_price":2450.32,"volume":18400.7989,"date":"2025-03-03
+        04:00:00 +0000"},{"unix_timestamp":1740978000000.0,"open_price":2450.32,"high_price":2457.25,"low_price":2440.67,"close_price":2449.94,"volume":12463.6692,"date":"2025-03-03
+        05:00:00 +0000"},{"unix_timestamp":1740981600000.0,"open_price":2449.94,"high_price":2450.0,"low_price":2360.37,"close_price":2372.68,"volume":56612.0987,"date":"2025-03-03
+        06:00:00 +0000"},{"unix_timestamp":1740985200000.0,"open_price":2372.68,"high_price":2391.46,"low_price":2352.79,"close_price":2387.01,"volume":29191.7926,"date":"2025-03-03
+        07:00:00 +0000"},{"unix_timestamp":1740988800000.0,"open_price":2387.01,"high_price":2388.11,"low_price":2332.08,"close_price":2345.41,"volume":31086.0888,"date":"2025-03-03
+        08:00:00 +0000"},{"unix_timestamp":1740992400000.0,"open_price":2345.41,"high_price":2356.69,"low_price":2322.01,"close_price":2347.51,"volume":35838.1588,"date":"2025-03-03
+        09:00:00 +0000"},{"unix_timestamp":1740996000000.0,"open_price":2347.5,"high_price":2366.29,"low_price":2340.79,"close_price":2359.19,"volume":22084.3278,"date":"2025-03-03
+        10:00:00 +0000"},{"unix_timestamp":1740999600000.0,"open_price":2359.18,"high_price":2363.89,"low_price":2344.4,"close_price":2356.16,"volume":17653.0192,"date":"2025-03-03
+        11:00:00 +0000"},{"unix_timestamp":1741003200000.0,"open_price":2356.15,"high_price":2376.78,"low_price":2352.26,"close_price":2367.69,"volume":27021.7407,"date":"2025-03-03
+        12:00:00 +0000"},{"unix_timestamp":1741006800000.0,"open_price":2367.69,"high_price":2389.0,"low_price":2361.3,"close_price":2376.88,"volume":26703.5093,"date":"2025-03-03
+        13:00:00 +0000"},{"unix_timestamp":1741010400000.0,"open_price":2376.87,"high_price":2380.85,"low_price":2266.97,"close_price":2274.81,"volume":103712.457,"date":"2025-03-03
+        14:00:00 +0000"},{"unix_timestamp":1741014000000.0,"open_price":2274.82,"high_price":2309.48,"low_price":2269.61,"close_price":2287.24,"volume":76224.1301,"date":"2025-03-03
+        15:00:00 +0000"},{"unix_timestamp":1741017600000.0,"open_price":2287.3,"high_price":2296.63,"low_price":2258.0,"close_price":2276.93,"volume":45099.106,"date":"2025-03-03
+        16:00:00 +0000"},{"unix_timestamp":1741021200000.0,"open_price":2276.92,"high_price":2297.0,"low_price":2265.33,"close_price":2277.21,"volume":24335.0856,"date":"2025-03-03
+        17:00:00 +0000"},{"unix_timestamp":1741024800000.0,"open_price":2277.22,"high_price":2280.35,"low_price":2178.32,"close_price":2193.33,"volume":116133.5925,"date":"2025-03-03
+        18:00:00 +0000"},{"unix_timestamp":1741028400000.0,"open_price":2193.33,"high_price":2207.69,"low_price":2100.0,"close_price":2109.88,"volume":135640.2631,"date":"2025-03-03
+        19:00:00 +0000"},{"unix_timestamp":1741032000000.0,"open_price":2109.87,"high_price":2140.4,"low_price":2097.91,"close_price":2129.16,"volume":106391.4535,"date":"2025-03-03
+        20:00:00 +0000"},{"unix_timestamp":1741035600000.0,"open_price":2129.16,"high_price":2146.92,"low_price":2103.76,"close_price":2111.82,"volume":40979.7884,"date":"2025-03-03
+        21:00:00 +0000"},{"unix_timestamp":1741039200000.0,"open_price":2111.82,"high_price":2173.29,"low_price":2110.94,"close_price":2166.41,"volume":34610.3267,"date":"2025-03-03
+        22:00:00 +0000"},{"unix_timestamp":1741042800000.0,"open_price":2166.41,"high_price":2166.41,"low_price":2142.7,"close_price":2149.01,"volume":23324.5435,"date":"2025-03-03
+        23:00:00 +0000"}]}'
+  recorded_at: Mon, 21 Apr 2025 18:51:53 GMT
+- request:
+    method: post
+    uri: https://lambda.eu-west-2.amazonaws.com/2015-03-31/functions/NextGen/invocations
+    body:
+      encoding: UTF-8
+      string: '{"lambda":{"class":"Clients::Binance","method":"candlestick"},"interval":"1h","limit":50,"timestamps":{"start":1740866400000,"end":1741046400000},"symbol":"ETHUSDT"}'
+    headers:
+      Accept-Encoding:
+      - ''
+      Amz-Sdk-Invocation-Id:
+      - ec4a60c6-4913-4ab5-937e-b2b5283ab176
+      X-Amz-Invocation-Type:
+      - RequestResponse
+      X-Amz-Log-Type:
+      - Tail
+      Content-Type:
+      - application/octet-stream
+      Host:
+      - lambda.eu-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20250617T134821Z
+      X-Amz-Content-Sha256:
+      - 14696e64af3d7d1f3d7982a57ae4ce1f3f0eb2c1064d9a296f73741a790dd0f8
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AWS_ACCESS_KEY_ID/20250617/eu-west-2/lambda/aws4_request,
+        SignedHeaders=amz-sdk-invocation-id;content-type;host;x-amz-content-sha256;x-amz-date;x-amz-invocation-type;x-amz-log-type,
+        Signature=4bc0aa30c5009984b2332c1e4cec65c52c033ea756390e99707b3e508647a762
+      User-Agent:
+      - aws-sdk-ruby3/3.222.2 ua/2.1 api/lambda#1.148.0 os/macos#22 md/x86_64 lang/ruby#2.7.6
+        md/2.7.6 m/Z,b,D,n
+      Content-Length:
+      - '165'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Date:
+      - Tue, 17 Jun 2025 13:48:21 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '68'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 7d023a11-e2bd-4e99-bc10-b24b4911ef86
+      X-Amzn-Errortype:
+      - UnrecognizedClientException
+    body:
+      encoding: UTF-8
+      string: '{"message":"The security token included in the request is invalid."}'
+  recorded_at: Tue, 17 Jun 2025 13:48:21 GMT
+recorded_with: VCR 6.1.0
