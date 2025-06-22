@@ -11,5 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Echo BOT_TOKEN
-        run: echo "${{ secrets.BOT_TOKEN }}"
+      - name: Dangerous echo (sconsigliato)
+        run: echo "BOT_TOKEN: ${{ secrets.BOT_TOKEN }}_suffix"
+
