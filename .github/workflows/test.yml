@@ -1,0 +1,15 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  # Se vuoi riattivare l'esecuzione programmata, decommenta la riga seguente:
+  # schedule:
+  #   - cron: '0 * * * *'
+
+jobs:
+  scheduled-task:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo BOT_TOKEN
+        run: echo "${{ secrets.BOT_TOKEN }}"
