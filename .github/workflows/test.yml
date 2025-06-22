@@ -2,7 +2,7 @@ name: Test
 
 on:
   workflow_dispatch:
-  # Se vuoi riattivare l'esecuzione programmata, decommenta la riga seguente:
+  # Per esecuzione automatica ogni ora, decommenta:
   # schedule:
   #   - cron: '0 * * * *'
 
@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Dangerous echo (sconsigliato)
-        run: echo "BOT_TOKEN: ${{ secrets.BOT_TOKEN }}_suffix"
-
+      - name: Echo BOT_TOKEN with suffix (⚠️ sconsigliato in produzione)
+        run: |
+          echo "BOT_TOKEN: ${{ secrets.BOT_TOKEN }}_suffix"
